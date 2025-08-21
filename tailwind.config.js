@@ -8,6 +8,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+  //     keyframes: {
+  //   float1: {
+  //     "0%, 100%": { transform: "translate(0,0)" },
+  //     "50%": { transform: "translate(-10px,12px) scale(1.08)" },
+  //   },
+  //   float2: {
+  //     "0%, 100%": { transform: "translate(0,0)" },
+  //     "50%": { transform: "translate(14px,-10px) scale(1.05)" },
+  //   },
+  //   float3: {
+  //     "0%, 100%": { transform: "translate(0,0)" },
+  //     "50%": { transform: "translate(-8px,10px) scale(1.07)" },
+  //   },
+  // },
+  // animation: {
+  //   float1: "float1 4s ease-in-out infinite",
+  //   float2: "float2 5s ease-in-out infinite",
+  //   float3: "float3 6s ease-in-out infinite",
+  // },
       colors: {
         // Add any custom colors here
       },
