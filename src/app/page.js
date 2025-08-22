@@ -17,6 +17,8 @@ import FAQ from '@/components/FAQ';
 
 import Features from '@/components/Features';
 
+import Review from '@/components/Review';
+
 
 export default function Home() {
   return (
@@ -31,6 +33,8 @@ export default function Home() {
 
       <StudentTestimonial />
       <ExamCourses />
+
+      <Review />
 
       
       <TeacherTestimonial />
