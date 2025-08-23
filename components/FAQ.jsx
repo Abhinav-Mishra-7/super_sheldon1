@@ -74,29 +74,69 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
+// const faqData = [
+//   {
+//     question: "What exams do you prepare students for?",
+//     answer: "We prepare students for various exams including NAPLAN, ICAS, and other exams.",
+//   },
+//   {
+//     question: "How do I apply for a job through the platform?",
+//     answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+//   },
+//   {
+//     question: "Do you offer one-on-one tutoring?",
+//     answer: "Yes, we offer personalized one-on-one tutoring sessions with qualified instructors.",
+//   },
+//   {
+//     question: "How do I create an account on the job board?",
+//     answer:
+//       "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+//   },
+//   {
+//     question: "Is there a cost to use the job board, and what features are free?",
+//     answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit .",
+//   },
+// ];
+
 const faqData = [
   {
-    question: "What exams do you prepare students for?",
-    answer: "We prepare students for various exams including NAPLAN, ICAS, and other exams.",
+    question: "What age groups are SuperSheldon courses designed for?",
+    answer: "Our programs are tailored for students from Grade 3 to Grade 12, covering early foundation levels to advanced exam preparation for NAPLAN, SAT, and ICAS across the UK, Australia, and the US.",
   },
   {
-    question: "How do I apply for a job through the platform?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+    question: "How is my child’s data and privacy protected?",
+    answer: "We strictly follow international privacy standards. All student data is securely stored, and class environments are fully protected to ensure a safe learning journey.",
   },
   {
-    question: "Do you offer one-on-one tutoring?",
-    answer: "Yes, we offer personalized one-on-one tutoring sessions with qualified instructors.",
+    question: "Can I get the recording of the classes for my child?",
+    answer: "To maintain student privacy, we do not share class recordings. Instead, detailed notes, practice worksheets, and exam-style questions are provided after every class for self-revision.",
   },
   {
-    question: "How do I create an account on the job board?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+    question: "Is there any homework or outside practice required?",
+    answer: "Yes. To maximize results in NAPLAN, SAT, and ICAS, students are given structured practice tasks and mock papers. These help reinforce learning and simulate real exam conditions.",
   },
   {
-    question: "Is there a cost to use the job board, and what features are free?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit .",
+    question: "How will expert teachers support my child’s exam preparation?",
+    answer: "Our teachers are specialists in NAPLAN, SAT, and ICAS with years of experience. They guide students with proven strategies, personalized feedback, and exam-focused practice to help them achieve top scores.",
+  },
+  {
+    question: "How are SuperSheldon classes conducted?",
+    answer: "Classes are 100% online, interactive, and one-on-one or small group sessions. Teachers use real exam-style practice, mock tests, and interactive activities to ensure deep understanding and exam confidence.",
+  },
+  {
+    question: "What devices or software are needed for classes?",
+    answer: "A laptop or tablet with stable internet, Zoom (or our online classroom platform), and a headset is all that’s required. No advanced setup is needed.",
+  },
+  {
+    question: "Does my child need prior experience or preparation before joining?",
+    answer: "Not at all. Our courses are designed to adapt to each student’s current level—whether beginner or advanced. We start with a diagnostic test and build a customized learning path.",
+  },
+  {
+    question: "Can I reschedule or cancel classes if needed?",
+    answer: "Yes. Parents can easily reschedule or cancel classes with advance notice. Flexibility is provided to suit your child’s exam preparation timeline.",
   },
 ];
+
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);

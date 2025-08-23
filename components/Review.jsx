@@ -129,7 +129,7 @@ const Review = () => {
         {/* Section 1 */}
         <div className="flex flex-col items-center justify-start text-center px-8 py-10 relative">
           <Image
-            src="/icons/learn.gif"
+            src="/learn.png"
             alt="Learn Icon"
             width={60}
             height={60}
@@ -153,7 +153,7 @@ const Review = () => {
         {/* Section 2 */}
         <div className="flex flex-col items-center justify-start text-center px-8 py-10 relative">
           <Image
-            src="/icons/academics.gif"
+            src="/academics.png"
             alt="Academics Icon"
             width={60}
             height={60}
@@ -178,7 +178,7 @@ const Review = () => {
         {/* Section 3 */}
         <div className="flex flex-col items-center justify-start text-center px-8 py-10 relative">
           <Image
-            src="/icons/feedback.gif"
+            src="/parents.png"
             alt="Feedback Icon"
             width={60}
             height={60}

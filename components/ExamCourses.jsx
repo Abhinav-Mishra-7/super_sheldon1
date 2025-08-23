@@ -256,7 +256,7 @@ const coursesData = {
       topics: 34,
       sales: 250,
       rating: 4,
-      img: "/course/y10icasgm.jpg",
+      img: "/course/y10icasgmnew.jpg",
       brochure: "/brochures/naplan.pdf",
     },
     // {
@@ -285,73 +285,31 @@ const coursesData = {
     "Year 11": [
     {
       id: "naplan-11-1",
-      title: "Naplan Exam Prep Course",
+      title: "ICAS Ultimate Scholar Course",
       type: "Exam Preparation",
       duration: "22hr 30min",
       topics: 34,
       sales: 250,
       rating: 4,
-      img: "/images/naplan.jpg",
+      img: "/course/y11icasscholar.jpg",
       brochure: "/brochures/naplan.pdf",
     },
-    {
-      id: "naplan-11-2",
-      title: "Naplan Exam Prep Course",
-      type: "Exam Preparation",
-      duration: "22hr 30min",
-      topics: 34,
-      sales: 250,
-      rating: 4,
-      img: "/images/naplan.jpg",
-      brochure: "/brochures/naplan.pdf",
-    },
-    {
-      id: "naplan-11-3",
-      title: "Naplan Exam Prep Course",
-      type: "Exam Preparation",
-      duration: "22hr 30min",
-      topics: 34,
-      sales: 250,
-      rating: 4,
-      img: "/images/naplan.jpg",
-      brochure: "/brochures/naplan.pdf",
-    },
+    
   ],
 
   "Year 12": [
     {
       id: "naplan-12-1",
-      title: "Naplan Exam Prep Course",
+      title: "HSC Mastery Program Course",
       type: "Exam Preparation",
       duration: "22hr 30min",
       topics: 34,
       sales: 250,
       rating: 4,
-      img: "/images/naplan.jpg",
+      img: "/course/y12hsc.jpg",
       brochure: "/brochures/naplan.pdf",
     },
-    {
-      id: "naplan-12-2",
-      title: "Naplan Exam Prep Course",
-      type: "Exam Preparation",
-      duration: "22hr 30min",
-      topics: 34,
-      sales: 250,
-      rating: 4,
-      img: "/images/naplan.jpg",
-      brochure: "/brochures/naplan.pdf",
-    },
-    {
-      id: "naplan-12-3",
-      title: "Naplan Exam Prep Course",
-      type: "Exam Preparation",
-      duration: "22hr 30min",
-      topics: 34,
-      sales: 250,
-      rating: 4,
-      img: "/images/naplan.jpg",
-      brochure: "/brochures/naplan.pdf",
-    },
+    
   ],
 };
 
@@ -563,7 +521,7 @@ export default function ExamCourses() {
                     download
                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
                   >
-                    <Download size={16} /> PDF
+                    <Download size={16} /> Download Brochure
                   </a>
                 </div>
               </div>
