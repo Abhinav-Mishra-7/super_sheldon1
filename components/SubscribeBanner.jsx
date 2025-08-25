@@ -115,7 +115,7 @@ const SubscribeSection = () => {
   return (
     <section
       id="try a free class"
-      className="relative mx-auto mt-4 mb-4 rounded-xl overflow-hidden text-white font-poppins flex items-center justify-center w-full max-w-[1432px] h-[429px] bg-[#4D2C5E]"
+      className="relative mx-auto w-full mt-4 mb-4 rounded-xl overflow-hidden text-white font-poppins flex items-center justify-center max-w-[1432px] h-[429px] bg-[#4D2C5E]"
     >
       {/* Decorative circles */}
       <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>

@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header style={quicksand}>
       <Popup></Popup>
-      <nav className="flex items-center justify-between pl-2 pr-2  mx-auto shadow-lg">
+      <nav className="flex items-center justify-between pl-2 pr-2 mb-10 mx-auto shadow-lg">
         <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
     <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
         <a href="#home">

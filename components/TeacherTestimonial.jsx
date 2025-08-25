@@ -290,18 +290,21 @@ export default function TeacherTestimonial() {
 
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
-        Why Choose Masters in Me?
+        Why Choose <br></br>Masters in Me?
       </h2>
 
       <div className="relative flex items-center justify-center w-full max-w-7xl">
         {/* Left Info Cards */}
         <div className="flex flex-col gap-4 absolute left-[calc(50%+210px)] md:left-[calc(50%+210px)] top-[100px]">
           {/* Top Left Card - bigger */}
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-60 h-40 flex flex-col justify-between font-manrope">
-            <img src="/pcmouse.png" className="w-14 h-14" alt="logo" />
-            <div>
+          <div className="bg-white shadow-2xl rounded-2xl p-4 w-60 h-42 flex flex-col justify-between font-manrope">
+            <img src="/pcmouse.png" className="w-12 h-12" alt="logo" />
+            <div className=" mx-auto">
               <h3 className="font-semibold text-xl">2M+ Questions</h3>
-              <p className="text-base text-gray-600">2M+ extra projects</p>
+              <p className="text-base text-gray-600 pb-3">2M+ extra projects</p>
+               <a href="#try a free class">
+                       <button className="  px-6 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] hover:from-[#ef6c2b] hover:to-[#ff6a00] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">Try a free Class</button>
+               </a>
             </div>
           </div>
           {/* Bottom Left Card */}

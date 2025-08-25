@@ -3,11 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const quicksand = {
-  fontFamily: "'Quicksand', Arial, sans-serif",
-  fontWeight: 700,
-  fontStyle: "bold",
-};
+// const quicksand = {
+//   fontFamily: "'Quicksand', Arial, sans-serif",
+//   fontWeight: 700,
+//   fontStyle: "bold",
+// };
 
 const Button = ({
   children,
@@ -94,16 +94,15 @@ export default function HeroHeader() {
           {/* Left Column: Text Content */}
           <div className="space-y-10 flex flex-col justify-center">
             <h1
-              className="font-bold text-5xl leading-tight"
+              className="font-quicksand font-semibold font- text-5xl leading-tight"
               style={{
-                fontFamily: "'Quicksand', Arial, sans-serif",
                 fontSize: "2.5rem",
               }}
             >
               <span>Ace Every Exam Worldwide</span> with Expert-Led Prep from{" "}
               <span className="text-[#1D2026]">NAPLAN</span> to{" "}
-              <span className="text-[#FFD700]">S</span>
-              <span className="text-[#1D2026]">AT.</span>
+              <span className="text-[#FFD700]">SAT</span>
+              
             </h1>
             <form
               className="bg-[#FFF7E6] p-4 rounded-xl shadow-md max-w-lg flex flex-col gap-2"
