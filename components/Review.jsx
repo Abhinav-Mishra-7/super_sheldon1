@@ -110,7 +110,11 @@ const Review = () => {
           letterSpacing: "-1px",
         }}
       >
-        From Our Hearts to <br /> Thousands of <br /> Australian Homes
+        From Our <span className="text-red-400">Hearts</span> to 
+        <br /> Thousands of 
+        <br /> 
+        <span className="text-purple-400">Australian</span> 
+        <span className="text-green-300"> Homes</span>
       </h2>
 
       {/* Subtitle */}

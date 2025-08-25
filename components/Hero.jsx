@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden pb-0">
+    <div  id="home" className="relative w-full overflow-hidden pb-0">
       {/* Content */}
       <div className="relative grid mt-0 px-4 sm:px-10 grid-cols-1 lg:grid-cols-2 gap-x-8 items-center">
         {/* Left Column */}

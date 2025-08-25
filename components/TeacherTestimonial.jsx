@@ -282,7 +282,7 @@ export default function TeacherTestimonial() {
   }, [currentIndex, isPlaying]);
 
   return (
-    <section className="relative flex flex-col items-center py-16 px-4">
+    <section id="testimonial"className="relative flex flex-col items-center py-16 px-4">
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-20 flex items-center justify-center">
         <div className="w-[700px] h-[700px] rounded-full bg-orange-200 opacity-30 blur-3xl"></div>
@@ -330,7 +330,7 @@ export default function TeacherTestimonial() {
         </div>
 
         {/* Center Video */}
-        <div className="relative w-[280px] sm:w-[340px] md:w-[380px] aspect-[9/16] flex items-center justify-center">
+        <div className="relative w-[280px] sm:w-[340px] md:w-[380px] aspect-[9/16] flex items-center justify-center shadow-xl rounded-full">
           <div className="absolute -z-10 w-[260px] h-[260px] rounded-full bg-blue-900/60"></div>
           <div className="absolute -z-10 w-[340px] h-[340px] rounded-full bg-blue-700/50"></div>
           <div className="absolute -z-10 w-[420px] h-[420px] rounded-full bg-blue-500/40"></div>

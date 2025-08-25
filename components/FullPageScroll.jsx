@@ -88,9 +88,9 @@ export default function SlideShow() {
     <div className="flex flex-col items-center justify-center w-full bg-white px-10 py-16">
       {/* Top Heading */}
       <h2 className="text-5xl leading-tight font-quicksand font-semibold mb-14 text-center">
-        The Smart Choice <br />
-        for Bright <br />
-        Futures
+        The <span className="text-orange-400">Smart</span> Choice for <br />
+      <span className="text-red-400">Bright</span>
+      <span className="text-purple-400"> Futures</span>
       </h2>
 
       {/* Content Flexbox */}
@@ -170,6 +170,7 @@ export default function SlideShow() {
                   className="object-cover h-full"
                 />
               </div>
+              
             </motion.div>
           </AnimatePresence>
 

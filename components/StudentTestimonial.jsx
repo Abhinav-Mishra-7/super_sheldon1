@@ -888,12 +888,15 @@ export default function StudentTestimonial() {
   <img src="/floating-icons/star.png" alt="Star" width={100} height={100} />
 </div>
 
-<div className="absolute top- right-12 animate-float2 z-10">
-  <img src="/floating-icons/book.png" alt="book" width={100} height={100} />
+<div className="absolute bottom-12 right-4 animate-float3 z-10">
+  <img src="/floating-icons/book.png" alt="book" width={120} height={120} />
 </div>
 
 <div className="absolute bottom-10 left-3 -translate-x-1/2 animate-float3 z-10">
   <img src="/floating-icons/globe.png" alt="graph" width={80} height={80} />
+</div>
+<div className="absolute top-8 right-6 animate-float1 z-10">
+  <img src="/floating-icons/graph.png" alt="book" width={100} height={100} />
 </div>
 
 <style jsx>{`
