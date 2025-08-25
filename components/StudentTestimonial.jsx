@@ -882,6 +882,39 @@ export default function StudentTestimonial() {
           />
         ))}
       </div>
+
+          {/* Floating Icons */}
+<div className="absolute top-10 left-10 animate-float1 z-10">
+  <img src="/floating-icons/star.png" alt="Star" width={100} height={100} />
+</div>
+
+<div className="absolute top- right-12 animate-float2 z-10">
+  <img src="/floating-icons/book.png" alt="book" width={100} height={100} />
+</div>
+
+<div className="absolute bottom-10 left-3 -translate-x-1/2 animate-float3 z-10">
+  <img src="/floating-icons/globe.png" alt="graph" width={80} height={80} />
+</div>
+
+<style jsx>{`
+  @keyframes float1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes float2 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(12px); }
+  }
+  @keyframes float3 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-10px) translateX(10px); }
+  }
+  .animate-float1 { animation: float1 4s ease-in-out infinite; }
+  .animate-float2 { animation: float2 5s ease-in-out infinite; }
+  .animate-float3 { animation: float3 6s ease-in-out infinite; }
+`}</style>
+
+
     </div>
   );
 }
