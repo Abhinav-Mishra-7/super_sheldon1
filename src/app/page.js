@@ -19,6 +19,8 @@ import Features from '@/components/Features';
 
 import Review from '@/components/Review';
 
+import FullPageSlider from '@/components/FullPageScroll';
+
 
 export default function Home() {
   return (
@@ -42,7 +44,7 @@ export default function Home() {
       <TeacherCarousel />
 
       {/* <Features /> */}
-
+      <FullPageSlider/>
       <FAQ />
 
       <SubscribeBanner />
