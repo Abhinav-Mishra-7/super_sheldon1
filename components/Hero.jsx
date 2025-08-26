@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import countries from "world-countries";
 
@@ -16,6 +17,7 @@ const countryOptions = countries.map((c) => ({
     ...[...c.cca2.toUpperCase()].map((ch) => ch.charCodeAt(0) + 127397)
   ),
 }));
+
 
 // ✅ StatCard Component
 const StatCard = ({ iconSrc, value, label }) => (
@@ -44,6 +46,13 @@ export default function Hero() {
     setError("");
     // TODO: connect API / handle form
   };
+
+  const navigate = useRouter();
+
+  const handleForm= (()=>{
+    if(phone.match(/^[0-9]{6,15}$/))
+    navigate.push("https://forms.gle/csc94GLG3tEDit6N6") ;
+  })
 
   return (
     <div  id="home" className="relative w-full overflow-hidden pb-0">
@@ -90,9 +99,11 @@ export default function Hero() {
                 placeholder="Phone number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="flex-grow px-4 py-2 border border-[#E0E0E0] rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm"
+                className="flex-grow px-4 py-2 border border-[#E0E0E0] rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm outline-none"
               />
+              
               <button
+              onClick={handleForm}
                 type="submit"
                 className="px-6 py-2 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105"
               >

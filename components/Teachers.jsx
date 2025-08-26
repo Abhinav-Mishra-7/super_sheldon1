@@ -7,22 +7,22 @@ import { Play } from "lucide-react";
 const teachers = [
   {
     id: 1,
-    name: "John Doe 1",
+    name: "Ashita Gunjikar",
     subject: "Mathematics Teacher",
     image: "/course/Teacher1.png",
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 2,
-    name: "John Doe 2",
+    name: "Ananya Sharma",
     subject: "Mathematics Teacher",
     image: "/course/Teacher2.png",
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 3,
-    name: "John Doe 3",
-    subject: "Mathematics Teacher",
+    name: "Avishikta Dutta",
+    subject: "Chemistry Teacher",
     image: "/course/Teacher3.png",
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
@@ -205,7 +205,7 @@ export default function TeacherCarousel() {
 
             {/* Overlay */}
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
-              <p className="font-semibold">{teacher.name}</p>
+              <p className="font-semibold text-[23px]">{teacher.name}</p>
               <p className="text-sm">{teacher.subject}</p>
               {/* <button
                 aria-label={`Play video of ${teacher.name}`}

@@ -108,10 +108,31 @@
 
 
 "use client";
-import React from "react";
+import React , {useState} from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const SubscribeSection = () => {
+
+    const [email , setEmail] = useState("") ;
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+        setError("Please enter a valid email account.");
+        return;
+      }
+      setError("");
+      // TODO: connect API / handle form
+    };
+
+    const navigate = useRouter();
+  
+    const handleForm= (()=>{
+      if(email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))
+      navigate.push("https://forms.gle/csc94GLG3tEDit6N6") ;
+    })
+
   return (
     <section
       id="try a free class"
@@ -132,14 +153,18 @@ const SubscribeSection = () => {
 
         {/* Stylish Email + Button */}
         <div className="relative w-full">
-          <input
+          <form onSubmit={handleSubmit}>
+            <input
             type="email"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full rounded-full py-4 px-6 text-gray-800 outline-none pr-36 shadow-lg"
           />
-          <button className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-orange-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg">
+          <button onClick={handleForm}  className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-orange-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg">
             Try a free Class
           </button>
+          </form>
         </div>
 
         {/* Lightbulbs using responsive percentages */}
