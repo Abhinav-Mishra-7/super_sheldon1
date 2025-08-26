@@ -885,7 +885,7 @@ export default function StudentTestimonial() {
 
           {/* Floating Icons */}
 
-<div className="absolute top-29 left-1 -translate-x-1/2 animate-float3 z-10">
+<div className="absolute top-31 left-0 -translate-x-1/3 animate-float3 z-10">
   <img src="/floating-icons/globe.png" alt="globe" width={80} height={80} />
 </div>
 <div className="absolute bottom-8 right-6 animate-float1 z-10">

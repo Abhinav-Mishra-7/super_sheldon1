@@ -70,9 +70,11 @@ export default function Credits() {
       </div>
 
       <div className="text-center mt-5 relative z-20">
+        <a href="#course">
         <button className="px-6 py-2 bg-[#ff5314] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">
           Try a free Class
         </button>
+        </a>
       </div>
 
       {/* White gradient overlay */}

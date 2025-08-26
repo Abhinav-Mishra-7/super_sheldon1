@@ -112,14 +112,14 @@ const Review = () => {
       >
         From Our <span className="text-red-400">Hearts</span> to 
         <br /> Thousands of 
-        <br /> 
-        <span className="text-purple-400">Australian</span> 
+        
+        <span className="text-purple-400"> Australian</span> 
         <span className="text-green-300"> Homes</span>
       </h2>
 
       {/* Subtitle */}
       <p className="text-base md:text-lg font-poppins text-gray-600 max-w-xl leading-relaxed">
-        Guiding students and parents <br /> toward brighter futures every day.
+        Guiding students and parents toward brighter futures every day.
       </p>
 
       {/* Orange Box */}

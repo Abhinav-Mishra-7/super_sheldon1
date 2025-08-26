@@ -323,11 +323,14 @@ export default function TeacherTestimonial() {
             <h3 className="font-semibold text-lg">Future Opportunities</h3>
           </div>
           {/* Bottom Right Card - bigger */}
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-60 h-40 flex flex-col justify-between font-manrope">
+          <div className="bg-white shadow-2xl rounded-2xl p-4 w-60 h-42 flex flex-col justify-between font-manrope">
             <img src="/add.png" className="w-14 h-14" alt="logo" />
-            <div>
+            <div className="mx-auto">
               <h3 className="font-semibold text-xl">MIT Certified +</h3>
-              <p className="text-base text-gray-600">All teachers MIT certified</p>
+              <p className="text-base text-gray-600 pb-3">All teachers MIT certified</p>
+               <a href="#try a free class">
+                       <button className="  px-6 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] hover:from-[#ef6c2b] hover:to-[#ff6a00] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">Try a free Class</button>
+               </a>
             </div>
           </div>
         </div>
@@ -394,7 +397,7 @@ export default function TeacherTestimonial() {
       {/* Floating Logos */}
       <img
         src="/saturn.png"
-        className="absolute right-10 top-28 w-14 animate-spin-slow"
+        className="absolute left-10 top-36 w-14 animate-spin-slow"
         alt="planet"
       />
       <img
@@ -404,17 +407,17 @@ export default function TeacherTestimonial() {
       />
       <img
         src="/blacksquiggle.png"
-        className="absolute right-20 bottom-20 w-9 animate-bounce"
+        className="absolute right-20 bottom-20 w-16 animate-bounce"
         alt="atom"
       />
       <img
         src="/blacksquiggle.png"
-        className="absolute left-20 top-20 w-8 animate-pulse scale-200"
+        className="absolute left-20 top-20 w-16 animate-pulse scale-200"
         alt="star"
       />
       <img
         src="/orangesquiggle.png"
-        className="absolute right-20 top-10 w-10 animate-bounce"
+        className="absolute right-20 top-8 w-16 animate-bounce"
         alt="lightbulb"
       />
     </section>

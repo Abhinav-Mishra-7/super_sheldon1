@@ -85,8 +85,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FFF9F1] text-gray-800 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+    <footer className="bg-[#FFF9F1] text-gray-800 py-10 px-6 h-[390px]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
 
         <div className="w-full md:w-2/5">
           <Image
@@ -94,7 +94,7 @@ export default function Footer() {
             alt="Super Sheldon Logo"
             width={197}
             height={124}
-            className="mb-2"
+            // className="mb-2"
             priority
           />
           <p className="text-base text-gray-600 leading-relaxed font-roboto mb-6">
@@ -142,9 +142,9 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Courses</h3>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li><Link href="#">Naplan Exam</Link></li>
-            <li><Link href="#">11+ Exam</Link></li>
-            <li><Link href="#">SAT Exam</Link></li>
+            <li><Link href="#course">Naplan Exam</Link></li>
+            <li><Link href="#course">11+ Exam</Link></li>
+            <li><Link href="#course">SAT Exam</Link></li>
           </ul>
         </div>
 
@@ -158,18 +158,9 @@ export default function Footer() {
           </ul>
         </div>
 
-
-        <div>
-          <h3 className="font-semibold mb-3">Blog</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li><Link href="#">Latest Articles</Link></li>
-            <li><Link href="#">Exam Tips</Link></li>
-            <li><Link href="#">Guides & Resources</Link></li> 
-          </ul>
-        </div>
     </div>
  
-      <div className="text-center mt-10 text-xs text-gray-500">
+      <div className=" text-center mt-10 text-xs text-gray-500">
         © {new Date().getFullYear()} Supersheldon. All rights reserved.
       </div>
     </footer>
