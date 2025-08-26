@@ -12,63 +12,63 @@ const slides = [
     texts: [
       {
         number: "01",
-        title: "Interactive Learning",
-        desc: "Exciting classes for students to enjoy learning.",
+        title: " Sessions Anytime, Anywhere",
+        desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
       {
         number: "02",
-        title: "Expert Teachers",
-        desc: "Learn with highly experienced mentors.",
+        title: " Customized Curriculum for Every Topic",
+        desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
       },
       {
         number: "03",
-        title: "Flexible Learning",
-        desc: "Access lessons anytime, anywhere.",
+        title: " Interactive LMS for Homework & Quizzes",
+        desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
       },
     ],
-    images: ["/small1.png", "/large1.png"],
+    images: ["/course/Grp1.png"],
   },
   {
     id: 1,
     texts: [
       {
         number: "01",
-        title: "Proven Results",
-        desc: "Thousands of students achieved their goals.",
+        title: " Sessions Anytime, Anywhere",
+        desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
       {
         number: "02",
-        title: "Personalized Plans",
-        desc: "Tailored programs for individual growth.",
+        title: " Customized Curriculum for Every Topic",
+        desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
       },
       {
         number: "03",
-        title: "Supportive Community",
-        desc: "Join a group of like-minded learners.",
+        title: " Interactive LMS for Homework & Quizzes",
+        desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
       },
     ],
-    images: ["/small2.png", "/large2.png"],
+    images: ["/course/Grp2.png"],
   },
   {
     id: 2,
     texts: [
       {
         number: "01",
-        title: "Easy Onboarding",
-        desc: "Start your journey with just a few clicks.",
+        title: " Sessions Anytime, Anywhere",
+        desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
       {
         number: "02",
-        title: "Affordable Plans",
-        desc: "Quality education at the best price.",
+        title: " Customized Curriculum for Every Topic",
+        desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
       },
       {
         number: "03",
-        title: "Lifetime Access",
-        desc: "Learn at your own pace, forever.",
+        title: " Interactive LMS for Homework & Quizzes",
+        desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
       },
     ],
-    images: ["/small3.png", "/large3.png"],
+    images: ["/course/Grp3.png"],
   },
 ];
 
@@ -102,14 +102,14 @@ export default function SlideShow() {
           </h3>
 
           {/* Text Boxes */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 w-[600px] z-10">
             {slides[active].texts.map((t, idx) => (
               <motion.div
                 key={t.title}
                 initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
                 className={`flex items-center gap-6 ${
                   idx % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
@@ -149,24 +149,14 @@ export default function SlideShow() {
               transition={{ duration: 0.7, ease: "easeInOut" }}
               className="flex items-start gap-6"
             >
-              {/* Smaller Image */}
-              <div className="rounded-2xl border overflow-hidden shadow-lg w-[200px] h-[300px] bg-gray-100 flex items-center justify-center">
+
+              {/* Image */}
+              <div className="rounded-2xl overflow-hidden  w-[380px] flex items-center justify-center">
                 <Image
                   src={slides[active].images[0]}
-                  alt="small"
-                  width={200}
-                  height={300}
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Larger Image */}
-              <div className="rounded-2xl border overflow-hidden shadow-lg w-[280px] h-[540px] bg-gray-100 flex items-center justify-center">
-                <Image
-                  src={slides[active].images[1]}
                   alt="large"
-                  width={280}
-                  height={540}
+                  width={380}
+                  height={340}
                   className="object-cover h-full"
                 />
               </div>

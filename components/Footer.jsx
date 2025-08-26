@@ -138,10 +138,10 @@ export default function Footer() {
           <h3 className="font-semibold mb-3">Company</h3>
           <ul className="space-y-2 text-sm text-gray-600">
             <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">About Us</Link></li>
-            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Privacy Policy</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="/Files/Privacy.pdf">Privacy Policy</Link></li>
             {/* <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Refund Policy</Link></li> */}
-            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Refund Policy</Link></li>
-            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Terms and Conditions</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="/Files/Refund.pdf">Refund Policy</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="/Files/Term.pdf">Terms and Conditions</Link></li>
           </ul>
         </div>
 

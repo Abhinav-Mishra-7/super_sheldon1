@@ -12,10 +12,10 @@ export default function Popup() {
       <div className="bg-white shadow-xl rounded-2xl px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-4 border border-gray-200">
  
         <p className="text-sm md:text-base font-medium text-gray-800">
-           <span className="font-semibold">Book a free trial class today!</span>
+           <span className="font-semibold text-gray-700">Hurry up!! Limited seats are available </span>
         </p>
         <a href="#course">
-        <button className="bg-[#F97316] hover:bg-[#dd5e02] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+        <button className="bg-[#F97316] shadow-md shadow-orange-800 hover:bg-[#dd5e02] text-white font-semibold px-6 py-2 rounded-full transition">
           Book Now
         </button>
         </a>

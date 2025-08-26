@@ -291,12 +291,12 @@ export default function TeacherTestimonial() {
       <h2 className="text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
         Why Choose <br></br>Masters in Me?
       </h2>
-
-      <div className="relative flex items-center justify-center w-full max-w-7xl">
+  {/* cards side are reference of website teacher */}
+      <div className="relative flex items-center justify-center w-full max-w-7xl ">
         {/* Left Info Cards */}
-        <div className="flex flex-col gap-4 absolute left-[calc(50%+210px)] md:left-[calc(50%+210px)] top-[100px]">
+        <div className="flex flex-col gap-4 absolute left-[calc(50%+210px)] md:left-[calc(50%+210px)] top-[100px]   ">
           {/* Top Left Card - bigger */}
-          <div className="bg-white shadow-2xl rounded-2xl p-4 w-60 h-42 flex flex-col justify-between font-manrope">
+          <div className="bg-white shadow-lg rounded-2xl p-4 w-60 h-42 flex flex-col justify-between font-manrope shadow-gray-500 ">
             <img src="/pcmouse.png" className="w-12 h-12" alt="logo" />
             <div className=" mx-auto">
               <h3 className="font-semibold text-xl">2M+ Questions</h3>
@@ -307,7 +307,7 @@ export default function TeacherTestimonial() {
             </div>
           </div>
           {/* Bottom Left Card */}
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope">
+          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope ">
             <img src="/srch.png" className="w-11 h-11 mb-2" alt="logo" />
             <h3 className="font-semibold text-xl">100K+</h3>
             <p className="text-base text-gray-600">Worldwide Students</p>
@@ -317,12 +317,12 @@ export default function TeacherTestimonial() {
         {/* Right Info Cards */}
         <div className="flex flex-col gap-4 absolute right-[calc(50%+210px)] md:right-[calc(50%+210px)] top-[140px]">
           {/* Top Right Card */}
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope">
+          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope ">
             <img src="/msg.png" className="w-12 h-12 mb-2" alt="logo" />
             <h3 className="font-semibold text-lg">Future Opportunities</h3>
           </div>
           {/* Bottom Right Card - bigger */}
-          <div className="bg-white shadow-2xl rounded-2xl p-4 w-60 h-42 flex flex-col  justify-center font-manrope">
+          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 w-60 h-42 flex flex-col  justify-center font-manrope ">
             <img src="/add.png" className="w-14 h-14" alt="logo" />
             <div className="mx-auto" >
               <h3 className="font-semibold text-xl">MIT Certified +</h3>

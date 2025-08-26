@@ -115,6 +115,19 @@ const Review = () => {
         
         <span className="text-purple-400"> Australian</span> 
         <span className="text-green-300"> Homes</span>
+
+           {/* Floating Saturn */}
+      <img
+        src="/saturn.png"
+        className="absolute right-10 top-20 w-14 "
+        alt="planet"
+      />
+      <img
+        src="/saturn.png"
+        className="absolute left-10 top-20 w-14 "
+        alt="planet"
+      />
+
       </h2>
 
       {/* Subtitle */}
@@ -197,5 +210,8 @@ const Review = () => {
     </section>
   );
 };
+
+
+
 
 export default Review;
