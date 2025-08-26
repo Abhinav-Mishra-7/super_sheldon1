@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 
 import CoursePage from "@/components/CoursePage";
 
+import PricingCards from "@/components/PricingCards";
+
 
 
 export default function Courses() {
@@ -14,6 +16,9 @@ export default function Courses() {
         <div>
             <Header />
             <CoursePage/>
+
+
+            <PricingCards/>
 
             <TeacherTestimonial/>
             <FullPageSlider/>
