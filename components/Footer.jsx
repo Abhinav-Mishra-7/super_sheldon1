@@ -164,7 +164,6 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-600">
             <li><Link href="#">Latest Articles</Link></li>
             <li><Link href="#">Exam Tips</Link></li>
-            <li><Link href="#">Student Stories</Link></li>
             <li><Link href="#">Guides & Resources</Link></li> 
           </ul>
         </div>
