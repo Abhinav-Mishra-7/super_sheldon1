@@ -81,7 +81,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -115,14 +115,20 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-4 mt-5 text-2xl">
-            <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <Link href="https://www.instagram.com/supersheldon.education/?igsh=MWxzNW1sZ2d0NXl2bw%3D%3D#" target="_blank" aria-label="Instagram">
               <FaInstagram className="hover:text-pink-500 transition-colors duration-300" />
             </Link>
-            <Link href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <Link href="https://x.com/SuperSheldonHQ" target="_blank" aria-label="Twitter">
               <FaXTwitter className="hover:text-black transition-colors duration-300" />
             </Link>
             <Link href="https://wa.me/919137053875" target="_blank" aria-label="WhatsApp">
               <FaWhatsapp className="hover:text-green-500 transition-colors duration-300" />
+            </Link>
+            <Link href="https://www.linkedin.com/company/super-sheldon/" target="_blank" aria-label="Linkedin">
+              <FaLinkedin className="hover:text-blue-600 transition-colors duration-300"/>
+            </Link>
+            <Link href="https://www.youtube.com/@SuperSheldon-Education" target="_blank" aria-label="Youtube" >
+               <FaYoutube className="hover:text-red-600 transition-colors duration-300"/>
             </Link>
           </div>
         </div>
@@ -131,10 +137,11 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Company</h3>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li><Link href="#">About Us</Link></li>
-            <li><Link href="#">Privacy Policy</Link></li>
-            <li><Link href="#">Refund Policy</Link></li>
-            <li><Link href="#">Terms and Conditions</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">About Us</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Privacy Policy</Link></li>
+            {/* <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Refund Policy</Link></li> */}
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Refund Policy</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Terms and Conditions</Link></li>
           </ul>
         </div>
 
@@ -142,9 +149,9 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Courses</h3>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li><Link href="#course">Naplan Exam</Link></li>
-            <li><Link href="#course">11+ Exam</Link></li>
-            <li><Link href="#course">SAT Exam</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#course">Naplan Exam</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#course">11+ Exam</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#course">SAT Exam</Link></li>
           </ul>
         </div>
 
@@ -152,9 +159,9 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Support</h3>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li><Link href="#">FAQ</Link></li>
-            <li><Link href="#">Support</Link></li>
-            <li><Link href="#">Career</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">FAQ</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Support</Link></li>
+            <li className=" hover:text-gray-900 transition-colors duration-300"><Link href="#">Career</Link></li>
           </ul>
         </div>
 

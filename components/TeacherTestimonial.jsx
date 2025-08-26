@@ -222,8 +222,7 @@ import { Play, Pause } from "lucide-react";
 
 const videos = [
   { id: 2, name: "Ms. Aditi", src: "/videos/video2.mp4" },
-  { id: 1, name: "Ms. Abha", src: "/videos/video1.mp4" },
-  { id: 3, name: " ", src: "/videos/video3.mp4" },
+  { id: 1, name: "Ms. Abha", src: "/videos/video1.mp4" }
 ];
 
 export default function TeacherTestimonial() {
@@ -323,9 +322,9 @@ export default function TeacherTestimonial() {
             <h3 className="font-semibold text-lg">Future Opportunities</h3>
           </div>
           {/* Bottom Right Card - bigger */}
-          <div className="bg-white shadow-2xl rounded-2xl p-4 w-60 h-42 flex flex-col justify-between font-manrope">
+          <div className="bg-white shadow-2xl rounded-2xl p-4 w-60 h-42 flex flex-col  justify-center font-manrope">
             <img src="/add.png" className="w-14 h-14" alt="logo" />
-            <div className="mx-auto">
+            <div className="mx-auto" >
               <h3 className="font-semibold text-xl">MIT Certified +</h3>
               <p className="text-base text-gray-600 pb-3">All teachers MIT certified</p>
                <a href="#try a free class">
@@ -382,7 +381,7 @@ export default function TeacherTestimonial() {
         {videos.map((_, index) => (
           <button
             key={index}
-            aria-label={`Go to video ${index + 1}`}
+            aria-label={`Go to video ${index +1}`}
             onClick={() => {
               setCurrentIndex(index);
               setIsPlaying(false);
