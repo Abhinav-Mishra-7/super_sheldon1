@@ -12,7 +12,6 @@ const slides = [
     texts: [
       {
         number: "01",
-<<<<<<< HEAD
         title: " Sessions Anytime, Anywhere",
         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
@@ -28,30 +27,12 @@ const slides = [
       },
     ],
     images: ["/course/Grp1.png"],
-=======
-        title: "Interactive Learning",
-        desc: "Exciting classes for students to enjoy learning.",
-      },
-      {
-        number: "02",
-        title: "Expert Teachers",
-        desc: "Learn with highly experienced mentors.",
-      },
-      {
-        number: "03",
-        title: "Flexible Learning",
-        desc: "Access lessons anytime, anywhere.",
-      },
-    ],
-    images: ["/small1.png", "/large1.png"],
->>>>>>> origin
   },
   {
     id: 1,
     texts: [
       {
         number: "01",
-<<<<<<< HEAD
         title: " Sessions Anytime, Anywhere",
         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
@@ -67,30 +48,12 @@ const slides = [
       },
     ],
     images: ["/course/Grp2.png"],
-=======
-        title: "Proven Results",
-        desc: "Thousands of students achieved their goals.",
-      },
-      {
-        number: "02",
-        title: "Personalized Plans",
-        desc: "Tailored programs for individual growth.",
-      },
-      {
-        number: "03",
-        title: "Supportive Community",
-        desc: "Join a group of like-minded learners.",
-      },
-    ],
-    images: ["/small2.png", "/large2.png"],
->>>>>>> origin
   },
   {
     id: 2,
     texts: [
       {
         number: "01",
-<<<<<<< HEAD
         title: " Sessions Anytime, Anywhere",
         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
@@ -106,23 +69,6 @@ const slides = [
       },
     ],
     images: ["/course/Grp3.png"],
-=======
-        title: "Easy Onboarding",
-        desc: "Start your journey with just a few clicks.",
-      },
-      {
-        number: "02",
-        title: "Affordable Plans",
-        desc: "Quality education at the best price.",
-      },
-      {
-        number: "03",
-        title: "Lifetime Access",
-        desc: "Learn at your own pace, forever.",
-      },
-    ],
-    images: ["/small3.png", "/large3.png"],
->>>>>>> origin
   },
 ];
 
@@ -142,15 +88,9 @@ export default function SlideShow() {
     <div className="flex flex-col items-center justify-center w-full bg-white px-10 py-16">
       {/* Top Heading */}
       <h2 className="text-5xl leading-tight font-quicksand font-semibold mb-14 text-center">
-<<<<<<< HEAD
         The <span className="text-purple-400">Smart</span> Choice for <br />
       <span className="text-red-400">Bright</span>
       <span className="text-orange-400"> Futures</span>
-=======
-        The Smart Choice <br />
-        for Bright <br />
-        Futures
->>>>>>> origin
       </h2>
 
       {/* Content Flexbox */}
@@ -162,22 +102,14 @@ export default function SlideShow() {
           </h3>
 
           {/* Text Boxes */}
-<<<<<<< HEAD
           <div className="flex flex-col gap-5 w-[600px] z-10">
-=======
-          <div className="flex flex-col gap-5">
->>>>>>> origin
             {slides[active].texts.map((t, idx) => (
               <motion.div
                 key={t.title}
                 initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, ease: "easeInOut" }}
-=======
-                transition={{ duration: 0.6, ease: "easeInOut" }}
->>>>>>> origin
                 className={`flex items-center gap-6 ${
                   idx % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
@@ -217,7 +149,6 @@ export default function SlideShow() {
               transition={{ duration: 0.7, ease: "easeInOut" }}
               className="flex items-start gap-6"
             >
-<<<<<<< HEAD
 
               {/* Image */}
               <div className="rounded-2xl overflow-hidden  w-[380px] flex items-center justify-center">
@@ -230,29 +161,6 @@ export default function SlideShow() {
                 />
               </div>
               
-=======
-              {/* Smaller Image */}
-              <div className="rounded-2xl border overflow-hidden shadow-lg w-[200px] h-[300px] bg-gray-100 flex items-center justify-center">
-                <Image
-                  src={slides[active].images[0]}
-                  alt="small"
-                  width={200}
-                  height={300}
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Larger Image */}
-              <div className="rounded-2xl border overflow-hidden shadow-lg w-[280px] h-[540px] bg-gray-100 flex items-center justify-center">
-                <Image
-                  src={slides[active].images[1]}
-                  alt="large"
-                  width={280}
-                  height={540}
-                  className="object-cover h-full"
-                />
-              </div>
->>>>>>> origin
             </motion.div>
           </AnimatePresence>
 
