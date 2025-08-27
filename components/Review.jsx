@@ -110,6 +110,7 @@ const Review = () => {
           letterSpacing: "-1px",
         }}
       >
+<<<<<<< HEAD
         From Our <span className="text-red-400">Hearts</span> to 
         <br /> Thousands of 
         
@@ -128,11 +129,18 @@ const Review = () => {
         alt="planet"
       />
 
+=======
+        From Our Hearts to <br /> Thousands of <br /> Australian Homes
+>>>>>>> origin
       </h2>
 
       {/* Subtitle */}
       <p className="text-base md:text-lg font-poppins text-gray-600 max-w-xl leading-relaxed">
+<<<<<<< HEAD
         Guiding students and parents toward brighter futures every day.
+=======
+        Guiding students and parents <br /> toward brighter futures every day.
+>>>>>>> origin
       </p>
 
       {/* Orange Box */}
@@ -211,7 +219,10 @@ const Review = () => {
   );
 };
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin
 export default Review;

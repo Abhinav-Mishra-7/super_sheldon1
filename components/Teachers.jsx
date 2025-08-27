@@ -7,6 +7,7 @@ import { Play } from "lucide-react";
 const teachers = [
   {
     id: 1,
+<<<<<<< HEAD
     name: "Ashita Gunjikar",
     subject: "Mathematics Teacher",
     image: "/course/Teacher1.png",
@@ -25,55 +26,103 @@ const teachers = [
     subject: "Chemistry Teacher",
     image: "/course/Teacher3.png",
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    name: "John Doe 1",
+    subject: "Mathematics Teacher",
+    image: "https://picsum.photos/300/200?random=1",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
+  {
+    id: 2,
+    name: "John Doe 2",
+    subject: "Mathematics Teacher",
+    image: "https://picsum.photos/300/200?random=2",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
+  {
+    id: 3,
+    name: "John Doe 3",
+    subject: "Mathematics Teacher",
+    image: "https://picsum.photos/300/200?random=3",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 4,
     name: "John Doe 4",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=4",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 5,
     name: "John Doe 5",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=5",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 6,
     name: "John Doe 6",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=6",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 7,
     name: "John Doe 7",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=7",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 8,
     name: "John Doe 8",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=8",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 9,
     name: "John Doe 9",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=9",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
   {
     id: 10,
     name: "John Doe 10",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=10",
+<<<<<<< HEAD
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+>>>>>>> origin
   },
 ];
 
@@ -194,20 +243,34 @@ export default function TeacherCarousel() {
         {[...teachers, ...teachers].map((teacher, index) => (
           <div
             key={index}
+<<<<<<< HEAD
             className="relative min-w-[220px] rounded-2xl shadow-md overflow-hidden  bg-white cursor-pointer transition duration-500 hover:shadow-md hover:shadow-gray-500 hover:scale-105"
+=======
+            className="relative min-w-[220px] rounded-2xl shadow-md overflow-hidden bg-white cursor-pointer"
+>>>>>>> origin
             onClick={() => setActiveVideo(teacher.video)}
           >
             <img
               src={teacher.image}
+<<<<<<< HEAD
               alt={teacher.name} 
+=======
+              alt={teacher.name}
+>>>>>>> origin
               className="w-full h-60 object-cover"
             />
 
             {/* Overlay */}
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+<<<<<<< HEAD
               <p className="font-semibold text-[23px]">{teacher.name}</p>
               <p className="text-sm">{teacher.subject}</p>
               {/* <button
+=======
+              <p className="font-semibold">{teacher.name}</p>
+              <p className="text-sm">{teacher.subject}</p>
+              <button
+>>>>>>> origin
                 aria-label={`Play video of ${teacher.name}`}
                 className="absolute bottom-3 right-3 p-2 bg-blue-600 rounded-full"
                 onClick={(e) => {
@@ -216,7 +279,11 @@ export default function TeacherCarousel() {
                 }}
               >
                 <Play size={18} />
+<<<<<<< HEAD
               </button> */}
+=======
+              </button>
+>>>>>>> origin
             </div>
           </div>
         ))}

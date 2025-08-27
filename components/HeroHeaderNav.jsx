@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
+<<<<<<< HEAD
 import Popup from "./Popup";
 
+=======
+>>>>>>> origin
 
 // Button stays in Header
 export const Button = ({ children, className = "", variant = "primary", ...props }) => {
@@ -29,6 +32,7 @@ const quicksand = {
 export default function Header() {
   return (
     <header style={quicksand}>
+<<<<<<< HEAD
       <Popup></Popup>
       <nav className="flex items-center justify-between pl-2 pr-2 mb-10 mx-auto shadow-lg">
         <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
@@ -58,6 +62,22 @@ export default function Header() {
           <a href="#try a free class">
           <Button variant="primary">Try a free Class</Button>
           </a>
+=======
+      <nav className="flex items-center justify-between">
+        <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
+        <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
+          <Button variant="outline">Home</Button>
+          <Button variant="outline">Course</Button>
+          <Button variant="outline">Testimonial</Button>
+          <Button variant="outline">Blog</Button>
+        </div>
+        <div className="hidden md:flex items-center space-x-5">
+          <span className="text-xs font-bold text-gray-600 cursor-pointer hover:text-black transition-colors">
+            Join Class
+          </span>
+          <Button variant="primary">Login</Button>
+          <Button variant="primary">Try a free Class</Button>
+>>>>>>> origin
         </div>
       </nav>
     </header>

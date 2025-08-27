@@ -3,11 +3,19 @@
 import { useState } from "react";
 import Image from "next/image";
 
+<<<<<<< HEAD
 // const quicksand = {
 //   fontFamily: "'Quicksand', Arial, sans-serif",
 //   fontWeight: 700,
 //   fontStyle: "bold",
 // };
+=======
+const quicksand = {
+  fontFamily: "'Quicksand', Arial, sans-serif",
+  fontWeight: 700,
+  fontStyle: "bold",
+};
+>>>>>>> origin
 
 const Button = ({
   children,
@@ -48,7 +56,11 @@ export default function HeroHeader() {
   const [country, setCountry] = useState("+370");
 
   return (
+<<<<<<< HEAD
     <section className=" mt-10 hero-header min-h-screen flex items-center justify-center bg-[#FFFFFF] relative overflow-hidden">
+=======
+    <section className="hero-header min-h-screen flex items-center justify-center bg-[#FFFFFF] relative overflow-hidden">
+>>>>>>> origin
       {/* Spherical sun-like gradient*/}
       <div
         className="absolute left-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none"
@@ -94,15 +106,26 @@ export default function HeroHeader() {
           {/* Left Column: Text Content */}
           <div className="space-y-10 flex flex-col justify-center">
             <h1
+<<<<<<< HEAD
               className="font-quicksand font-semibold font- text-5xl leading-tight"
               style={{
+=======
+              className="font-bold text-5xl leading-tight"
+              style={{
+                fontFamily: "'Quicksand', Arial, sans-serif",
+>>>>>>> origin
                 fontSize: "2.5rem",
               }}
             >
               <span>Ace Every Exam Worldwide</span> with Expert-Led Prep from{" "}
               <span className="text-[#1D2026]">NAPLAN</span> to{" "}
+<<<<<<< HEAD
               <span className="text-[#FFD700]">SAT</span>
               
+=======
+              <span className="text-[#FFD700]">S</span>
+              <span className="text-[#1D2026]">AT.</span>
+>>>>>>> origin
             </h1>
             <form
               className="bg-[#FFF7E6] p-4 rounded-xl shadow-md max-w-lg flex flex-col gap-2"
@@ -168,7 +191,11 @@ export default function HeroHeader() {
               priority
             />
             {/* "Members" card */}
+<<<<<<< HEAD
             <div className="absolute bottom-8 right-8 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white">
+=======
+            <div className="absolute bottom-8 left-8 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white">
+>>>>>>> origin
               <span className="font-bold text-[#1D2026] text-sm">500k+</span>
               <span className="text-[#4E5566] text-xs">Members</span>
               <div className="flex -space-x-3">
