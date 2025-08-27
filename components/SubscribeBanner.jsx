@@ -138,15 +138,11 @@ const SubscribeSection = () => {
     <section
       id="try a free class"
       className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[370px] bg-[#4D2C5E]"
-=======
-import React from "react";
-import Image from "next/image";
 
 const SubscribeSection = () => {
   return (
     <section
       className="relative mx-auto mt-4 mb-4 rounded-xl overflow-hidden text-white font-poppins flex items-center justify-center w-full max-w-[1432px] h-[429px] bg-[#4D2C5E]"
->>>>>>> origin
     >
       {/* Decorative circles */}
       <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>
@@ -163,7 +159,6 @@ const SubscribeSection = () => {
 
         {/* Stylish Email + Button */}
         <div className="relative w-full">
-<<<<<<< HEAD
           <form onSubmit={handleSubmit}>
             <input
             type="email"
@@ -176,7 +171,6 @@ const SubscribeSection = () => {
             Try a free Class
           </button>
           </form>
-=======
           <input
             type="email"
             placeholder="Enter your email"
@@ -185,7 +179,6 @@ const SubscribeSection = () => {
           <button className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-orange-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg">
             Try a free Class
           </button>
->>>>>>> origin
         </div>
 
         {/* Lightbulbs using responsive percentages */}
