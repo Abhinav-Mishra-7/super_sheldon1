@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+
+
 import { useState } from "react";
 import Image from "next/image";
 
@@ -75,7 +78,7 @@ export default function HeroHeader() {
             />
             <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
               <Button variant="outline">Home</Button>
-              <Button variant="outline">Course</Button>
+              <Link href="/courses"><Button variant="outline">Course</Button></Link>
               <Button variant="outline">Testimonial</Button>
               <Button variant="outline">Blog</Button>
             </div>
