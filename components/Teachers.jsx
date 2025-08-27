@@ -194,34 +194,20 @@ export default function TeacherCarousel() {
         {[...teachers, ...teachers].map((teacher, index) => (
           <div
             key={index}
-<<<<<<< HEAD
             className="relative min-w-[220px] rounded-2xl shadow-md overflow-hidden  bg-white cursor-pointer transition duration-500 hover:shadow-md hover:shadow-gray-500 hover:scale-105"
-=======
-            className="relative min-w-[220px] rounded-2xl shadow-md overflow-hidden bg-white cursor-pointer"
->>>>>>> origin
             onClick={() => setActiveVideo(teacher.video)}
           >
             <img
               src={teacher.image}
-<<<<<<< HEAD
               alt={teacher.name} 
-=======
-              alt={teacher.name}
->>>>>>> origin
               className="w-full h-60 object-cover"
             />
 
             {/* Overlay */}
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
-<<<<<<< HEAD
               <p className="font-semibold text-[23px]">{teacher.name}</p>
               <p className="text-sm">{teacher.subject}</p>
               {/* <button
-=======
-              <p className="font-semibold">{teacher.name}</p>
-              <p className="text-sm">{teacher.subject}</p>
-              <button
->>>>>>> origin
                 aria-label={`Play video of ${teacher.name}`}
                 className="absolute bottom-3 right-3 p-2 bg-blue-600 rounded-full"
                 onClick={(e) => {
@@ -230,11 +216,7 @@ export default function TeacherCarousel() {
                 }}
               >
                 <Play size={18} />
-<<<<<<< HEAD
               </button> */}
-=======
-              </button>
->>>>>>> origin
             </div>
           </div>
         ))}
