@@ -715,9 +715,9 @@ const testimonials = [
     image: "/k2g.png",
   },
   {
-    text: "Interface is user-friendly and the content is informative and engaging. Ananya truly Enjoys learning and has shown great improvement.",
-    name: "— Ms. Aditi",
-    image: "/k2g.png",
+    text: "Studying with Connect2Learn has been an amazing experience. The classes are interactive, the teachers are supportive, and I feel more confident in my studies every day.",
+    name: "— Liam Anderson, Year 10 Student, Australia ",
+    image: "/k3b.png",
   },
 ];
 
