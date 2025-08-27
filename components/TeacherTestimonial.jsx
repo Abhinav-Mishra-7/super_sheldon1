@@ -396,12 +396,12 @@ export default function TeacherTestimonial() {
       {/* Floating Logos */}
       <img
         src="/saturn.png"
-        className="absolute left-10 top-36 w-14 animate-spin-slow"
+        className="absolute left-20 top-36 w-14 animate-spin-slow"
         alt="planet"
       />
       <img
         src="/pencil.png"
-        className="absolute left-10 bottom-28 w-10 animate-pulse"
+        className="absolute left-20 bottom-20 w-10 animate-bounce"
         alt="book"
       />
       <img
@@ -411,7 +411,7 @@ export default function TeacherTestimonial() {
       />
       <img
         src="/blacksquiggle.png"
-        className="absolute left-20 top-20 w-16 animate-pulse scale-200"
+        className="absolute left-20 top-8 w-16 animate-bounce"
         alt="star"
       />
       <img

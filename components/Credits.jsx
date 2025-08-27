@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function Credits() {
   return (
-    <section className="relative w-[98%] mx-auto mt-0 overflow-hidden">
+    <section className="relative w-[85%] mx-auto mt-5 overflow-hidden">
       {/* Pill background */}
       <div className="w-full bg-[#EDE8E1] rounded-[9999px] py-4 px-6 sm:px-10 shadow-md relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch text-center">
           
           {/* Trusted Feedback */}
-          <div className="flex flex-col items-center justify-between h-full space-y-2">
+          <div className="flex flex-col items-center justify-between h-[130px] space-y-2">
             <p className="text-lg text-[#4E5566] font-medium">Trusted Feedback</p>
             <div className="h-28 flex items-center justify-center -mt-1">
               <Image
@@ -61,7 +61,7 @@ export default function Credits() {
         </div>
 
         {/* Bottom flex row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-sm text-[#4E5566] mt-2 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-sm text-[#4E5566] mt-0 text-center">
           <p className="invisible">Placeholder</p>
           <p>Educational Experience</p>
           <p>Mesa School of Business</p>
@@ -69,16 +69,16 @@ export default function Credits() {
         </div>
       </div>
 
-      <div className="text-center mt-5 relative z-20">
+      {/* White gradient overlay */}
+      <div className="absolute bottom-0 left-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+
+       <div className="text-center mx-auto mt-5 relative z-20">
         <a href="#course">
-        <button className="px-6 py-2  shadow-gray-500 mt-4 transform -translate-y-1/2 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition shadow-md hover:scale-105">
+        <button className="px-6 py-2  shadow-gray-500 mt-6 transform -translate-y-1/2 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">
           Try a free Class
         </button>
         </a>
       </div>
-
-      {/* White gradient overlay */}
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );
 }

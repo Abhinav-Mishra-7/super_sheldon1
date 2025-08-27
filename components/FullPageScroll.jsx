@@ -15,16 +15,8 @@ const slides = [
         title: " Sessions Anytime, Anywhere",
         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
       },
-      {
-        number: "02",
-        title: " Customized Curriculum for Every Topic",
-        desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
-      },
-      {
-        number: "03",
-        title: " Interactive LMS for Homework & Quizzes",
-        desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
-      },
+     
+     
     ],
     images: ["/course/Grp1.png"],
   },
@@ -32,19 +24,9 @@ const slides = [
     id: 1,
     texts: [
       {
-        number: "01",
-        title: " Sessions Anytime, Anywhere",
-        desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
-      },
-      {
         number: "02",
         title: " Customized Curriculum for Every Topic",
         desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
-      },
-      {
-        number: "03",
-        title: " Interactive LMS for Homework & Quizzes",
-        desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
       },
     ],
     images: ["/course/Grp2.png"],
@@ -52,16 +34,6 @@ const slides = [
   {
     id: 2,
     texts: [
-      {
-        number: "01",
-        title: " Sessions Anytime, Anywhere",
-        desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
-      },
-      {
-        number: "02",
-        title: " Customized Curriculum for Every Topic",
-        desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
-      },
       {
         number: "03",
         title: " Interactive LMS for Homework & Quizzes",
@@ -96,13 +68,13 @@ export default function SlideShow() {
       {/* Content Flexbox */}
       <div className="flex w-full max-w-7xl gap-5">
         {/* Left Section (Text Side) */}
-        <div className="flex-1 flex flex-col justify-start">
+        <div className=" justify-center">
           <h3 className="text-4xl font-quicksand font-semibold mb-10">
             The Global Exam Expertise
           </h3>
-
+         
           {/* Text Boxes */}
-          <div className="flex flex-col gap-5 w-[600px] z-10">
+          <div className="flex flex-col gap-5 w-[600px] z-10 ">
             {slides[active].texts.map((t, idx) => (
               <motion.div
                 key={t.title}
