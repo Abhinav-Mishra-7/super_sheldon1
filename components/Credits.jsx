@@ -5,11 +5,7 @@ import Image from "next/image";
 
 export default function Credits() {
   return (
-<<<<<<< HEAD
     <section className="relative w-[98%] mx-auto mt-0 overflow-hidden">
-=======
-    <section className="relative w-full mt-0 overflow-hidden">
->>>>>>> origin
       {/* Pill background */}
       <div className="w-full bg-[#EDE8E1] rounded-[9999px] py-4 px-6 sm:px-10 shadow-md relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch text-center">
@@ -74,17 +70,11 @@ export default function Credits() {
       </div>
 
       <div className="text-center mt-5 relative z-20">
-<<<<<<< HEAD
         <a href="#course">
         <button className="px-6 py-2  shadow-gray-500 mt-4 transform -translate-y-1/2 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition shadow-md hover:scale-105">
           Try a free Class
         </button>
         </a>
-=======
-        <button className="px-6 py-2 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">
-          Try a free Class
-        </button>
->>>>>>> origin
       </div>
 
       {/* White gradient overlay */}

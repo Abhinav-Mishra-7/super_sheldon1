@@ -135,11 +135,11 @@ const SubscribeSection = () => {
     })
 
   return (
-    <section
+    <section>
       id="try a free class"
       className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[370px] bg-[#4D2C5E]"
 
-const SubscribeSection = () => {
+const SubscribeSection =(() => {
   return (
     <section
       className="relative mx-auto mt-4 mb-4 rounded-xl overflow-hidden text-white font-poppins flex items-center justify-center w-full max-w-[1432px] h-[429px] bg-[#4D2C5E]"
@@ -205,6 +205,6 @@ const SubscribeSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default SubscribeSection;

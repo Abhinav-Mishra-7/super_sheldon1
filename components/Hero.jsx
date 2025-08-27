@@ -2,10 +2,7 @@
 "use client";
 
 import { useState } from "react";
-<<<<<<< HEAD
 import { useRouter } from "next/navigation";
-=======
->>>>>>> origin
 import Image from "next/image";
 import countries from "world-countries";
 
@@ -21,10 +18,6 @@ const countryOptions = countries.map((c) => ({
   ),
 }));
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin
 // ✅ StatCard Component
 const StatCard = ({ iconSrc, value, label }) => (
   <div className="flex items-center space-x-3">
@@ -53,7 +46,6 @@ export default function Hero() {
     // TODO: connect API / handle form
   };
 
-<<<<<<< HEAD
   const navigate = useRouter();
 
   const handleForm= (()=>{
@@ -63,10 +55,6 @@ export default function Hero() {
 
   return (
     <div  id="home" className="relative w-full overflow-hidden pb-0">
-=======
-  return (
-    <div className="relative w-full overflow-hidden pb-0">
->>>>>>> origin
       {/* Content */}
       <div className="relative grid mt-0 px-4 sm:px-10 grid-cols-1 lg:grid-cols-2 gap-x-8 items-center">
         {/* Left Column */}
@@ -110,17 +98,11 @@ export default function Hero() {
                 placeholder="Phone number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-<<<<<<< HEAD
                 className="flex-grow px-4 py-2 border border-[#E0E0E0] rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm outline-none"
               />
               
               <button
               onClick={handleForm}
-=======
-                className="flex-grow px-4 py-2 border border-[#E0E0E0] rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm"
-              />
-              <button
->>>>>>> origin
                 type="submit"
                 className="px-6 py-2 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105"
               >
