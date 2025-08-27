@@ -5,6 +5,8 @@ import { useState } from "react";
 import Popup from "./Popup";
 
 
+import Link from "next/link";
+
 // Button stays in Header
 export const Button = ({ children, className = "", variant = "primary", ...props }) => {
   const base = "px-4 py-2 rounded-full font-bold transition-colors text-xs focus:outline-none shadow-sm";
@@ -33,12 +35,12 @@ export default function Header() {
       <nav className="flex items-center justify-between pl-2 pr-2 mb-10 mx-auto shadow-lg">
         <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
     <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
-        <a href="#home">
+        <Link href="/">
          <Button variant="outline">Home</Button>
-        </a>
-        <a href="#course">
+        </Link>
+        <Link href="/courses">
          <Button variant="outline">Course</Button>
-        </a>
+        </Link>
         <a href="#testimonial">
          <Button variant="outline">Testimonial</Button>
         </a>
