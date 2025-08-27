@@ -21,6 +21,236 @@ const years = [
   "Year 12",
 ];
 
+
+
+// const coursesData = {
+//   "Year 2": [
+//     {
+//       id: "naplan-2-1",
+//       title: "ICAS Spark Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/icas_prep_course.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     }
+//   ],
+//   "Year 3": [
+//     {
+//       id: "naplan-3-1",
+//       title: "Naplan Champion Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y3naplanchampion.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//     {
+//       id: "naplan-3-2",
+//       title: "Naplan Exam Prep Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y3icassmartprep.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     }
+//   ],
+//   "Year 4": [
+//     {
+//       id: "naplan-4-1",
+//       title: "ICAS Challenger Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y4icas.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     }
+//   ],
+//   "Year 5": [
+//     {
+//       id: "naplan-5-1",
+//       title: "Naplan Progidy Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y5progidy.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//     {
+//       id: "naplan-5-2",
+//       title: "ICAS Challenger Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y5icas.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//     {
+//       id: "naplan-5-3",
+//       title: "Opportunity and Scholarship Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y5scholarship.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//   ],
+//   "Year 6": [
+//     {
+//       id: "naplan-6-1",
+//       title: "ICAS Mastermind Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y6icas.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//     {
+//       id: "naplan-6-2",
+//       title: "Scholarship Builder Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y6scholarship.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//   ],
+//   "Year 7": [
+//     {
+//       id: "naplan-7-1",
+//       title: "ICAS Genius Track Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y7icasgenius.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//     {
+//       id: "naplan-7-2",
+//       title: "NAPLAN Progidy Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y7naplanprogidy.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//   ],
+//   "Year 8": [
+//     {
+//       id: "naplan-8-1",
+//       title: "ICAS Genius Track Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y8icasgeniustech.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//   ],
+//   "Year 9": [
+//     {
+//       id: "sat",
+//       title: "ICAS Olympian Prep Course",
+//       type: "SAT Exam",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y9icasolymp.jpg",
+//       brochure: "/brochures/sat.pdf",
+//     },
+//     {
+//       id: "igcse",
+//       title: "NAPLAN Grand Master Course",
+//       type: "IGCSE",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 5,
+//       img: "/course/y9naplangm.jpg",
+//       brochure: "/brochures/igcse.pdf",
+//     },
+//     {
+//       id: "naplan-9-1",
+//       title: "Selective Accelerator Program Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y9selacc.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+//   ],
+//   "Year 10": [
+//     {
+//       id: "naplan-10-1",
+//       title: "ICAS Grand Master Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y10icasgmnew.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+    
+//   ],
+//     "Year 11": [
+//     {
+//       id: "naplan-11-1",
+//       title: "ICAS Ultimate Scholar Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y11icasscholar.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+    
+//   ],
+
+//   "Year 12": [
+//     {
+//       id: "naplan-12-1",
+//       title: "HSC Mastery Program Course",
+//       type: "Exam Preparation",
+//       duration: "22hr 30min",
+//       topics: 34,
+//       sales: 250,
+//       rating: 4,
+//       img: "/course/y12hsc.jpg",
+//       brochure: "/brochures/naplan.pdf",
+//     },
+    
+//   ],
+// };
+
+
 const coursesData = {
   "Year 2": [
     {
@@ -33,6 +263,8 @@ const coursesData = {
       rating: 4,
       img: "/course/icas_prep_course.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Kickstart your exam journey with the ICAS Spark Course, designed to ignite curiosity and build a strong foundation in test preparation.",
+      chapters: [],
     }
   ],
   "Year 3": [
@@ -46,6 +278,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y3naplanchampion.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Train like a champion with our Naplan Champion Course, helping students master key skills and strategies for exam success.",
+      chapters: [],
     },
     {
       id: "naplan-3-2",
@@ -57,6 +291,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y3icassmartprep.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Get exam-ready with the Naplan Exam Prep Course, focused on boosting confidence and performance through structured practice.",
+      chapters: [],
     }
   ],
   "Year 4": [
@@ -70,6 +306,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y4icas.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Take on new challenges with the ICAS Challenger Course, perfect for students aiming to strengthen problem-solving and critical thinking.",
+      chapters: [],
     }
   ],
   "Year 5": [
@@ -83,6 +321,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y5progidy.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Develop advanced skills with the Naplan Prodigy Course, tailored to push high achievers toward exam excellence.",
+      chapters: [],
     },
     {
       id: "naplan-5-2",
@@ -94,6 +334,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y5icas.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Build confidence and mastery with the ICAS Challenger Course, designed to prepare students for higher-level test success.",
+      chapters: [],
     },
     {
       id: "naplan-5-3",
@@ -105,6 +347,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y5scholarship.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Prepare for scholarship opportunities with a course that sharpens analytical skills and exam readiness.",
+      chapters: [],
     },
   ],
   "Year 6": [
@@ -118,6 +362,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y6icas.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Challenge your intellect with the ICAS Mastermind Course, focused on advanced concepts and critical reasoning.",
+      chapters: [],
     },
     {
       id: "naplan-6-2",
@@ -129,18 +375,9 @@ const coursesData = {
       rating: 4,
       img: "/course/y6scholarship.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Lay the foundation for success in competitive exams with the Scholarship Builder Course, crafted for ambitious learners.",
+      chapters: [],
     },
-    // {
-    //   id: "naplan-6-3",
-    //   title: "Naplan Exam Prep Course",
-    //   type: "Exam Preparation",
-    //   duration: "22hr 30min",
-    //   topics: 34,
-    //   sales: 250,
-    //   rating: 4,
-    //   img: "/images/naplan.jpg",
-    //   brochure: "/brochures/naplan.pdf",
-    // },
   ],
   "Year 7": [
     {
@@ -153,6 +390,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y7icasgenius.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Unlock your full potential with the ICAS Genius Track Course, guiding students through advanced problem-solving pathways.",
+      chapters: [],
     },
     {
       id: "naplan-7-2",
@@ -164,18 +403,9 @@ const coursesData = {
       rating: 4,
       img: "/course/y7naplanprogidy.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Excel in exams with the NAPLAN Prodigy Course, crafted to nurture young minds into high achievers.",
+      chapters: [],
     },
-    // {
-    //   id: "naplan-7-3",
-    //   title: "Naplan Exam Prep Course",
-    //   type: "Exam Preparation",
-    //   duration: "22hr 30min",
-    //   topics: 34,
-    //   sales: 250,
-    //   rating: 4,
-    //   img: "/images/naplan.jpg",
-    //   brochure: "/brochures/naplan.pdf",
-    // },
   ],
   "Year 8": [
     {
@@ -188,29 +418,9 @@ const coursesData = {
       rating: 4,
       img: "/course/y8icasgeniustech.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Pursue academic brilliance with the ICAS Genius Track Course, designed for students ready to take their skills to the next level.",
+      chapters: [],
     },
-    // {
-    //   id: "naplan-8-2",
-    //   title: "Naplan Exam Prep Course",
-    //   type: "Exam Preparation",
-    //   duration: "22hr 30min",
-    //   topics: 34,
-    //   sales: 250,
-    //   rating: 4,
-    //   img: "/images/naplan.jpg",
-    //   brochure: "/brochures/naplan.pdf",
-    // },
-    // {
-    //   id: "naplan-8-3",
-    //   title: "Naplan Exam Prep Course",
-    //   type: "Exam Preparation",
-    //   duration: "22hr 30min",
-    //   topics: 34,
-    //   sales: 250,
-    //   rating: 4,
-    //   img: "/images/naplan.jpg",
-    //   brochure: "/brochures/naplan.pdf",
-    // },
   ],
   "Year 9": [
     {
@@ -223,6 +433,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y9icasolymp.jpg",
       brochure: "/brochures/sat.pdf",
+      desc: "Train like an Olympian with our ICAS Olympian Prep Course, tailored to prepare students for international-level competition.",
+      chapters: [],
     },
     {
       id: "igcse",
@@ -234,6 +446,8 @@ const coursesData = {
       rating: 5,
       img: "/course/y9naplangm.jpg",
       brochure: "/brochures/igcse.pdf",
+      desc: "Achieve mastery with the NAPLAN Grand Master Course, combining in-depth knowledge and advanced exam strategies.",
+      chapters: [],
     },
     {
       id: "naplan-9-1",
@@ -245,6 +459,8 @@ const coursesData = {
       rating: 4,
       img: "/course/y9selacc.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Accelerate your learning with the Selective Accelerator Program, designed to prepare students for competitive entry tests.",
+      chapters: [],
     },
   ],
   "Year 10": [
@@ -258,31 +474,11 @@ const coursesData = {
       rating: 4,
       img: "/course/y10icasgmnew.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Master challenging concepts with the ICAS Grand Master Course, helping learners reach the peak of their exam performance.",
+      chapters: [],
     },
-    // {
-    //   id: "naplan-10-2",
-    //   title: "Naplan Exam Prep Course",
-    //   type: "Exam Preparation",
-    //   duration: "22hr 30min",
-    //   topics: 34,
-    //   sales: 250,
-    //   rating: 4,
-    //   img: "/images/naplan.jpg",
-    //   brochure: "/brochures/naplan.pdf",
-    // },
-    // {
-    //   id: "naplan-10-3",
-    //   title: "Naplan Exam Prep Course",
-    //   type: "Exam Preparation",
-    //   duration: "22hr 30min",
-    //   topics: 34,
-    //   sales: 250,
-    //   rating: 4,
-    //   img: "/images/naplan.jpg",
-    //   brochure: "/brochures/naplan.pdf",
-    // },
   ],
-    "Year 11": [
+  "Year 11": [
     {
       id: "naplan-11-1",
       title: "ICAS Ultimate Scholar Course",
@@ -293,10 +489,10 @@ const coursesData = {
       rating: 4,
       img: "/course/y11icasscholar.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Step into academic excellence with the ICAS Ultimate Scholar Course, designed to build confidence and deep understanding.",
+      chapters: [],
     },
-    
   ],
-
   "Year 12": [
     {
       id: "naplan-12-1",
@@ -308,8 +504,9 @@ const coursesData = {
       rating: 4,
       img: "/course/y12hsc.jpg",
       brochure: "/brochures/naplan.pdf",
+      desc: "Conquer final exams with the HSC Mastery Program Course, tailored for students aiming for top results in Year 12.",
+      chapters: [],
     },
-    
   ],
 };
 
