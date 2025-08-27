@@ -199,7 +199,7 @@ export default function TeacherCarousel() {
           >
             <img
               src={teacher.image}
-              alt={teacher.name} 
+              alt={teacher.name}
               className="w-full h-60 object-cover"
             />
 

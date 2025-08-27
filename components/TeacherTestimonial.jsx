@@ -222,12 +222,7 @@ import { Play, Pause } from "lucide-react";
 
 const videos = [
   { id: 2, name: "Ms. Aditi", src: "/videos/video2.mp4" },
-<<<<<<< HEAD
   { id: 1, name: "Ms. Abha", src: "/videos/video1.mp4" }
-=======
-  { id: 1, name: "Ms. Abha", src: "/videos/video1.mp4" },
-  { id: 3, name: " ", src: "/videos/video3.mp4" },
->>>>>>> origin
 ];
 
 export default function TeacherTestimonial() {
@@ -286,11 +281,7 @@ export default function TeacherTestimonial() {
   }, [currentIndex, isPlaying]);
 
   return (
-<<<<<<< HEAD
     <section id="testimonial"className="relative flex flex-col items-center py-16 px-4">
-=======
-    <section className="relative flex flex-col items-center py-16 px-4">
->>>>>>> origin
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-20 flex items-center justify-center">
         <div className="w-[700px] h-[700px] rounded-full bg-orange-200 opacity-30 blur-3xl"></div>
@@ -298,7 +289,6 @@ export default function TeacherTestimonial() {
 
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
-<<<<<<< HEAD
         Why Choose <br></br>Masters in Me?
       </h2>
   {/* cards side are reference of website teacher */}
@@ -318,24 +308,6 @@ export default function TeacherTestimonial() {
           </div>
           {/* Bottom Left Card */}
           <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope ">
-=======
-        Why Choose Masters in Me?
-      </h2>
-
-      <div className="relative flex items-center justify-center w-full max-w-7xl">
-        {/* Left Info Cards */}
-        <div className="flex flex-col gap-4 absolute left-[calc(50%+210px)] md:left-[calc(50%+210px)] top-[100px]">
-          {/* Top Left Card - bigger */}
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-60 h-40 flex flex-col justify-between font-manrope">
-            <img src="/pcmouse.png" className="w-14 h-14" alt="logo" />
-            <div>
-              <h3 className="font-semibold text-xl">2M+ Questions</h3>
-              <p className="text-base text-gray-600">2M+ extra projects</p>
-            </div>
-          </div>
-          {/* Bottom Left Card */}
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope">
->>>>>>> origin
             <img src="/srch.png" className="w-11 h-11 mb-2" alt="logo" />
             <h3 className="font-semibold text-xl">100K+</h3>
             <p className="text-base text-gray-600">Worldwide Students</p>
@@ -345,16 +317,11 @@ export default function TeacherTestimonial() {
         {/* Right Info Cards */}
         <div className="flex flex-col gap-4 absolute right-[calc(50%+210px)] md:right-[calc(50%+210px)] top-[140px]">
           {/* Top Right Card */}
-<<<<<<< HEAD
           <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope ">
-=======
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope">
->>>>>>> origin
             <img src="/msg.png" className="w-12 h-12 mb-2" alt="logo" />
             <h3 className="font-semibold text-lg">Future Opportunities</h3>
           </div>
           {/* Bottom Right Card - bigger */}
-<<<<<<< HEAD
           <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 w-60 h-42 flex flex-col  justify-center font-manrope ">
             <img src="/add.png" className="w-14 h-14" alt="logo" />
             <div className="mx-auto" >
@@ -363,23 +330,12 @@ export default function TeacherTestimonial() {
                <a href="#try a free class">
                        <button className="  px-6 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] hover:from-[#ef6c2b] hover:to-[#ff6a00] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">Try a free Class</button>
                </a>
-=======
-          <div className="bg-white shadow-2xl rounded-2xl p-6 w-60 h-40 flex flex-col justify-between font-manrope">
-            <img src="/add.png" className="w-14 h-14" alt="logo" />
-            <div>
-              <h3 className="font-semibold text-xl">MIT Certified +</h3>
-              <p className="text-base text-gray-600">All teachers MIT certified</p>
->>>>>>> origin
             </div>
           </div>
         </div>
 
         {/* Center Video */}
-<<<<<<< HEAD
         <div className="relative w-[280px] sm:w-[340px] md:w-[380px] aspect-[9/16] flex items-center justify-center shadow-xl rounded-full">
-=======
-        <div className="relative w-[280px] sm:w-[340px] md:w-[380px] aspect-[9/16] flex items-center justify-center">
->>>>>>> origin
           <div className="absolute -z-10 w-[260px] h-[260px] rounded-full bg-blue-900/60"></div>
           <div className="absolute -z-10 w-[340px] h-[340px] rounded-full bg-blue-700/50"></div>
           <div className="absolute -z-10 w-[420px] h-[420px] rounded-full bg-blue-500/40"></div>
@@ -425,11 +381,7 @@ export default function TeacherTestimonial() {
         {videos.map((_, index) => (
           <button
             key={index}
-<<<<<<< HEAD
             aria-label={`Go to video ${index +1}`}
-=======
-            aria-label={`Go to video ${index + 1}`}
->>>>>>> origin
             onClick={() => {
               setCurrentIndex(index);
               setIsPlaying(false);
@@ -444,11 +396,7 @@ export default function TeacherTestimonial() {
       {/* Floating Logos */}
       <img
         src="/saturn.png"
-<<<<<<< HEAD
         className="absolute left-10 top-36 w-14 animate-spin-slow"
-=======
-        className="absolute right-10 top-28 w-14 animate-spin-slow"
->>>>>>> origin
         alt="planet"
       />
       <img
@@ -458,29 +406,17 @@ export default function TeacherTestimonial() {
       />
       <img
         src="/blacksquiggle.png"
-<<<<<<< HEAD
         className="absolute right-20 bottom-20 w-16 animate-bounce"
-=======
-        className="absolute right-20 bottom-20 w-9 animate-bounce"
->>>>>>> origin
         alt="atom"
       />
       <img
         src="/blacksquiggle.png"
-<<<<<<< HEAD
         className="absolute left-20 top-20 w-16 animate-pulse scale-200"
-=======
-        className="absolute left-20 top-20 w-8 animate-pulse scale-200"
->>>>>>> origin
         alt="star"
       />
       <img
         src="/orangesquiggle.png"
-<<<<<<< HEAD
         className="absolute right-20 top-8 w-16 animate-bounce"
-=======
-        className="absolute right-20 top-10 w-10 animate-bounce"
->>>>>>> origin
         alt="lightbulb"
       />
     </section>
