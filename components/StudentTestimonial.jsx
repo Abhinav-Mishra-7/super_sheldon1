@@ -778,7 +778,7 @@ export default function StudentTestimonial() {
 
   return (
     <div
-      className="mt-8 relative flex flex-col items-center justify-center bg-white py-20 overflow-visible"
+      className="mt-6 relative flex flex-col items-center justify-center bg-white py-20 overflow-visible"
       role="region"
       aria-roledescription="carousel"
       aria-label="Student testimonials carousel"
@@ -810,7 +810,7 @@ export default function StudentTestimonial() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="relative flex-shrink-0 w-full bg-[#FB8740] px-6 md:px-12 py-10 shadow-xl rounded-2xl overflow-visible"
+              className="relative flex-shrink-0 w-[94%] mx-auto bg-[#FB8740] px-6 md:px-12 py-10 shadow-xl rounded-2xl overflow-visible"
             >
               {/* Content row */}
               <div className="relative flex items-start">
@@ -884,16 +884,12 @@ export default function StudentTestimonial() {
       </div>
 
           {/* Floating Icons */}
-<div className="absolute top-10 left-10 animate-float1 z-10">
-  <img src="/floating-icons/star.png" alt="Star" width={100} height={100} />
-</div>
 
-<div className="absolute top- right-12 animate-float2 z-10">
-  <img src="/floating-icons/book.png" alt="book" width={100} height={100} />
+<div className="absolute top-31 left-0 -translate-x-1/3 animate-float3 z-10">
+  <img src="/floating-icons/globe.png" alt="globe" width={80} height={80} />
 </div>
-
-<div className="absolute bottom-10 left-3 -translate-x-1/2 animate-float3 z-10">
-  <img src="/floating-icons/globe.png" alt="graph" width={80} height={80} />
+<div className="absolute bottom-8 right-6 animate-float1 z-10">
+  <img src="/floating-icons/orangesquiggle.png" alt="" width={80} height={80} />
 </div>
 
 <style jsx>{`

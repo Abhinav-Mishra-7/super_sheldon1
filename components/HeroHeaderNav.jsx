@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Popup from "./Popup";
+
 
 // Button stays in Header
 export const Button = ({ children, className = "", variant = "primary", ...props }) => {
@@ -27,20 +29,35 @@ const quicksand = {
 export default function Header() {
   return (
     <header style={quicksand}>
-      <nav className="flex items-center justify-between">
+      <Popup></Popup>
+      <nav className="flex items-center justify-between pl-2 pr-2 mb-10 mx-auto shadow-lg">
         <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
-        <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
-          <Button variant="outline">Home</Button>
-          <Button variant="outline">Course</Button>
-          <Button variant="outline">Testimonial</Button>
+    <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
+        <a href="#home">
+         <Button variant="outline">Home</Button>
+        </a>
+        <a href="#course">
+         <Button variant="outline">Course</Button>
+        </a>
+        <a href="#testimonial">
+         <Button variant="outline">Testimonial</Button>
+        </a>
+        <a href="#blog">
           <Button variant="outline">Blog</Button>
-        </div>
+        </a>
+    </div>
+
+
         <div className="hidden md:flex items-center space-x-5">
+          <a href="#course">
           <span className="text-xs font-bold text-gray-600 cursor-pointer hover:text-black transition-colors">
             Join Class
           </span>
+          </a>
           <Button variant="primary">Login</Button>
+          <a href="#try a free class">
           <Button variant="primary">Try a free Class</Button>
+          </a>
         </div>
       </nav>
     </header>

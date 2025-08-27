@@ -48,7 +48,7 @@ export default function HeroHeader() {
   const [country, setCountry] = useState("+370");
 
   return (
-    <section className="hero-header min-h-screen flex items-center justify-center bg-[#FFFFFF] relative overflow-hidden">
+    <section className=" mt-10 hero-header min-h-screen flex items-center justify-center bg-[#FFFFFF] relative overflow-hidden">
       {/* Spherical sun-like gradient*/}
       <div
         className="absolute left-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none"
@@ -169,7 +169,7 @@ export default function HeroHeader() {
               priority
             />
             {/* "Members" card */}
-            <div className="absolute bottom-8 left-8 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white">
+            <div className="absolute bottom-8 right-8 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white">
               <span className="font-bold text-[#1D2026] text-sm">500k+</span>
               <span className="text-[#4E5566] text-xs">Members</span>
               <div className="flex -space-x-3">

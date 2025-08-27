@@ -110,12 +110,29 @@ const Review = () => {
           letterSpacing: "-1px",
         }}
       >
-        From Our Hearts to <br /> Thousands of <br /> Australian Homes
+        From Our <span className="text-red-400">Hearts</span> to 
+        <br /> Thousands of 
+        
+        <span className="text-purple-400"> Australian</span> 
+        <span className="text-green-300"> Homes</span>
+
+           {/* Floating Saturn */}
+      <img
+        src="/saturn.png"
+        className="absolute right-10 top-20 w-14 "
+        alt="planet"
+      />
+      <img
+        src="/saturn.png"
+        className="absolute left-10 top-20 w-14 "
+        alt="planet"
+      />
+
       </h2>
 
       {/* Subtitle */}
       <p className="text-base md:text-lg font-poppins text-gray-600 max-w-xl leading-relaxed">
-        Guiding students and parents <br /> toward brighter futures every day.
+        Guiding students and parents toward brighter futures every day.
       </p>
 
       {/* Orange Box */}

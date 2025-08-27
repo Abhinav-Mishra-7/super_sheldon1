@@ -7,73 +7,73 @@ import { Play } from "lucide-react";
 const teachers = [
   {
     id: 1,
-    name: "John Doe 1",
+    name: "Ashita Gunjikar",
     subject: "Mathematics Teacher",
-    image: "https://picsum.photos/300/200?random=1",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    image: "/course/Teacher1.png",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 2,
-    name: "John Doe 2",
+    name: "Ananya Sharma",
     subject: "Mathematics Teacher",
-    image: "https://picsum.photos/300/200?random=2",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    image: "/course/Teacher2.png",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 3,
-    name: "John Doe 3",
-    subject: "Mathematics Teacher",
-    image: "https://picsum.photos/300/200?random=3",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    name: "Avishikta Dutta",
+    subject: "Chemistry Teacher",
+    image: "/course/Teacher3.png",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 4,
     name: "John Doe 4",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=4",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 5,
     name: "John Doe 5",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=5",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 6,
     name: "John Doe 6",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=6",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 7,
     name: "John Doe 7",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=7",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 8,
     name: "John Doe 8",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=8",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 9,
     name: "John Doe 9",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=9",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 10,
     name: "John Doe 10",
     subject: "Mathematics Teacher",
     image: "https://picsum.photos/300/200?random=10",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 ];
 
@@ -194,7 +194,7 @@ export default function TeacherCarousel() {
         {[...teachers, ...teachers].map((teacher, index) => (
           <div
             key={index}
-            className="relative min-w-[220px] rounded-2xl shadow-md overflow-hidden bg-white cursor-pointer"
+            className="relative min-w-[220px] rounded-2xl shadow-md overflow-hidden  bg-white cursor-pointer transition duration-500 hover:shadow-md hover:shadow-gray-500 hover:scale-105"
             onClick={() => setActiveVideo(teacher.video)}
           >
             <img
@@ -205,9 +205,9 @@ export default function TeacherCarousel() {
 
             {/* Overlay */}
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
-              <p className="font-semibold">{teacher.name}</p>
+              <p className="font-semibold text-[23px]">{teacher.name}</p>
               <p className="text-sm">{teacher.subject}</p>
-              <button
+              {/* <button
                 aria-label={`Play video of ${teacher.name}`}
                 className="absolute bottom-3 right-3 p-2 bg-blue-600 rounded-full"
                 onClick={(e) => {
@@ -216,7 +216,7 @@ export default function TeacherCarousel() {
                 }}
               >
                 <Play size={18} />
-              </button>
+              </button> */}
             </div>
           </div>
         ))}
