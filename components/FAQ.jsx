@@ -295,11 +295,10 @@ export default function FAQ() {
 
   return (
     <div className="relative max-w-3xl mx-auto px-4 py-12">
-      {/* Left & right blurred background circles */}
       <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
       <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
 
-      {/* PNG watermark left center */}
+      {/* PNG watermark */}
       <div className="absolute left-1/3 top-1/2 -translate-y-1/2 h-[400px] w-[400px] opacity-10 z-0 pointer-events-none">
         <img src="course/light-bulb.png" alt="decor" className="object-contain" />
       </div>
@@ -341,7 +340,6 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* FAQ List */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
