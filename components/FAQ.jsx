@@ -298,13 +298,10 @@ export default function FAQ() {
       <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
       <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
 
-      {/* PNG watermark */}
-      <div className="absolute left-1/3 top-1/2 -translate-y-1/2 h-[400px] w-[400px] opacity-10 z-0 pointer-events-none">
-        <img src="course/light-bulb.png" alt="decor" className="object-contain" />
-      </div>
+     
 
       {/* FAQ Content above watermark */}
-      <div className="relative z-10">
+      <div className="relative">
         {/* Title */}
         <h1 className="text-4xl font-quicksand font-bold text-center text-orange-600 mb-12">
           Frequently Asked Questions
@@ -397,6 +394,14 @@ export default function FAQ() {
           </motion.div>
         </AnimatePresence>
       </div>
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[120px] h-[120px] opacity-10 pointer-events-none">
+  <img
+    src="course/light-bulb.png"
+    alt="decor"
+    className="object-contain"
+  />
+</div>
+
     </div>
   );
 }

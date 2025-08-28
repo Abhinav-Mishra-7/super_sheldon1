@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ✅ Apply Quicksand globally */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
 
 .perspective {
   perspective: 1200px;
@@ -16,14 +23,6 @@
   transform: rotateY(180deg);
 }
 
-
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 @keyframes float-1 {
   0%   { transform: translate(0, 0); }
   50%  { transform: translate(-5px, -10px); }
@@ -66,4 +65,4 @@ html, body {
 }
 .float-icon:focus {
   animation-play-state: running;
-} 
+}

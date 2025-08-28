@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import countries from "world-countries";
 
-// ✅ Pre-process countries (flag + name + dialCode)
+// Pre-process countries (flag + name + dialCode)
 const countryOptions = countries.map((c) => ({
   code: c.cca2,
   name: c.name.common,
@@ -18,7 +18,7 @@ const countryOptions = countries.map((c) => ({
   ),
 }));
 
-// ✅ StatCard Component
+//StatCard Component
 const StatCard = ({ iconSrc, value, label }) => (
   <div className="flex items-center space-x-3">
     <div className="bg-[#F9D4AB] p-2 rounded-full">
@@ -133,7 +133,7 @@ export default function Hero() {
         {/* Right Column */}
         <div className="relative flex justify-center items-center mt-10 lg:mt-0">
           <Image
-            src="/hero-kids.png"
+            src="/header.png"
             alt="Happy students showing A+ grade"
             width={1050}
             height={780}

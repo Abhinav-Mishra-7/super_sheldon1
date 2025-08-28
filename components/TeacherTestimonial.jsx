@@ -281,71 +281,51 @@ export default function TeacherTestimonial() {
   }, [currentIndex, isPlaying]);
 
   return (
-    <section id="testimonial"className="relative flex flex-col items-center py-16 px-4">
+    <section id="testimonial" className="relative flex flex-col items-center py-16 px-4 overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-20 flex items-center justify-center">
-        <div className="w-[700px] h-[700px] rounded-full bg-orange-200 opacity-30 blur-3xl"></div>
+        <div className="w-[400px] sm:w-[600px] md:w-[700px] h-[400px] sm:h-[600px] md:h-[700px] rounded-full bg-orange-200 opacity-30 blur-3xl"></div>
       </div>
-         <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
-      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
-
+      <div className="absolute -left-[150px] sm:-left-[250px] md:-left-[300px] top-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[150px] sm:-right-[250px] md:-right-[300px] top-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
 
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
-        Why Choose <br></br>Masters in Me?
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
+        Why Choose <br /> Masters in Me?
       </h2>
-  {/* cards side are reference of website teacher */}
-      <div className="relative flex items-center justify-center w-full max-w-7xl ">
-        {/* Left Info Cards */}
-        <div className="flex flex-col gap-4 absolute left-[calc(50%+210px)] md:left-[calc(50%+210px)] top-[100px]   ">
-          {/* Top Left Card - bigger */}
-          <div className="bg-white shadow-lg rounded-2xl p-4 w-60 h-42 flex flex-col justify-between font-manrope shadow-gray-500 ">
-            <img src="/pcmouse.png" className="w-12 h-12" alt="logo" />
-            <div className=" mx-auto">
-              <h3 className="font-semibold text-xl">2M+ Questions</h3>
-              <p className="text-base text-gray-600 pb-3">2M+ extra projects</p>
-               <a href="#try a free class">
-                       <button className="  px-6 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] hover:from-[#ef6c2b] hover:to-[#ff6a00] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">Try a free Class</button>
-               </a>
-            </div>
-          </div>
-          {/* Bottom Left Card */}
-          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope ">
-            <img src="/srch.png" className="w-11 h-11 mb-2" alt="logo" />
-            <h3 className="font-semibold text-xl">100K+</h3>
-            <p className="text-base text-gray-600">Worldwide Students</p>
-          </div>
-        </div>
 
-        {/* Right Info Cards */}
-        <div className="flex flex-col gap-4 absolute right-[calc(50%+210px)] md:right-[calc(50%+210px)] top-[140px]">
-          {/* Top Right Card */}
-          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-6 w-56 h-32 flex flex-col justify-center items-start font-manrope ">
-            <img src="/msg.png" className="w-12 h-12 mb-2" alt="logo" />
-            <h3 className="font-semibold text-lg">Future Opportunities</h3>
-          </div>
-          {/* Bottom Right Card - bigger */}
-          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 w-60 h-42 flex flex-col  justify-center font-manrope ">
-            <img src="/add.png" className="w-14 h-14" alt="logo" />
-            <div className="mx-auto" >
-              <h3 className="font-semibold text-xl">MIT Certified +</h3>
-              <p className="text-base text-gray-600 pb-3">All teachers MIT certified</p>
-               <a href="#try a free class">
-                       <button className="  px-6 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] hover:from-[#ef6c2b] hover:to-[#ff6a00] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105">Try a free Class</button>
-               </a>
+      {/* Wrapper */}
+      <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-7xl gap-6 md:gap-0">
+        
+        {/* Left Info Cards */}
+        <div className="flex flex-col gap-4 static md:absolute md:left-[calc(50%+210px)] md:top-[100px] w-full sm:w-auto items-center md:items-start">
+          <div className="bg-white shadow-lg rounded-2xl p-4 w-full sm:w-60 flex flex-col justify-between font-manrope shadow-gray-500">
+            <img src="/pcmouse.png" className="w-10 sm:w-12 h-10 sm:h-12" alt="logo" />
+            <div className="mx-auto text-center">
+              <h3 className="font-semibold text-lg sm:text-xl">2M+ Questions</h3>
+              <p className="text-sm sm:text-base text-gray-600 pb-3">2M+ extra projects</p>
+              <a href="#try a free class">
+                <button className="px-5 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] text-white rounded-full font-bold text-xs sm:text-sm shadow-md transition-transform duration-300 hover:scale-105">
+                  Try a free Class
+                </button>
+              </a>
             </div>
+          </div>
+          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 sm:p-6 w-full sm:w-56 flex flex-col justify-center items-center font-manrope">
+            <img src="/srch.png" className="w-9 sm:w-11 h-9 sm:h-11 mb-2" alt="logo" />
+            <h3 className="font-semibold text-lg sm:text-xl">100K+</h3>
+            <p className="text-sm sm:text-base text-gray-600">Worldwide Students</p>
           </div>
         </div>
 
         {/* Center Video */}
-        <div className="relative w-[280px] sm:w-[340px] md:w-[380px] aspect-[9/16] flex items-center justify-center shadow-xl rounded-full">
+        <div className="relative w-[220px] sm:w-[280px] md:w-[340px] lg:w-[380px] aspect-[9/16] flex items-center justify-center shadow-xl rounded-full">
           <div className="absolute -z-10 w-[260px] h-[260px] rounded-full bg-blue-900/60"></div>
           <div className="absolute -z-10 w-[340px] h-[340px] rounded-full bg-blue-700/50"></div>
           <div className="absolute -z-10 w-[420px] h-[420px] rounded-full bg-blue-500/40"></div>
           <div className="absolute -z-10 w-[500px] h-[500px] rounded-full bg-blue-300/30"></div>
           <div className="absolute -z-10 w-[580px] h-[580px] rounded-full bg-blue-100/20"></div>
-
-          <div
+  <div
             className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
             onClick={togglePlay}
           >
@@ -364,16 +344,36 @@ export default function TeacherTestimonial() {
                 togglePlay();
               }}
               aria-label={isPlaying ? "Pause video" : "Play video"}
-              className="absolute bottom-3 right-3 bg-black/40 p-2 rounded-full"
+              className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 bg-black/40 p-1 sm:p-2 rounded-full"
             >
               {isPlaying ? (
-                <Pause className="w-6 h-6 text-white" />
+                <Pause className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
               ) : (
-                <Play className="w-6 h-6 text-white" />
+                <Play className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
               )}
             </button>
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-lg font-adamina text-white drop-shadow-lg">
+            <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 text-sm sm:text-lg font-adamina text-white drop-shadow-lg">
               {currentVideo.name}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Info Cards */}
+        <div className="flex flex-col gap-4 static md:absolute md:right-[calc(50%+210px)] md:top-[140px] w-full sm:w-auto items-center md:items-end">
+          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 sm:p-6 w-full sm:w-56 flex flex-col justify-center items-center font-manrope">
+            <img src="/msg.png" className="w-10 sm:w-12 h-10 sm:h-12 mb-2" alt="logo" />
+            <h3 className="font-semibold text-base sm:text-lg">Future Opportunities</h3>
+          </div>
+          <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 w-full sm:w-60 flex flex-col justify-center items-center font-manrope">
+            <img src="/add.png" className="w-12 sm:w-14 h-12 sm:h-14 mb-2" alt="logo" />
+            <div className="mx-auto text-center">
+              <h3 className="font-semibold text-lg sm:text-xl">MIT Certified +</h3>
+              <p className="text-sm sm:text-base text-gray-600 pb-3">All teachers MIT certified</p>
+              <a href="#try a free class">
+                <button className="px-5 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] text-white rounded-full font-bold text-xs sm:text-sm shadow-md transition-transform duration-300 hover:scale-105">
+                  Try a free Class
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -384,7 +384,7 @@ export default function TeacherTestimonial() {
         {videos.map((_, index) => (
           <button
             key={index}
-            aria-label={`Go to video ${index +1}`}
+            aria-label={`Go to video ${index + 1}`}
             onClick={() => {
               setCurrentIndex(index);
               setIsPlaying(false);
@@ -397,31 +397,12 @@ export default function TeacherTestimonial() {
       </div>
 
       {/* Floating Logos */}
-      <img
-        src="/saturn.png"
-        className="absolute left-20 top-36 w-14 animate-spin-slow"
-        alt="planet"
-      />
-      <img
-        src="/pencil.png"
-        className="absolute left-20 bottom-20 w-10 animate-bounce"
-        alt="book"
-      />
-      <img
-        src="/blacksquiggle.png"
-        className="absolute right-20 bottom-20 w-16 animate-bounce"
-        alt="atom"
-      />
-      <img
-        src="/blacksquiggle.png"
-        className="absolute left-20 top-8 w-16 animate-bounce"
-        alt="star"
-      />
-      <img
-        src="/orangesquiggle.png"
-        className="absolute right-20 top-8 w-16 animate-bounce"
-        alt="lightbulb"
-      />
+      <img src="/saturn.png" className="absolute left-5 sm:left-20 top-20 sm:top-36 w-10 sm:w-14 animate-spin-slow" alt="planet" />
+      <img src="/pencil.png" className="absolute left-5 sm:left-20 bottom-10 sm:bottom-20 w-8 sm:w-10 animate-bounce" alt="book" />
+      <img src="/blacksquiggle.png" className="absolute right-5 sm:right-20 bottom-10 sm:bottom-20 w-12 sm:w-16 animate-bounce" alt="atom" />
+      <img src="/blacksquiggle.png" className="absolute left-5 sm:left-20 top-5 sm:top-8 w-12 sm:w-16 animate-bounce" alt="star" />
+      <img src="/orangesquiggle.png" className="absolute right-5 sm:right-20 top-5 sm:top-8 w-12 sm:w-16 animate-bounce" alt="lightbulb" />
     </section>
   );
 }
+

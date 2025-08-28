@@ -30,6 +30,9 @@ module.exports = {
       colors: {
         // Add any custom colors here
       },
+       fontFamily: {
+        sans: ["var(--font-quicksand)", "sans-serif"], // ✅ Quicksand global
+      },
       animation: {
         'float-1': 'float-1 4s ease-in-out infinite',
         'float-2': 'float-2 5s ease-in-out infinite',
