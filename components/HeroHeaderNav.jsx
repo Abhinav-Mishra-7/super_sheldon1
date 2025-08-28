@@ -30,9 +30,9 @@ export default function Header() {
   return (
     <header style={quicksand}>
       <Popup></Popup>
-      <nav className="flex items-center justify-between pl-2 pr-2 mb-10 mx-auto shadow-lg">
+      <nav className="flex items-center justify-between pl-2   shadow-lg">
         <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
-    <div className="hidden lg:flex flex-1 justify-center items-center space-x-2">
+    <div className="hidden lg:flex flex-1 justify-center items-center space-x-4">
         <a href="#home">
          <Button variant="outline">Home</Button>
         </a>
@@ -42,18 +42,18 @@ export default function Header() {
         <a href="#testimonial">
          <Button variant="outline">Testimonial</Button>
         </a>
-        <a href="#blog">
+        {/* <a href="#blog">
           <Button variant="outline">Blog</Button>
-        </a>
+        </a> */}
     </div>
 
 
-        <div className="hidden md:flex items-center space-x-5">
-          <a href="#course">
-          <span className="text-xs font-bold text-gray-600 cursor-pointer hover:text-black transition-colors">
+        <div className="hidden md:flex items-center space-x-7 mr-3">
+          {/* <a href="#course"> 
+           <span className="text-xs font-bold text-gray-600 cursor-pointer hover:text-black transition-colors">
             Join Class
-          </span>
-          </a>
+          </span> 
+           </a> */}
           <Button variant="primary">Login</Button>
           <a href="#try a free class">
           <Button variant="primary">Try a free Class</Button>

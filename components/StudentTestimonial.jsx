@@ -856,7 +856,7 @@ export default function StudentTestimonial() {
                     )}`}
                     width={IMG_W}
                     height={240}
-                    className="object-contain relative z-20"
+                    className="object-contain rounded-2xl relative z-20"
                     priority
                   />
                 </div>

@@ -54,11 +54,11 @@ export default function Hero() {
   })
 
   return (
-    <div  id="home" className="relative w-full overflow-hidden pb-0">
+    <div  id="home" className="relative w-full overflow-hidden">
       {/* Content */}
       <div className="relative grid mt-0 px-4 sm:px-10 grid-cols-1 lg:grid-cols-2 gap-x-8 items-center">
         {/* Left Column */}
-        <div className="space-y-8 md:space-y-10 flex flex-col justify-center">
+        <div className="space-y-8 md:space-y-10 flex flex-col justify-center pt-5 ">
           <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight font-quicksand">
             <span>Worldwide Exam Prep Made Easy from School to </span>
             <span className="text-[#FFD700]">SATs.</span>

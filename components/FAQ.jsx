@@ -351,7 +351,7 @@ export default function FAQ() {
           >
             {faqSections[activeSection].faqs.map((item, index) => {
               const isActive = activeIndex === index;
-              // Alternate zig-zag alignment
+              //zig-zag alignment
               const alignment = index % 2 === 0 ? "ml-0 mr-40" : "ml-40 mr-0";
 
               return (

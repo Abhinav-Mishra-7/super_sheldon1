@@ -5,23 +5,31 @@ import Image from "next/image";
 
 export default function Credits() {
   return (
-    <section className="relative w-[85%] mx-auto mt-5 overflow-hidden">
+    <section className="relative w-[90%] mx-auto mt-5 overflow-hidden">
       {/* Pill background */}
       <div className="w-full bg-[#EDE8E1] rounded-[9999px] py-4 px-6 sm:px-10 shadow-md relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 items-stretch text-center">
           
           {/* Trusted Feedback */}
           <div className="flex flex-col items-center justify-between h-[130px] space-y-2">
             <p className="text-lg text-[#4E5566] font-medium">Trusted Feedback</p>
-            <div className="h-28 flex items-center justify-center -mt-1">
-              <Image
-                src="/reviews.png"
+            <div className="h-28 flex items-center justify-center -mt-1 gap-3">
+               <Image
+                src="/trustpilot.png"
                 alt="Trustpilot"
-                width={380}
-                height={160}
+                width={100}
+                height={100}
+                className="object-contain"
+              />
+              <Image
+                src="/google.png"
+                alt="Trustpilot"
+                width={100}
+                height={100}
                 className="object-contain"
               />
             </div>
+            <p className="text-xs">TrusteScore 4.9 395 reviews , 278 Reviews</p>
           </div>
 
           {/* Accredited By */}
@@ -29,10 +37,10 @@ export default function Credits() {
             <p className="text-lg text-[#4E5566] font-medium">Accredited by</p>
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/stemi.png"
+                src="/Stem.png"
                 alt="STEM Accredited"
-                width={240}
-                height={110}
+                width={200}
+                height={100}
                 className="object-contain"
               />
             </div>
@@ -43,9 +51,9 @@ export default function Credits() {
             <p className="text-lg text-[#4E5566] font-medium">Built by alumni of</p>
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/mesa.png"
+                src="/Messa.png"
                 alt="Mesa School of Business Logo"
-                width={240}
+                width={200}
                 height={110}
                 className="object-contain"
               />
@@ -54,14 +62,14 @@ export default function Credits() {
 
           {/* Exam Confidence */}
           <div className="flex flex-col items-center justify-center h-full space-y-2">
-            <p className="text-[#1D2026] font-semibold text-sm leading-snug">
+            <p className="text-[#1D2026] font-semibold text-md leading-snug">
               80% learners show Exam<br />increased confidence in 2 weeks
             </p>
           </div>
         </div>
 
         {/* Bottom flex row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-sm text-[#4E5566] mt-0 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-md text-[#4E5566] mt-0 text-center">
           <p className="invisible">Placeholder</p>
           <p>Educational Experience</p>
           <p>Mesa School of Business</p>
