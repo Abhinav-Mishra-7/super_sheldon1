@@ -101,6 +101,9 @@ import Image from "next/image";
 const Review = () => {
   return (
     <section className="relative py-12 flex flex-col items-center text-center px-6">
+        <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+
       {/* Title */}
       <h2
         className="font-quicksand font-semibold text-center align-middle mb-6"

@@ -294,95 +294,112 @@ export default function FAQ() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-quicksand font-bold text-center text-orange-600 mb-12">
-        Frequently Asked Questions
-      </h1>
+    <div className="relative max-w-3xl mx-auto px-4 py-12">
+      {/* Left & right blurred background circles */}
+      <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
 
-      {/* Section Tabs */}
-      <div className="relative flex justify-center mb-10 bg-orange-100 rounded-full p-1">
-        {faqSections.map((section, idx) => (
-          <button
-            key={idx}
-            onClick={() => {
-              setActiveSection(idx);
-              setActiveIndex(null);
-            }}
-            className="relative flex-1 text-center px-4 sm:px-6 py-2 font-semibold z-10 transition-colors duration-300"
-          >
-            <span
-              className={`relative z-10 ${
-                activeSection === idx ? "text-white" : "text-orange-600"
-              }`}
-            >
-              {section.title}
-            </span>
-
-            {activeSection === idx && (
-              <motion.div
-                layoutId="tabIndicator"
-                className="absolute inset-0 bg-orange-500 rounded-full shadow-md z-0"
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-            )}
-          </button>
-        ))}
+      {/* PNG watermark left center */}
+      <div className="absolute left-1/3 top-1/2 -translate-y-1/2 h-[400px] w-[400px] opacity-10 z-0 pointer-events-none">
+        <img src="course/light-bulb.png" alt="decor" className="object-contain" />
       </div>
 
-      {/* FAQ List */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeSection} // Animate section changes
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.4 }}
-          className="space-y-4"
-        >
-          {faqSections[activeSection].faqs.map((item, index) => {
-            const isActive = activeIndex === index;
-            return (
-              <motion.div
-                key={index}
-                layout
-                initial={{ borderRadius: 10 }}
-                className={`border border-orange-300 rounded-lg overflow-hidden transition-all duration-300 ${
-                  isActive ? "bg-orange-50" : "bg-white"
+      {/* FAQ Content above watermark */}
+      <div className="relative z-10">
+        {/* Title */}
+        <h1 className="text-4xl font-quicksand font-bold text-center text-orange-600 mb-12">
+          Frequently Asked Questions
+        </h1>
+
+        {/* Section Tabs */}
+        <div className="relative flex justify-center mb-10 bg-orange-100 rounded-full p-1">
+          {faqSections.map((section, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                setActiveSection(idx);
+                setActiveIndex(null);
+              }}
+              className="relative flex-1 text-center px-4 sm:px-6 py-2 font-semibold z-10 transition-colors duration-300"
+            >
+              <span
+                className={`relative z-10 ${
+                  activeSection === idx ? "text-white" : "text-orange-600"
                 }`}
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none"
+                {section.title}
+              </span>
+
+              {activeSection === idx && (
+                <motion.div
+                  layoutId="tabIndicator"
+                  className="absolute inset-0 bg-orange-500 rounded-full shadow-md z-0"
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* FAQ List */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSection}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-4"
+          >
+            {faqSections[activeSection].faqs.map((item, index) => {
+              const isActive = activeIndex === index;
+              // Alternate zig-zag alignment
+              const alignment = index % 2 === 0 ? "ml-0 mr-40" : "ml-40 mr-0";
+
+              return (
+                <motion.div
+                  key={index}
+                  layout
+                  initial={{ borderRadius: 10 }}
+                  className={`border border-orange-300 rounded-lg overflow-hidden transition-all duration-300 ${alignment} ${
+                    isActive ? "bg-orange-50" : "bg-white"
+                  }`}
                 >
-                  <span
-                    className={`font-anybody text-lg ${
-                      isActive ? "text-orange-600" : "text-orange-700"
-                    }`}
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none"
                   >
-                    {index + 1}. {item.question}
-                  </span>
-                  <span className="text-orange-500 text-2xl font-bold">
-                    {isActive ? "−" : "+"}
-                  </span>
-                </button>
-                <AnimatePresence>
-                  {isActive && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-6 pb-4 text-orange-800 font-manrope text-base"
+                    <span
+                      className={`font-anybody text-lg ${
+                        isActive ? "text-orange-600" : "text-orange-700"
+                      }`}
                     >
-                      {item.answer}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </AnimatePresence>
+                      {item.question}
+                    </span>
+                    <span className="text-orange-500 text-2xl font-bold">
+                      {isActive ? "−" : "+"}
+                    </span>
+                  </button>
+                  <AnimatePresence>
+                    {isActive && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-6 pb-4 text-orange-800 font-manrope text-base"
+                      >
+                        {item.answer}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
+

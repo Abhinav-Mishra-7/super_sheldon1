@@ -286,6 +286,9 @@ export default function TeacherTestimonial() {
       <div className="absolute inset-0 -z-20 flex items-center justify-center">
         <div className="w-[700px] h-[700px] rounded-full bg-orange-200 opacity-30 blur-3xl"></div>
       </div>
+         <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+
 
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
