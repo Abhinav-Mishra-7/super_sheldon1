@@ -68,13 +68,13 @@ const teachers = [
     image: "/course/Teacher9.png",
     // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
-  // {
-  //   id: 10,
-  //   name: "John Doe 10",
-  //   subject: "Mathematics Teacher",
-  //   image: "https://picsum.photos/300/200?random=10",
-  //   // video: "https://www.w3schools.com/html/mov_bbb.mp4",
-  // },
+  {
+    id: 10,
+    name: "Priyanshi Agrawal",
+    subject: "AI/ML Python Teacher",
+    image: "/course/Teacher10.png",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
 ];
 
 // export default function TeacherCarousel() {

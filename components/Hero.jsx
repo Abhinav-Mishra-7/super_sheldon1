@@ -54,16 +54,14 @@ export default function Hero() {
   })
 
   return (
-    <div  id="home" className="relative w-full overflow-hidden pb-0">
+    <div  id="home" className="relative w-full overflow-hidden">
       {/* Content */}
       <div className="relative grid mt-0 px-4 sm:px-10 grid-cols-1 lg:grid-cols-2 gap-x-8 items-center">
         {/* Left Column */}
-        <div className="space-y-8 md:space-y-10 flex flex-col justify-center">
-          <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight font-[quicksand]">
-            <span>Ace Every Exam Worldwide</span> with Expert-Led Prep from{" "}
-            <span className="text-[#1D2026]">NAPLAN</span> to{" "}
-            <span className="text-[#FFD700]">S</span>
-            <span className="text-[#1D2026]">AT.</span>
+        <div className="space-y-8 md:space-y-10 flex flex-col justify-center pt-5 ">
+          <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight font-quicksand">
+            <span>Worldwide Exam Prep Made Easy from School to </span>
+            <span className="text-[#FFD700]">SATs.</span>
           </h1>
 
           {/* Phone Form */}
@@ -72,7 +70,7 @@ export default function Hero() {
             onSubmit={handleSubmit}
           >
             <label
-              className="text-xs text-[#4E5566] font-medium mb-1"
+              className="text-md text-[#494e5e] font-medium mb-1"
               htmlFor="phone"
             >
               Phone number
@@ -113,7 +111,7 @@ export default function Hero() {
           </form>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-6 md:gap-8 pt-4">
+          <div className="flex flex-wrap gap-6 md:gap-8 pt-0">
             <StatCard
               iconSrc="/CircleWavyCheck.png"
               value="100k"
@@ -139,13 +137,13 @@ export default function Hero() {
             alt="Happy students showing A+ grade"
             width={1050}
             height={780}
-            className="max-w-full h-auto"
+            className="max-w-full h-full"
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
           />
 
           {/* Members Card */}
-          <div className="absolute bottom-6 left-6 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white">
+          <div className="absolute bottom-6 right-6 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white animate-float1">
             <span className="font-bold text-[#1D2026] text-sm">500k+</span>
             <span className="text-[#4E5566] text-xs">Members</span>
             <div className="flex -space-x-3">
@@ -180,7 +178,7 @@ export default function Hero() {
               height={100}
             />
           </div>
-          <div className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 z-10 animate-float3">
+          <div className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 z-10 animate-float1">
             <Image
               src="/floating-icons/book.png"
               alt="Book icon"
@@ -188,7 +186,7 @@ export default function Hero() {
               height={100}
             />
           </div>
-          <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-10 animate-float2">
+          <div className="absolute bottom-0 left-0 translate-x-1/4 translate-y-1/4 z-10 animate-float1">
             <Image
               src="/floating-icons/graph.png"
               alt="Graph icon"

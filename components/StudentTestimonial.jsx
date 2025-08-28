@@ -777,12 +777,17 @@ export default function StudentTestimonial() {
   };
 
   return (
-    <div
-      className="mt-6 relative flex flex-col items-center justify-center bg-white py-20 overflow-visible"
+    <div className="bg-[#FFF9F1] w-full h-full">
+      
+      <div
+      className="mt-8 relative flex flex-col items-center justify-center bg-white py-20 overflow-visible"
       role="region"
       aria-roledescription="carousel"
       aria-label="Student testimonials carousel"
     >
+         <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+
       {/* Carousel */}
       <div
         className="relative w-11/12 max-w-6xl rounded-2xl z-10 overflow-visible"
@@ -850,8 +855,8 @@ export default function StudentTestimonial() {
                       ""
                     )}`}
                     width={IMG_W}
-                    height={280}
-                    className="object-contain relative z-20"
+                    height={240}
+                    className="object-contain rounded-2xl relative z-20"
                     priority
                   />
                 </div>
@@ -885,8 +890,8 @@ export default function StudentTestimonial() {
 
           {/* Floating Icons */}
 
-<div className="absolute top-31 left-0 -translate-x-1/3 animate-float3 z-10">
-  <img src="/floating-icons/globe.png" alt="globe" width={80} height={80} />
+<div className="absolute bottom-6 left-8 -translate-x-1/3 animate-float1 z-10">
+  <img src="/floating-icons/globe.png" alt="globe" width={60} height={60} />
 </div>
 <div className="absolute bottom-8 right-6 animate-float1 z-10">
   <img src="/floating-icons/orangesquiggle.png" alt="" width={80} height={80} />
@@ -912,5 +917,7 @@ export default function StudentTestimonial() {
 
 
     </div>
+    </div>
+    
   );
 }

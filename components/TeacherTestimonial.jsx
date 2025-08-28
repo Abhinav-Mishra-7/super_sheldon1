@@ -286,6 +286,9 @@ export default function TeacherTestimonial() {
       <div className="absolute inset-0 -z-20 flex items-center justify-center">
         <div className="w-[700px] h-[700px] rounded-full bg-orange-200 opacity-30 blur-3xl"></div>
       </div>
+         <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+
 
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
@@ -396,12 +399,12 @@ export default function TeacherTestimonial() {
       {/* Floating Logos */}
       <img
         src="/saturn.png"
-        className="absolute left-10 top-36 w-14 animate-spin-slow"
+        className="absolute left-20 top-36 w-14 animate-spin-slow"
         alt="planet"
       />
       <img
         src="/pencil.png"
-        className="absolute left-10 bottom-28 w-10 animate-pulse"
+        className="absolute left-20 bottom-20 w-10 animate-bounce"
         alt="book"
       />
       <img
@@ -411,7 +414,7 @@ export default function TeacherTestimonial() {
       />
       <img
         src="/blacksquiggle.png"
-        className="absolute left-20 top-20 w-16 animate-pulse scale-200"
+        className="absolute left-20 top-8 w-16 animate-bounce"
         alt="star"
       />
       <img

@@ -724,7 +724,7 @@ export default function ExamCourses() {
   const isScrollable = items.length > 3;
 
   return (
-    <div id="course"className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[650px] border border-gray-300">
+    <div id="course"className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[700px] border border-gray-300">
       {/* Title */}
       <h2 className="text-2xl font-bold text-center mb-6">
         Our Exam Preparation Courses
