@@ -5,6 +5,8 @@ import { useState } from "react";
 import Popup from "./Popup";
 
 
+import Link from "next/link";
+
 // Button stays in Header
 export const Button = ({ children, className = "", variant = "primary", ...props }) => {
   const base = "px-4 py-2 rounded-full font-bold transition-colors text-xs focus:outline-none shadow-sm";
@@ -36,7 +38,7 @@ export default function Header() {
         <a href="#home">
          <Button variant="outline">Home</Button>
         </a>
-        <a href="#course">
+        <a href="/courses">
          <Button variant="outline">Course</Button>
         </a>
         <a href="#testimonial">
