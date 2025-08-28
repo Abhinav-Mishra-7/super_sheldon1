@@ -5,6 +5,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.perspective {
+  perspective: 1200px;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+
+
+
 html, body {
   margin: 0;
   padding: 0;

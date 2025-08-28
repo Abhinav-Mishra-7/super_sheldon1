@@ -7,8 +7,11 @@ import Footer from "@/components/Footer";
 
 import CoursePage from "@/components/CoursePage";
 
-import PricingCards from "@/components/PricingCards";
+import CardsNaplan from "@/components/PricingCardNaplan";
 
+import CardsICAS from "@/components/PricingCardIcas";
+
+import CardsHSC from "@/components/PricingCardsHSC";
 
 
 export default function Courses() {
@@ -18,7 +21,9 @@ export default function Courses() {
             <CoursePage/>
 
 
-            <PricingCards/>
+            <CardsNaplan/>
+            <CardsICAS/>
+            <CardsHSC/>
 
             <TeacherTestimonial/>
             <FullPageSlider/>
