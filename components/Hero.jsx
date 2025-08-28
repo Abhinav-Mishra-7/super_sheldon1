@@ -18,6 +18,85 @@ const countryOptions = countries.map((c) => ({
   ),
 }));
 
+const countryPhoneCodes = {AF: "+93",AL: "+355",DZ: "+213",AS: "+1-684",AD: "+376",AO: "+244",AI: "+1-264",AG: "+1-268",AR: "+54", AM: "+374",AW: "+297",
+  AU: "+61",AT: "+43",AZ: "+994",BS: "+1-242",BH: "+973",BD: "+880",BB: "+1-246",BY: "+375",
+  BE: "+32",BZ: "+501",BJ: "+229",BM: "+1-441",BT: "+975",BO: "+591",BA: "+387",BW: "+267",
+  BR: "+55",IO: "+246",BN: "+673",BG: "+359",BF: "+226",BI: "+257",KH: "+855",CM: "+237",
+  CA: "+1",CV: "+238",KY: "+1-345",CF: "+236",TD: "+235",CL: "+56",CN: "+86",CX: "+61",CC: "+61",
+  CO: "+57",KM: "+269",CD: "+243",CG: "+242",CK: "+682",CR: "+506",CI: "+225",HR: "+385",CU: "+53",
+  CY: "+357",CZ: "+420",DK: "+45",DJ: "+253",DM: "+1-767",DO: "+1-809", // also +1-829TP: "+670",
+  EC: "+593",EG: "+20",SV: "+503",GQ: "+240",ER: "+291",EE: "+372",ET: "+251",FK: "+500",
+  FO: "+298",FJ: "+679",FI: "+358",FR: "+33",GF: "+594",PF: "+689",TF: "+262",GA: "+241",
+  GM: "+220",GE: "+995",DE: "+49",GH: "+233",GI: "+350",GB: "+44",GR: "+30",GL: "+299",GD: "+1-473",
+  GP: "+590",
+  GU: "+1-671",
+  GT: "+502",
+  GN: "+224",
+  GW: "+245",
+  GY: "+592",
+  HT: "+509",
+  HM: "+672",
+  VA: "+39",
+  HN: "+504",
+  HK: "+852",
+  HU: "+36",
+  IS: "+354",
+  IN: "+91",
+  ID: "+62",
+  IR: "+98",
+  IQ: "+964",
+  IE: "+353",
+  IL: "+972",
+  IT: "+39",
+  JM: "+1-876",
+  JP: "+81",
+  JO: "+962",
+  KZ: "+7",
+  KE: "+254",
+  KI: "+686",
+  KP: "+850",
+  KR: "+82",
+  KW: "+965",
+  KG: "+996",
+  LA: "+856",
+  LV: "+371",
+  LB: "+961",
+  LS: "+266",
+  LR: "+231",
+  LY: "+218",
+  LI: "+423",
+  LT: "+370",
+  LU: "+352",
+  MO: "+853",
+  MK: "+389",
+  MG: "+261",
+  MW: "+265",
+  MY: "+60",
+  MV: "+960",
+  ML: "+223",
+  MT: "+356",
+  MH: "+692",
+  MQ: "+596",
+  MR: "+222",
+  MU: "+230",
+  YT: "+269",
+  MX: "+52",
+  FM: "+691",
+  MD: "+373",
+  MC: "+377",
+  MN: "+976",
+  MS: "+1-664",
+  MA: "+212",
+  MZ: "+258",
+  MM: "+95",
+  NA: "+264",
+  NR: "+674",
+  NP: "+977",
+  NL: "+31",
+};
+
+
+
 //StatCard Component
 const StatCard = ({ iconSrc, value, label }) => (
   <div className="flex items-center space-x-3">
@@ -35,6 +114,15 @@ export default function Hero() {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("+370");
   const [error, setError] = useState("");
+  const [userCountryCode , setUserCountryCode] = useState("+1") ;
+
+  const getUserCountryPhoneCode = async()=>{
+    const response = await fetch('https://iplocate.io/api/lookup?apikey=0e7ca4b669dc85fbc604c1776a93d3e5') ;
+    const data = await response.json() ;
+    setUserCountryCode(countryPhoneCodes[data.country_code]) ;
+  }
+
+  getUserCountryPhoneCode() ;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,28 +164,13 @@ export default function Hero() {
               Phone number
             </label>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-              <select
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
-                className="border border-[#E0E0E0] rounded-lg px-2 py-2 text-sm bg-white w-40"
-                aria-label="Country code"
-              >
-                {countryOptions
-                  .filter((c) => c.dialCode)
-                  .map((c) => (
-                    <option key={c.code} value={c.dialCode}>
-                      {c.flag} {c.name} ({c.dialCode})
-                    </option>
-                  ))}
-              </select>
-              <input
-                id="phone"
-                type="tel"
-                placeholder="Phone number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="flex-grow px-4 py-2 border border-[#E0E0E0] rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm outline-none"
-              />
+              <div className="flex items-center justify-center flex-grow px-4 py-2 rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm outline-none">
+                <div className="text-black text-center pt-2 w-9 h-10 bg-white rounded-s-lg border-e border-[#E0E0E0]">{userCountryCode}</div>
+                <input id="phone" type="tel" placeholder="Phone number"
+                  value={phone} onChange={(e) => setPhone(e.target.value)}
+                  className="flex-grow px-4 py-2.5 rounded-e-lg text-sm outline-none"
+                />
+              </div>
               
               <button
               onClick={handleForm}
