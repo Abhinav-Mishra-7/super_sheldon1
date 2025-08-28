@@ -1,6 +1,5 @@
 
 
-
 // "use client";
 
 // import Image from "next/image";
@@ -15,23 +14,6 @@
 //     coursesData[Object.keys(coursesData)[0]][0].id
 //   );
 //   const [reviews, setReviews] = useState([]);
-
-//   const chapters = [
-//     {
-//       title: "Chapter 1: Course Overview",
-//       lessons: ["1.1 Introduction – 5 min", "1.2 Basics – 7 min"],
-//     },
-//     {
-//       title: "Chapter 2: Demo",
-//       lessons: [
-//         "2.1 Reading Lab",
-//         "2.2 Interactive Visual Components",
-//         "2.3 Vocab Practicing",
-//         "2.4 Vocab Games",
-//         "2.5 Vocab Styling",
-//       ],
-//     },
-//   ];
 
 //   const allReviews = [
 //     { name: "Leonardo Da Vinci", text: "Loved the course. I’ve learned some very subtle techniques, especially on leaves.", img: "" },
@@ -122,10 +104,7 @@
 //           <h2 className="mt-6 text-4xl font-bold">{currentCourse.title}</h2>
 //           <h3 className="mt-5 font-semibold text-2xl">About Course</h3>
 //           <p className="text-gray-700 mt-4 text-xl leading-relaxed">
-//             Our {currentCourse.title} is designed to help students excel in all
-//             key test areas. Through personalised tutoring, targeted practice, and
-//             proven strategies, students build the skills, confidence, and exam
-//             techniques needed to achieve their best possible results.
+//             {currentCourse.desc}
 //           </p>
 
 //           {/* Reviews */}
@@ -162,27 +141,11 @@
 //         <div className="w-full md:w-[380px] space-y-10 scale-110 origin-top">
 //           {/* Chapters */}
 //           <div className="bg-white shadow rounded-lg p-6">
-//             {chapters.map((c, idx) => (
+//             {currentCourse.chapters?.map((c, idx) => (
 //               <div key={idx} className="mb-6">
-//                 <button
-//                   className="w-full flex justify-between items-center font-semibold text-xl transition-colors duration-300 hover:text-orange-600"
-//                   onClick={() => setActiveTab(idx === activeTab ? -1 : idx)}
-//                 >
+//                 <div className="w-full flex justify-between items-center font-semibold text-s transition-colors duration-300 hover:text-orange-600">
 //                   <span>{c.title}</span>
-//                   <span>{activeTab === idx ? "−" : "+"}</span>
-//                 </button>
-//                 {activeTab === idx && (
-//                   <ul className="mt-4 pl-6 list-disc text-lg text-gray-700 space-y-2 transition-all duration-500">
-//                     {c.lessons.map((l, i) => (
-//                       <li
-//                         key={i}
-//                         className="hover:text-orange-500 transition-transform duration-300 hover:translate-x-1"
-//                       >
-//                         <Link href={"#"}>{l}</Link>
-//                       </li>
-//                     ))}
-//                   </ul>
-//                 )}
+//                 </div>
 //               </div>
 //             ))}
 //           </div>
@@ -236,6 +199,7 @@
 //     </div>
 //   );
 // }
+
 
 
 "use client";
@@ -330,18 +294,24 @@ export default function CoursePage() {
       <section className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 pt-36 pb-16 gap-12">
         {/* Left Side */}
         <div className="flex-[1.5]">
-          <div className="rounded-lg overflow-hidden shadow w-[95%] scale-105">
+          {/* Fixed Course Image */}
+          <div className="rounded-lg overflow-hidden shadow w-full mb-6">
             <Image
               src={currentCourse.img}
               alt={currentCourse.title}
               width={1000}
               height={600}
-              className="object-cover w-full"
+              className="object-cover w-full h-auto"
             />
           </div>
-          <h2 className="mt-6 text-4xl font-bold">{currentCourse.title}</h2>
-          <h3 className="mt-5 font-semibold text-2xl">About Course</h3>
-          <p className="text-gray-700 mt-4 text-xl leading-relaxed">
+
+          {/* Smaller Course Title */}
+          <h2 className="mt-4 text-2xl md:text-3xl font-bold leading-snug">
+            {currentCourse.title}
+          </h2>
+
+          <h3 className="mt-4 font-semibold text-xl">About Course</h3>
+          <p className="text-gray-700 mt-3 text-lg leading-relaxed">
             {currentCourse.desc}
           </p>
 
@@ -366,7 +336,9 @@ export default function CoursePage() {
                     <div className="w-12 h-12 rounded-full bg-gray-200 flex-shrink-0" />
                   )}
                   <div className="flex-1">
-                    <p className="font-semibold text-orange-500 text-base">{r.name}</p>
+                    <p className="font-semibold text-orange-500 text-base">
+                      {r.name}
+                    </p>
                     <p className="text-gray-700 text-base">{r.text}</p>
                   </div>
                 </div>
@@ -376,12 +348,12 @@ export default function CoursePage() {
         </div>
 
         {/* Right Side */}
-        <div className="w-full md:w-[380px] space-y-10 scale-110 origin-top">
+        <div className="w-full md:w-[450px] space-y-10">
           {/* Chapters */}
-          <div className="bg-white shadow rounded-lg p-6">
+          <div className="bg-white shadow rounded-lg p-8">
             {currentCourse.chapters?.map((c, idx) => (
               <div key={idx} className="mb-6">
-                <div className="w-full flex justify-between items-center font-semibold text-xl transition-colors duration-300 hover:text-orange-600">
+                <div className="w-full flex justify-between items-center font-semibold text-base md:text-lg transition-colors duration-300 hover:text-orange-600">
                   <span>{c.title}</span>
                 </div>
               </div>
@@ -389,7 +361,7 @@ export default function CoursePage() {
           </div>
 
           {/* Teacher Box */}
-          <div className="relative bg-orange-100 rounded-lg shadow overflow-hidden scale-110">
+          <div className="relative bg-orange-100 rounded-lg shadow overflow-hidden">
             <Image
               src="/coursepage/kidwithearphones.png"
               alt="kid"
