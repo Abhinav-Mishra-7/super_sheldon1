@@ -7,7 +7,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const quicksand = {
-  fontFamily: "'Quicksand', Arial, sans-serif",
+  fontFamily: "'Quicksand', sans-serif",
   fontWeight: 700,
   fontStyle: "bold",
 };
@@ -65,6 +65,7 @@ export default function HeroHeader() {
           WebkitBackdropFilter: "blur(650px)",
         }}
       ></div>
+      
 
       <div className="w-full mx-10 px-[20px] relative z-20">
         {/* Navigation Bar */}
@@ -164,7 +165,7 @@ export default function HeroHeader() {
           {/* Right Column: Image with Floating Icons */}
           <div className="relative flex justify-center items-center mt-8 lg:mt-0">
             <Image
-              src="/hero-kids.png"
+              src="/Header.png"
               alt="Happy students showing A+ grade"
               width={1050}
               height={780}
