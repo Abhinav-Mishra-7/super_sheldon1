@@ -647,7 +647,7 @@ chapters: [
       img: "/course/y10icasgmnew.jpg",
       brochure: "/brochures/naplan.pdf",
       desc: "Master challenging concepts with the ICAS Grand Master Course, helping learners reach the peak of their exam performance.",
-      cchapters: [
+      chapters: [
   { title: "Reading: Analysing Themes Across Multiple Texts" },
   { title: "Reading: Author’s Purpose, Bias & Perspective" },
   { title: "Vocabulary: Academic & Subject-specific Language" },
