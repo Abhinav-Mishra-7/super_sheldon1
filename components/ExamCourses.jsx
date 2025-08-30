@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Download, Clock, BookOpen, Users } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const years = [
   "Year 2",
@@ -23,234 +24,6 @@ const years = [
 
 
 
-// const coursesData = {
-//   "Year 2": [
-//     {
-//       id: "naplan-2-1",
-//       title: "ICAS Spark Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/icas_prep_course.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     }
-//   ],
-//   "Year 3": [
-//     {
-//       id: "naplan-3-1",
-//       title: "Naplan Champion Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y3naplanchampion.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//     {
-//       id: "naplan-3-2",
-//       title: "Naplan Exam Prep Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y3icassmartprep.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     }
-//   ],
-//   "Year 4": [
-//     {
-//       id: "naplan-4-1",
-//       title: "ICAS Challenger Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y4icas.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     }
-//   ],
-//   "Year 5": [
-//     {
-//       id: "naplan-5-1",
-//       title: "Naplan Progidy Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y5progidy.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//     {
-//       id: "naplan-5-2",
-//       title: "ICAS Challenger Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y5icas.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//     {
-//       id: "naplan-5-3",
-//       title: "Opportunity and Scholarship Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y5scholarship.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//   ],
-//   "Year 6": [
-//     {
-//       id: "naplan-6-1",
-//       title: "ICAS Mastermind Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y6icas.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//     {
-//       id: "naplan-6-2",
-//       title: "Scholarship Builder Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y6scholarship.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//   ],
-//   "Year 7": [
-//     {
-//       id: "naplan-7-1",
-//       title: "ICAS Genius Track Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y7icasgenius.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//     {
-//       id: "naplan-7-2",
-//       title: "NAPLAN Progidy Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y7naplanprogidy.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//   ],
-//   "Year 8": [
-//     {
-//       id: "naplan-8-1",
-//       title: "ICAS Genius Track Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y8icasgeniustech.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//   ],
-//   "Year 9": [
-//     {
-//       id: "sat",
-//       title: "ICAS Olympian Prep Course",
-//       type: "SAT Exam",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y9icasolymp.jpg",
-//       brochure: "/brochures/sat.pdf",
-//     },
-//     {
-//       id: "igcse",
-//       title: "NAPLAN Grand Master Course",
-//       type: "IGCSE",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 5,
-//       img: "/course/y9naplangm.jpg",
-//       brochure: "/brochures/igcse.pdf",
-//     },
-//     {
-//       id: "naplan-9-1",
-//       title: "Selective Accelerator Program Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y9selacc.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-//   ],
-//   "Year 10": [
-//     {
-//       id: "naplan-10-1",
-//       title: "ICAS Grand Master Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y10icasgmnew.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-    
-//   ],
-//     "Year 11": [
-//     {
-//       id: "naplan-11-1",
-//       title: "ICAS Ultimate Scholar Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y11icasscholar.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-    
-//   ],
-
-//   "Year 12": [
-//     {
-//       id: "naplan-12-1",
-//       title: "HSC Mastery Program Course",
-//       type: "Exam Preparation",
-//       duration: "22hr 30min",
-//       topics: 34,
-//       sales: 250,
-//       rating: 4,
-//       img: "/course/y12hsc.jpg",
-//       brochure: "/brochures/naplan.pdf",
-//     },
-    
-//   ],
-// };
-
-
 const coursesData = {
   "Year 2": [
     {
@@ -263,6 +36,7 @@ const coursesData = {
       rating: 4,
       img: "/course/icas_prep_course.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y2page1",
       desc: "Kickstart your exam journey with the ICAS Spark Course, designed to ignite curiosity and build a strong foundation in test preparation.",
       chapters: [
   { title: "Reading: Understanding Short Stories" },
@@ -290,6 +64,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y3naplanchampion.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y3page1",
       desc: "Train like a champion with our Naplan Champion Course, helping students master key skills and strategies for exam success.",
       chapters: [
   { title: "Reading: Finding Information in Short Texts" },
@@ -314,6 +89,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y3icassmartprep.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y2page2",
       desc: "Get exam-ready with the Naplan Exam Prep Course, focused on boosting confidence and performance through structured practice.",
       chapters: [
   { title: "Reading: Understanding Fiction & Non-Fiction Passages" },
@@ -340,6 +116,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y4icas.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y4page1",
       desc: "Take on new challenges with the ICAS Challenger Course, perfect for students aiming to strengthen problem-solving and critical thinking.",
       chapters: [
   { title: "Reading: Understanding Longer Stories & Articles" },
@@ -366,6 +143,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y5progidy.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y5page1",
       desc: "Develop advanced skills with the Naplan Prodigy Course, tailored to push high achievers toward exam excellence.",
       chapters: [
   { title: "Reading: Understanding Informative & Narrative Texts" },
@@ -390,6 +168,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y5icas.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y5page2",
       desc: "Build confidence and mastery with the ICAS Challenger Course, designed to prepare students for higher-level test success.",
       chapters: [
   { title: "Reading: Interpreting Factual, Narrative & Poetic Texts" },
@@ -414,6 +193,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y5scholarship.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y5page3",
       desc: "Prepare for scholarship opportunities with a course that sharpens analytical skills and exam readiness.",
       chapters: [
   { title: "Reading: Inference & Interpretation of Complex Texts" },
@@ -440,6 +220,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y6icas.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y6page1",
       desc: "Challenge your intellect with the ICAS Mastermind Course, focused on advanced concepts and critical reasoning.",
       chapters: [
   { title: "Reading: Identifying Main Ideas in Short Texts" },
@@ -464,6 +245,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y6scholarship.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y6page2",
       desc: "Lay the foundation for success in competitive exams with the Scholarship Builder Course, crafted for ambitious learners.",
       chapters: [
   { title: "Reading: Analysing Informative & Narrative Texts" },
@@ -492,6 +274,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y7icasgenius.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y7page1",
       desc: "Unlock your full potential with the ICAS Genius Track Course, guiding students through advanced problem-solving pathways.",
       chapters: [
   { title: "Reading: Understanding Longer Fiction & Non-Fiction Texts" },
@@ -516,6 +299,7 @@ const coursesData = {
       rating: 4,
       img: "/course/y7naplanprogidy.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y7page2",
       desc: "Excel in exams with the NAPLAN Prodigy Course, crafted to nurture young minds into high achievers.",
 chapters: [
   { title: "Reading: Analysing Fiction, Non-Fiction & Poetry" },
@@ -545,6 +329,7 @@ chapters: [
       rating: 4,
       img: "/course/y8icasgeniustech.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y8page1",
       desc: "Pursue academic brilliance with the ICAS Genius Track Course, designed for students ready to take their skills to the next level.",
       chapters: [
   { title: "Reading: Literary Texts – Theme, Tone & Perspective" },
@@ -571,6 +356,7 @@ chapters: [
       rating: 4,
       img: "/course/y9icasolymp.jpg",
       brochure: "/brochures/sat.pdf",
+      path: "/courses/y9page1",
       desc: "Train like an Olympian with our ICAS Olympian Prep Course, tailored to prepare students for international-level competition.",
 chapters: [
     { title: "Reading: Inference & Evaluation of Complex Texts" },
@@ -595,6 +381,7 @@ chapters: [
       rating: 5,
       img: "/course/y9naplangm.jpg",
       brochure: "/brochures/igcse.pdf",
+      path: "/courses/y9page3",
       desc: "Achieve mastery with the NAPLAN Grand Master Course, combining in-depth knowledge and advanced exam strategies.",
 chapters: [
     { title: "Reading: Analysing Main Ideas, Tone & Purpose" },
@@ -620,6 +407,7 @@ chapters: [
       rating: 4,
       img: "/course/y9selacc.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y9page3",
       desc: "Accelerate your learning with the Selective Accelerator Program, designed to prepare students for competitive entry tests.",
        chapters: [
     { title: "Reading: Advanced Comprehension (Author’s Viewpoint, Bias)" },
@@ -646,6 +434,7 @@ chapters: [
       rating: 4,
       img: "/course/y10icasgmnew.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y10page1",
       desc: "Master challenging concepts with the ICAS Grand Master Course, helping learners reach the peak of their exam performance.",
       chapters: [
   { title: "Reading: Analysing Themes Across Multiple Texts" },
@@ -672,6 +461,7 @@ chapters: [
       rating: 4,
       img: "/course/y11icasscholar.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y11page1",
       desc: "Step into academic excellence with the ICAS Ultimate Scholar Course, designed to build confidence and deep understanding.",
       chapters: [
   { title: "Reading: Critical Interpretation of Fiction & Non-Fiction" },
@@ -698,6 +488,7 @@ chapters: [
       rating: 4,
       img: "/course/y12hsc.jpg",
       brochure: "/brochures/naplan.pdf",
+      path: "/courses/y12page1",
       desc: "Conquer final exams with the HSC Mastery Program Course, tailored for students aiming for top results in Year 12.",
       chapters: [
   { title: "Reading: Critical & Comparative Study of Texts" },
@@ -716,6 +507,123 @@ chapters: [
 };
 
 
+// export default function ExamCourses() {
+//   const [activeYear, setActiveYear] = useState("Year 2");
+//   const router = useRouter();
+
+//   const items = coursesData[activeYear] || [];
+//   const isScrollable = items.length > 3;
+
+//   return (
+//     <div id="course"className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[700px] border border-gray-300">
+//       {/* Title */}
+//       <h2 className="text-2xl font-bold text-center mb-6 text-quicksand">
+//         Our Exam Preparation Courses
+//       </h2>
+
+//       {/* ✅ Year Navbar */}
+//       <div className="flex justify-center gap-4 mb-10 p-4 bg-orange-100 rounded-xl overflow-x-auto">
+//         {years.map((year) => (
+//           <button
+//             key={year}
+//             onClick={() => setActiveYear(year)}
+//             className="relative px-4 py-2 text-gray-700 font-medium"
+//           >
+//             {year}
+//             {activeYear === year && (
+//               <motion.div
+//                 layoutId="underline"
+//                 className="absolute left-0 right-0 -bottom h-[3px] bg-orange-500 rounded-full"
+//                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
+//               />
+//             )}
+//           </button>
+//         ))}
+//       </div>
+
+//       {/* Course Cards */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={activeYear}
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           exit={{ opacity: 0, y: -20 }}
+//           transition={{ duration: 0.4, ease: "easeInOut" }}
+//           className={`flex gap-6  ${
+//             isScrollable ? "overflow-x-auto justify-start" : "justify-center"
+//           }`}
+//         >
+//           {items.map((course) => (
+//             <motion.div
+//               key={course.id}
+//               whileHover={{ scale: 1.02 }}
+//               transition={{ type: "spring", stiffness: 200, damping: 15 }}
+//               className={`bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden flex flex-col w-full sm:w-1/2 lg:w-[32%] ${
+//                 isScrollable ? "flex-shrink-0" : ""
+//               }`}
+//             >
+//               {/* ✅ Gray Box at 6000x3375 ratio */}
+//               <div className="m-4 rounded-xl border border-gray-200 overflow-hidden">
+//                 <div className="relative w-full aspect-[6000/3375] bg-gray-200">
+//                   <Image
+//                     src={course.img}
+//                     alt={course.title}
+//                     fill
+//                     className="object-contain"
+//                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//                   />
+//                 </div>
+//               </div>
+
+//               {/* Course Info */}
+//               <div className="px-4 pb-4 flex flex-col flex-1">
+//                 <p className="text-sm text-gray-500">{course.type}</p>
+//                 <h3 className="text-lg font-semibold">{course.title}</h3>
+//                 <div className="flex items-center text-yellow-500 mb-3">
+//                   {"★".repeat(course.rating)}
+//                   {"☆".repeat(5 - course.rating)}
+//                 </div>
+
+//                 {/* Meta Info */}
+//                 <div className="flex justify-between text-sm text-gray-600 mb-4">
+//                   <span className="flex items-center gap-1">
+//                     <BookOpen size={16} /> {course.topics} Topics
+//                   </span>
+//                   <span className="flex items-center gap-1">
+//                     <Users size={16} /> {course.sales} Enrolled
+//                   </span>
+//                 </div>
+
+//                 {/* Buttons */}
+//                 <div className="flex space-x-2 mt-auto">
+//                   <button
+//                     onClick={() => router.push(`/courses/${course.id}`)}
+//                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
+//                   >
+//                     Try a free Class
+//                   </button>
+//                   <a
+//                     href={course.brochure}
+//                     download
+//                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
+//                   >
+//                     <Download size={16} /> Download Brochure
+//                   </a>
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//       </AnimatePresence>
+//     </div>
+//   );
+// }
+
+
+// export {coursesData};
+
+
+
 export default function ExamCourses() {
   const [activeYear, setActiveYear] = useState("Year 2");
   const router = useRouter();
@@ -724,7 +632,7 @@ export default function ExamCourses() {
   const isScrollable = items.length > 3;
 
   return (
-    <div id="course"className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[700px] border border-gray-300">
+    <div id="course" className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[700px] border border-gray-300">
       {/* Title */}
       <h2 className="text-2xl font-bold text-center mb-6 text-quicksand">
         Our Exam Preparation Courses
@@ -763,64 +671,65 @@ export default function ExamCourses() {
           }`}
         >
           {items.map((course) => (
-            <motion.div
-              key={course.id}
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className={`bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden flex flex-col w-full sm:w-1/2 lg:w-[32%] ${
-                isScrollable ? "flex-shrink-0" : ""
-              }`}
-            >
-              {/* ✅ Gray Box at 6000x3375 ratio */}
-              <div className="m-4 rounded-xl border border-gray-200 overflow-hidden">
-                <div className="relative w-full aspect-[6000/3375] bg-gray-200">
-                  <Image
-                    src={course.img}
-                    alt={course.title}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-              </div>
-
-              {/* Course Info */}
-              <div className="px-4 pb-4 flex flex-col flex-1">
-                <p className="text-sm text-gray-500">{course.type}</p>
-                <h3 className="text-lg font-semibold">{course.title}</h3>
-                <div className="flex items-center text-yellow-500 mb-3">
-                  {"★".repeat(course.rating)}
-                  {"☆".repeat(5 - course.rating)}
+            <Link key={course.id} href={course.path || "#"} className="w-full sm:w-1/2 lg:w-[32%]">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                className={`bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden flex flex-col w-full h-full ${
+                  isScrollable ? "flex-shrink-0" : ""
+                }`}
+              >
+                {/* ✅ Gray Box at 6000x3375 ratio */}
+                <div className="m-4 rounded-xl border border-gray-200 overflow-hidden">
+                  <div className="relative w-full aspect-[6000/3375] bg-gray-200">
+                    <Image
+                      src={course.img}
+                      alt={course.title}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
                 </div>
 
-                {/* Meta Info */}
-                <div className="flex justify-between text-sm text-gray-600 mb-4">
-                  <span className="flex items-center gap-1">
-                    <BookOpen size={16} /> {course.topics} Topics
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Users size={16} /> {course.sales} Enrolled
-                  </span>
-                </div>
+                {/* Course Info */}
+                <div className="px-4 pb-4 flex flex-col flex-1">
+                  <p className="text-sm text-gray-500">{course.type}</p>
+                  <h3 className="text-lg font-semibold">{course.title}</h3>
+                  <div className="flex items-center text-yellow-500 mb-3">
+                    {"★".repeat(course.rating)}
+                    {"☆".repeat(5 - course.rating)}
+                  </div>
 
-                {/* Buttons */}
-                <div className="flex space-x-2 mt-auto">
-                  <button
-                    onClick={() => router.push(`/courses/${course.id}`)}
-                    className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
-                  >
-                    Try a free Class
-                  </button>
-                  <a
-                    href={course.brochure}
-                    download
-                    className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
-                  >
-                    <Download size={16} /> Download Brochure
-                  </a>
+                  {/* Meta Info */}
+                  <div className="flex justify-between text-sm text-gray-600 mb-4">
+                    <span className="flex items-center gap-1">
+                      <BookOpen size={16} /> {course.topics} Topics
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users size={16} /> {course.sales} Enrolled
+                    </span>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex space-x-2 mt-auto">
+                    <button
+                      onClick={(e) => { e.preventDefault(); router.push(`/courses/${course.id}`); }}
+                      className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
+                    >
+                      Try a free Class
+                    </button>
+                    <a
+                      href={course.brochure}
+                      download
+                      className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
+                    >
+                      <Download size={16} /> Download Brochure
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </AnimatePresence>
@@ -828,5 +737,4 @@ export default function ExamCourses() {
   );
 }
 
-
-export {coursesData};
+export { coursesData };
