@@ -58,8 +58,8 @@ export default function SlideShow() {
   return (
     <div className="relative flex flex-col items-center justify-center w-full bg-white px-4 sm:px-6 lg:px-10 py-12 lg:py-20">
       {/* Background glows */}
-      <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
-      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      {/* <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" /> */}
 
       {/* Heading */}
       <h2 className="text-3xl sm:text-5xl lg:text-7xl leading-tight font-semibold mb-10 sm:mb-14 text-center">
