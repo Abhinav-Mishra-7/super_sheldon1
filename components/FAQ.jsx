@@ -83,10 +83,10 @@ export default function FAQ() {
 
   return (
     <div className="relative max-w-3xl mx-auto px-4 py-12">
-    {/* <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
-      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" /> */}
+      {/* <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
+      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-10 blur-3xl pointer-events-none" />
 
-     
+      */}
 
       {/* FAQ Content above watermark */}
       <div className="relative">
