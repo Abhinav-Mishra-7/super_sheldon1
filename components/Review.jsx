@@ -15,7 +15,7 @@ const Review = () => {
       <h2
         className="font-quicksand font-semibold text-center align-middle mb-6"
         style={{
-          fontSize: "70px",
+          fontSize: "50px",
           lineHeight: "88px",
           letterSpacing: "-1px",
         }}
@@ -23,8 +23,8 @@ const Review = () => {
         From Our <span className="text-red-400">Hearts</span> to 
         <br /> Thousands of 
         
-        <span className="text-purple-400"> Australian</span> 
-        <span className="text-green-300"> Homes</span>
+        <span className="text-orange-400"> Australian</span> 
+        <span className="text-orange-400"> Homes</span>
 
            {/* Floating Saturn */}
       <img

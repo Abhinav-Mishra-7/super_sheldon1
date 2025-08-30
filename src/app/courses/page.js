@@ -19,6 +19,8 @@ import CardsScholarship from "@/components/PricingcardScholar";
 
 import FloatingArrowWhatsApp from "@/components/ArrowAndWhatsapp";
 
+import ClassVideoSection from '@/components/Studentvideo';
+
 
 export default function Courses() {
     return (
@@ -33,7 +35,7 @@ export default function Courses() {
             <CardsExam/>
             <CardsScholarship/>
 
-
+            <ClassVideoSection/>
             <TeacherTestimonial/>
             <FullPageSlider/>
             <FAQ/>

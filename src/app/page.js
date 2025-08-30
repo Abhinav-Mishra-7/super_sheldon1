@@ -24,6 +24,9 @@ import FullPageSlider from '@/components/FullPageScroll';
 import FloatingArrowWhatsApp from '@/components/ArrowAndWhatsapp';
 
 
+import ClassVideoSection from '@/components/Studentvideo';
+
+
 export default function Home() {
   return (
     <>
@@ -37,6 +40,9 @@ export default function Home() {
 
       <StudentTestimonial />
       <ExamCourses />
+
+      <ClassVideoSection />
+
 
       <Review />
 
