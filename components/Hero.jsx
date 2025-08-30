@@ -5,6 +5,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import countries from "world-countries";
+import { Changa_One } from "next/font/google";
+import {useEffect } from "react";
+
 
 // Pre-process countries (flag + name + dialCode)
 const countryOptions = countries.map((c) => ({
@@ -96,7 +99,6 @@ const countryPhoneCodes = {AF: "+93",AL: "+355",DZ: "+213",AS: "+1-684",AD: "+37
 };
 
 
-
 //StatCard Component
 const StatCard = ({ iconSrc, value, label }) => (
   <div className="flex items-center space-x-3">
@@ -141,6 +143,23 @@ export default function Hero() {
     navigate.push("https://forms.gle/csc94GLG3tEDit6N6") ;
   })
 
+
+// highlight options for title
+const highlightOptions = [
+  { text: "SATs.", color: "#FFD700" },
+  { text: "ICAS.", color: "#ff8800ff" },
+  { text: "NAPLAN.", color: "#FF1493" },
+];
+
+const [highlight, setHighlight] = useState(highlightOptions[0]);
+
+
+useEffect(() => {
+  const random = Math.floor(Math.random() * highlightOptions.length);
+  setHighlight(highlightOptions[random]);
+}, []);
+
+
   return (
     <div  id="home" className="relative w-full overflow-hidden">
       {/* Content */}
@@ -148,8 +167,8 @@ export default function Hero() {
         {/* Left Column */}
         <div className="space-y-8 md:space-y-10 flex flex-col justify-center pt-5 ">
           <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight font-quicksand">
-            <span>Worldwide Exam Prep Made Easy from School to </span>
-            <span className="text-[#FFD700]">SATs.</span>
+            <span>Smart Learning, Smarter Results –From School to </span>
+              <span style={{ color: highlight.color }}>{highlight.text}</span>
           </h1>
 
           {/* Phone Form */}
@@ -158,14 +177,14 @@ export default function Hero() {
             onSubmit={handleSubmit}
           >
             <label
-              className="text-md text-[#494e5e] font-medium mb-1"
+              className="text-xl text-[#494e5e] font-medium mb-1"
               htmlFor="phone"
             >
-              Phone number
+              Experience Smarter Learning – <label className="text-md text-[#FF8C00]">First Class is Free!</label>
             </label>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               <div className="flex items-center justify-center flex-grow px-4 py-2 rounded-lg focus:ring-[#FF8C00] focus:border-[#FF8C00] text-sm outline-none">
-                <div className="text-black text-center pt-2 w-9 h-10 bg-white rounded-s-lg border-e border-[#E0E0E0]">{userCountryCode}</div>
+                <div className="text-black text-center pt-2 w-10 h-10 bg-white rounded-s-lg border-e border-[#E0E0E0]">{userCountryCode}</div>
                 <input id="phone" type="tel" placeholder="Phone number"
                   value={phone} onChange={(e) => setPhone(e.target.value)}
                   className="flex-grow px-4 py-2.5 rounded-e-lg text-sm outline-none"
@@ -206,10 +225,10 @@ export default function Hero() {
         {/* Right Column */}
         <div className="relative flex justify-center items-center mt-10 lg:mt-0">
           <Image
-            src="/header.png"
+            src="/newheroimg.png"
             alt="Happy students showing A+ grade"
-            width={1050}
-            height={780}
+            width={800}
+            height={800}
             className="max-w-full h-full"
             priority
             sizes="(max-width: 768px) 100vw, 50vw"

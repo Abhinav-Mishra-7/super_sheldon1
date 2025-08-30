@@ -21,6 +21,8 @@ import Review from '@/components/Review';
 
 import FullPageSlider from '@/components/FullPageScroll';
 
+import FloatingArrowWhatsApp from '@/components/ArrowAndWhatsapp';
+
 
 export default function Home() {
   return (
@@ -51,6 +53,8 @@ export default function Home() {
       
 
       <Footer />
+
+      <FloatingArrowWhatsApp/>
 
       
     </>

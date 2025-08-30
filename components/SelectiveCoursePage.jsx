@@ -36,8 +36,8 @@ export default function SelectiveCoursePage({ year, courseIndex }) {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    // shuffle and pick 8 reviews
-    const shuffled = [...allReviews].sort(() => 0.5 - Math.random()).slice(0, 8);
+    // shuffle and pick 5 reviews
+    const shuffled = [...allReviews].sort(() => 0.5 - Math.random()).slice(0, 5);
     setReviews(shuffled);
   }, []);
 
