@@ -357,7 +357,7 @@ export default function Header() {
               Login
             </Button>
           </Link>
-          <a href="#try-a-free-class">
+          <a href="#try a free class">
             <Button variant="primary" className="px-4 py-1.5 text-sm">
               Try a free Class
             </Button>
