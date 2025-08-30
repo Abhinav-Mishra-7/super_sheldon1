@@ -57,7 +57,7 @@ export default function HeroHeader() {
         className="absolute left-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none"
         style={{
           width: "600px",
-          height: "600px",
+          height: "500px",
           borderRadius: "50%",
           background:
             "radial-gradient(circle at 40% 50%, #f1d9cd32 0%, rgba(239, 214, 199, 0.12) 60%, rgba(238, 221, 212, 0.01) 100%)",
@@ -67,12 +67,12 @@ export default function HeroHeader() {
       ></div>
       
 
-      <div className="w-full mx-10 px-[20px] relative z-20">
+      <div className="w-full mx-10 px-[20px] py-[20px] relative z-20">
         {/* Navigation Bar */}
         <header style={quicksand}>
-          <nav className="flex items-center justify-between">
+          <nav className="flex items-center justify-between py-2">
             <Image
-              src="/logo.png"
+              src="/newlogo.png"
               alt="SuperSheldon Logo"
               width={170}
               height={20}

@@ -62,10 +62,10 @@ export default function SlideShow() {
       <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" /> */}
 
       {/* Heading */}
-      <h2 className="text-3xl sm:text-5xl lg:text-7xl leading-tight font-semibold mb-10 sm:mb-14 text-center">
-        The <span className="text-purple-400">Smart</span> Choice for <br />
-        <span className="text-red-400">Bright</span>
-        <span className="text-orange-400"> Futures</span>
+      <h2 className="text-3xl sm:text-5xl lg:text-5xl leading-tight font-semibold mb-10 sm:mb-14 text-center">
+        The Smart Choice for <br />
+        
+        <span className="text-orange-400"> Bright Futures</span>
       </h2>
 
       {/* Content Flexbox */}

@@ -78,7 +78,7 @@ export default function TeacherTestimonial() {
       <div className="absolute -right-[150px] sm:-right-[250px] md:-right-[300px] top-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
 
       {/* Title */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-quicksand font-bold mb-10 text-center">
+      <h2 className="text-5xl sm:text-2xl md:text-5xl font-quicksand font-semibold mb-10 text-center">
         Why Choose <br /> Masters in Me?
       </h2>
 

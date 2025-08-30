@@ -150,7 +150,7 @@ export default function ClassVideoBanner() {
       {/* Sections Below Video */}
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center w-full max-w-4xl mt-20 px-4">
         {/* Audio Classes */}
-        <div className="flex items-center gap-3 px-4 py-3 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition">
+        <div className="flex bg-white items-center gap-3 px-4 py-3 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition">
           <div className=" p-2 rounded-full w-12 h-12 flex items-center justify-center">
             <img
               src="/icons/science.png"
@@ -162,7 +162,7 @@ export default function ClassVideoBanner() {
         </div>
 
         {/* Live Classes */}
-        <div className="flex items-center gap-3 px-4 py-3 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition">
+        <div className="flex bg-white items-center gap-3 px-4 py-3 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition">
           <div className=" p-2 rounded-full w-12 h-12 flex items-center justify-center">
             <img
               src="/icons/Scholarcap.png"
@@ -174,7 +174,7 @@ export default function ClassVideoBanner() {
         </div>
 
         {/* Recorded Class */}
-        <div className="flex items-center gap-3 px-4 py-3 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition">
+        <div className="flex bg-white items-center gap-3 px-4 py-3 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition">
           <div className=" p-2 rounded-full w-12 h-12 flex items-center justify-center">
             <img
               src="/icons/homework.png"
