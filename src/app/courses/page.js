@@ -13,6 +13,10 @@ import CardsICAS from "@/components/PricingCardIcas";
 
 import CardsHSC from "@/components/PricingCardsHSC";
 
+import CardsExam from "@/components/PricingCardExamPrep";
+
+import CardsScholarship from "@/components/PricingcardScholar";
+
 
 export default function Courses() {
     return (
@@ -24,6 +28,9 @@ export default function Courses() {
             <CardsNaplan/>
             <CardsICAS/>
             <CardsHSC/>
+            <CardsExam/>
+            <CardsScholarship/>
+
 
             <TeacherTestimonial/>
             <FullPageSlider/>

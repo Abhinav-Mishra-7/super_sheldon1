@@ -33,14 +33,14 @@ export default function Header() {
     <header style={quicksand}>
       <Popup></Popup>
       <nav className="flex items-center justify-between pl-2   shadow-lg">
-        <Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} />
+        <Link href="/"><Image src="/logo.png" alt="SuperSheldon Logo" width={170} height={20} /></Link>
     <div className="hidden lg:flex flex-1 justify-center items-center space-x-4">
-        <a href="#home">
+        <Link href="/">
          <Button variant="outline">Home</Button>
-        </a>
-        <a href="/courses">
+        </Link>
+        <Link href="/courses">
          <Button variant="outline">Course</Button>
-        </a>
+        </Link>
         <a href="#testimonial">
          <Button variant="outline">Testimonial</Button>
         </a>
