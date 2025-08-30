@@ -218,15 +218,15 @@ export default function CoursePage() {
   const [reviews, setReviews] = useState([]);
 
   const allReviews = [
-    { name: "Leonardo Da Vinci", text: "Loved the course. I’ve learned some very subtle techniques, especially on leaves.", img: "" },
-    { name: "Titanic S", text: "I love the course, it had been a long time since I had experimented with watercolors and now I will do it more often thanks to Khan Studio.", img: "" },
-    { name: "Zhitkov", text: "Yes, I just emphasize that the use of Photoshop, for non-users, becomes difficult to follow. What requires a course to master it. Safe and very didactic teacher.", img: "" },
-    { name: "Mojtaba", text: "I haven’t finished the course yet, and I would like to have some feedback from the teacher...", img: "" },
-    { name: "Sarah M", text: "Very interactive and engaging, loved the exercises and challenges.", img: "" },
-    { name: "James K", text: "The pacing was perfect and the course kept me motivated all the way.", img: "" },
-    { name: "Emily R", text: "Clear explanations and fun to follow, my kids enjoyed it too.", img: "" },
-    { name: "Omar L", text: "Excellent structure, made difficult topics much easier to understand.", img: "" },
-    { name: "Hiroshi T", text: "This was one of the most enjoyable online learning experiences I’ve had.", img: "" },
+    { name: "Leo", text: "Loved the course. I’ve learned some very subtle techniques, especially on leaves.", img: "/reviews/r7m.jpg" },
+    { name: "Sarah", text: "I love the course, it had been a long time since I had experimented with watercolors and now I will do it more often thanks to Khan Studio.", img: "/reviews/r1g.jpg" },
+    { name: "Chris", text: "Yes, I just emphasize that the use of Photoshop, for non-users, becomes difficult to follow. What requires a course to master it. Safe and very didactic teacher.", img: "/reviews/r8m.jpg" },
+    { name: "Eva", text: "I haven’t finished the course yet, and I would like to have some feedback from the teacher...", img: "/reviews/r5g.jpg" },
+    { name: "Sarah ", text: "Very interactive and engaging, loved the exercises and challenges.", img: "/reviews/r11g.jpg" },
+    { name: "James", text: "The pacing was perfect and the course kept me motivated all the way.", img: "/reviews/r17m.jpg" },
+    { name: "Emily ", text: "Clear explanations and fun to follow, my kids enjoyed it too.", img: "/reviews/r14g.jpg" },
+    { name: "Oscar ", text: "Excellent structure, made difficult topics much easier to understand.", img: "/reviews/r19m.jpg" },
+    { name: "Simon", text: "This was one of the most enjoyable online learning experiences I’ve had.", img: "/reviews/r20m.jpg" },
   ];
 
   // Shuffle reviews once after mount
