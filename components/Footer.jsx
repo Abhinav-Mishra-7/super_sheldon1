@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -8,17 +7,18 @@ import { FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FFF9F1] text-gray-800 pt-6 pb-3 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+    <footer className="bg-[#FFF9F1] text-gray-800 pt-6 pb-3 px-4 sm:px-6 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10 w-full">
         
         {/* Left Section */}
-        <div className="w-full md:w-2/5">
+        <div className="w-full md:w-2/5 overflow-hidden">
           <Image
             src="/Final-Logo-bg-removed.png"
             alt="Super Sheldon Logo"
             width={197}
             height={124}
             priority
+            className="max-w-full h-auto"
           />
           <p className="text-base text-gray-600 leading-relaxed font-roboto mb-6">
             Supersheldon is a trusted global learning platform offering 
@@ -31,7 +31,7 @@ export default function Footer() {
             <p><span className="font-semibold">📍 Address: </span> 123 Learning Street, London, UK</p>
           </div>
 
-          <div className="flex gap-4 mt-5 text-2xl">
+          <div className="flex flex-wrap gap-4 mt-5 text-2xl">
             <Link href="https://www.instagram.com/supersheldon.education/" target="_blank" aria-label="Instagram">
               <FaInstagram className="hover:text-pink-500 transition-colors duration-300" />
             </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section as Equal Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full md:w-3/5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full md:w-3/5">
           <div className="text-center sm:text-left">
             <h3 className="font-semibold mb-3">Company</h3>
             <ul className="space-y-2 text-sm text-gray-600">

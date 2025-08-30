@@ -93,9 +93,7 @@ export default function StudentTestimonial() {
       aria-roledescription="carousel"
       aria-label="Student testimonials carousel"
     >
-         <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
-      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
-
+ 
       {/* Carousel */}
       <div
         className="relative w-11/12 max-w-6xl rounded-2xl z-10 overflow-visible"
