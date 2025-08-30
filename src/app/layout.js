@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <body className={`${quicksand.variable} font-sans relative overflow-x-hidden bg-white`}>
+    <body className={`${quicksand.variable} font-sans relative overflow-x-hidden bg-[#FFF9F3] min-h-screen`}>
   {/* Global background glows */}
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       <div className="fixed -left-[300px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none -z-10" />

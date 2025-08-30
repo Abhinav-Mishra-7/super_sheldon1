@@ -17,6 +17,8 @@ import CardsExam from "@/components/PricingCardExamPrep";
 
 import CardsScholarship from "@/components/PricingcardScholar";
 
+import FloatingArrowWhatsApp from "@/components/ArrowAndWhatsapp";
+
 
 export default function Courses() {
     return (
@@ -37,6 +39,8 @@ export default function Courses() {
             <FAQ/>
             <SubscribeSection/>
             <Footer/>
+
+            <FloatingArrowWhatsApp/>
 
         </div>
     );

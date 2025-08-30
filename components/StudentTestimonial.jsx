@@ -23,7 +23,7 @@ const testimonials = [
     image: "/k2g.png",
   },
   {
-    text: "Studying with Connect2Learn has been an amazing experience. The classes are interactive, the teachers are supportive, and I feel more confident in my studies every day.",
+    text: " SuperSheldon has really boosted my confidence in class. The teachers explain everything clearly. My grades have improved a lot this term.",
     name: "— Liam Anderson, Year 10 Student, Australia ",
     image: "/k3b.png",
   },
@@ -85,10 +85,10 @@ export default function StudentTestimonial() {
   };
 
   return (
-    <div className="bg-[#FFF9F1] w-full h-full">
+    <div className=" w-full h-full">
       
       <div
-      className="mt-8 relative flex flex-col items-center justify-center bg-white py-20 overflow-visible"
+      className="mt-8 relative flex flex-col items-center justify-center py-20 overflow-visible"
       role="region"
       aria-roledescription="carousel"
       aria-label="Student testimonials carousel"

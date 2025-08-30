@@ -56,7 +56,7 @@ export default function SlideShow() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full bg-white px-4 sm:px-6 lg:px-10 py-12 lg:py-20">
+    <div className="relative flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-10 py-12 lg:py-20">
       {/* Background glows */}
       {/* <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
       <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" /> */}

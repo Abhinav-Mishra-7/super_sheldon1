@@ -15,15 +15,26 @@ export default function CoursePage() {
   const [reviews, setReviews] = useState([]);
 
   const allReviews = [
-    { name: "Leo", text: "Loved the course. I’ve learned some very subtle techniques, especially on leaves.", img: "/reviews/r7m.jpg" },
-    { name: "Sarah", text: "I love the course, it had been a long time since I had experimented with watercolors and now I will do it more often thanks to Khan Studio.", img: "/reviews/r1g.jpg" },
-    { name: "Chris", text: "Yes, I just emphasize that the use of Photoshop, for non-users, becomes difficult to follow. What requires a course to master it. Safe and very didactic teacher.", img: "/reviews/r8m.jpg" },
-    { name: "Eva", text: "I haven’t finished the course yet, and I would like to have some feedback from the teacher...", img: "/reviews/r5g.jpg" },
-    { name: "Sarah ", text: "Very interactive and engaging, loved the exercises and challenges.", img: "/reviews/r11g.jpg" },
-    { name: "James", text: "The pacing was perfect and the course kept me motivated all the way.", img: "/reviews/r17m.jpg" },
-    { name: "Emily ", text: "Clear explanations and fun to follow, my kids enjoyed it too.", img: "/reviews/r14g.jpg" },
-    { name: "Oscar ", text: "Excellent structure, made difficult topics much easier to understand.", img: "/reviews/r19m.jpg" },
-    { name: "Simon", text: "This was one of the most enjoyable online learning experiences I’ve had.", img: "/reviews/r20m.jpg" },
+    { name: "Maria ", text: "Loved the course. I’ve learned some very subtle techniques, especially on leaves.", img: "/reviews/r1g.jpg" },
+    { name: "Chloe", text: "I love the course, it had been a long time since I had experimented with watercolors and now I will do it more often thanks to Khan Studio.", img: "/reviews/r2g.jpg" },
+    { name: "Sarah ", text: "Very interactive and engaging, loved the exercises and challenges.", img: "/reviews/r3g.jpg" },
+    { name: "Christina ", text: "The pacing was perfect and the course kept me motivated all the way.", img: "/reviews/r4g.jpg" },
+    { name: "Emily ", text: "Clear explanations and fun to follow, my kids enjoyed it too.", img: "/reviews/r5g.jpg" },
+    { name: "Omar ", text: "Excellent structure, made difficult topics much easier to understand.", img: "/reviews/r5g.jpg" },
+    { name: "James ", text: "This was one of the most enjoyable online learning experiences my kid has had.", img: "/reviews/r7m.jpg" },
+    { name: "Dexter ", text: "The videos are so well made, I feel like I’m in a real classroom.", img: "/reviews/r7m.jpg" },
+    { name: "Michael ", text: "Great content, straight to the point without wasting time.", img: "/reviews/r8m.jpg" },
+    { name: "Doakes ", text: "I could follow everything easily, very beginner friendly.", img: "/reviews/r9m.jpg" },
+    { name: "Rick ", text: "Detailed, thorough, and motivating. Highly recommended.", img: "/reviews/r10m.jpg" },
+    { name: "Amelia ", text: "Fantastic course, exceeded my expectations.", img: "/reviews/r11g.jpg" },
+    { name: "Daniel ", text: "I finally understood grammar thanks to this!", img: "/reviews/r16m.jpg" },
+    { name: "Felicia ", text: "Challenging but fun, exactly what I needed.", img: "/reviews/r12g.jpg" },
+    { name: "Olivia ", text: "The assignments helped me a lot to practice.", img: "/reviews/r13g.jpg" },
+    { name: "Sanders ", text: "Super clear teaching style, very beginner friendly.", img: "/reviews/r20m.jpg" },
+    { name: "William ", text: "I enjoyed every lesson, very engaging.", img: "/reviews/r19m.jpg" },
+    { name: "AvaL", text: "Easy to follow and very practical examples.", img: "/reviews/r17m.jpg" },
+    { name: "Alicia ", text: "The examples made everything so easy to understand and apply.", img: "/reviews/r13g.jpg" },
+    { name: "Mary", text: "Loved the visuals and teaching style and the presentation skills.", img: "/reviews/r14g.jpg" },
   ];
 
   // Shuffle reviews once after mount
