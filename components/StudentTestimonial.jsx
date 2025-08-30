@@ -85,10 +85,10 @@ export default function StudentTestimonial() {
   };
 
   return (
-    <div className="bg-[#FFF9F1] w-full h-full">
+    <div className=" w-full h-full">
       
       <div
-      className="mt-8 relative flex flex-col items-center justify-center bg-white py-20 overflow-visible"
+      className="mt-8 relative flex flex-col items-center justify-center py-20 overflow-visible"
       role="region"
       aria-roledescription="carousel"
       aria-label="Student testimonials carousel"
