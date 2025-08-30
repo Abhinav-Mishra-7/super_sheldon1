@@ -283,7 +283,7 @@ export default function FAQ() {
       {/* FAQ Content above watermark */}
       <div className="relative">
         {/* Title */}
-        <h1 className="text-4xl font-quicksand font-bold text-center text-orange-600 mb-12">
+        <h1 className="text-5xl font-quicksand font-semibold text-center text-black-900 mb-12">
           Frequently Asked Questions
         </h1>
 
@@ -373,9 +373,9 @@ export default function FAQ() {
         </AnimatePresence>
       </div>
 
-      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[120px] h-[120px] opacity-10 pointer-events-none">
+      {/* <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[120px] h-[120px] opacity-10 pointer-events-none">
         <img src="course/light-bulb.png" alt="decor" className="object-contain" />
-      </div>
+      </div> */}
     </div>
   );
 }

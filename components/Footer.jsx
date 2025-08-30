@@ -222,7 +222,7 @@ export default function Footer() {
           <div className="space-y-1 text-gray-800 text-xl sm:text-2xl">
             <p>📞 <span className="font-semibold">Phone:</span> +91 91370 53875</p>
             <p>✉️ <span className="font-semibold">Email:</span> support@supersheldon.com</p>
-            <p>📍 <span className="font-semibold">Address:</span> 123 Learning Street, London, UK</p>
+            <p>📍 <span className="font-semibold">Address:</span> Om Chambers 648/A 4th Flr, Binnamangala 1st Stage,Bangalore- 560038, Karnataka, India</p>
           </div>
 
           <div className="flex gap-8 mt-4 text-4xl sm:text-5xl">
@@ -250,9 +250,9 @@ export default function Footer() {
           <div>
             <h3 className="font-extrabold text-gray-900 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Company</h3>
             <ul className="space-y-3 text-gray-800 text-xl sm:text-2xl">
-              <li><Link href="/privacy" className="hover:text-gray-900">Privacy Policy</Link></li>
-              <li><Link href="/refund" className="hover:text-gray-900">Refund Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-gray-900">Terms & Conditions</Link></li>
+              <li><Link href="/privacypolicy" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Privacy Policy</Link></li>
+              <li><Link href="/refund" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Refund Policy</Link></li>
+              <li><Link href="/terms" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Terms & Conditions</Link></li>
             </ul>
           </div>
 
