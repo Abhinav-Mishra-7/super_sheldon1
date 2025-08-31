@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+import GlossyButton from "./GlossyButton";
+
+
 export default function Popup() {
   const [visible, setVisible] = useState(true);
 
@@ -19,12 +22,13 @@ export default function Popup() {
         </p>
 
         {/* Button */}
-        <a href="#course" className="shrink-0 w-full md:w-auto">
-          <button className="bg-[#F97316] shadow-md shadow-orange-800 hover:bg-[#dd5e02] text-white font-semibold px-6 py-2 rounded-full transition w-full md:w-auto">
+        {/* <a href="#course" className="shrink-0 w-full md:w-auto">
+          <button className="bg-[#C45F30] text-white font-semibold px-8 py-3 rounded-full border-2 border-[#3A1F10] shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] hover:bg-[#D16F3B] focus:outline-none focus:ring-2 focus:ring-[#D16F3B] transition-all duration-200"
+>
             Book Now
           </button>
-        </a>
-
+        </a> */}
+      <GlossyButton href="#try a free class " >Book Now</GlossyButton>
         {/* Close Button */}
         <button
           onClick={() => setVisible(false)}

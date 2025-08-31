@@ -67,3 +67,14 @@ html, body {
 .float-icon:focus {
   animation-play-state: running;
 }
+
+
+@keyframes shine-slow {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
+
+.animate-shine-slow {
+  animation: shine-slow 4s linear infinite;
+}
+
