@@ -840,19 +840,31 @@ export default function ExamCourses() {
                   <button
                     onClick={(e) => {
                       e.preventDefault();
-                      router.push(`/courses/${course.id}`);
+                      router.push(course.path); // changed course id to course path
                     }}
                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
                   >
                     Try a free Class
                   </button>
-                  <a
+                  {/* <a
                     href={course.brochure}
                     download
                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
                   >
                     <Download size={16} /> Download Brochure
-                  </a>
+                  </a> */}
+
+                  <a
+  href={`https://wa.me/919137053875?text=${encodeURIComponent(
+    `Hi, I am interested in the ${course.title} course. Can you share more details?`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
+>
+  <Download size={16} /> Download Brochure
+</a>
+
                 </div>
               </div>
             </motion.div>

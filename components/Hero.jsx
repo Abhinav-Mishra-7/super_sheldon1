@@ -223,8 +223,9 @@ useEffect(() => {
         </div>
 
         {/* Right Column */}
-        <div className="relative flex justify-center items-center mt-10 lg:mt-0">
+        <div className="relative flex justify-center items-center mt-10 lg:mt-20">
           <Image
+          // hero Image
             src="/newheroimg.png"
             alt="Happy students showing A+ grade"
             width={800}
@@ -236,7 +237,7 @@ useEffect(() => {
 
           {/* Members Card */}
           <div className="absolute bottom-6 right-6 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white animate-float1">
-            <span className="font-bold text-[#1D2026] text-sm">500k+</span>
+            <span className="font-bold text-[#1D2026] text-lg">500k+</span>
             <span className="text-[#4E5566] text-xs">Members</span>
             <div className="flex -space-x-3">
               <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-[#FFD700] flex items-center justify-center">
