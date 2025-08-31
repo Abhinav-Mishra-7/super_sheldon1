@@ -50,22 +50,22 @@ export default function CoursePage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full h-[750px]">
+      <section className="relative w-full h-[680px]">
         <Image
-          src="/coursepage/coursetop.png"
+          src="/coursebannerv2.png"
           alt="Hero"
           fill
           className="object-cover"
         />
         <div className="absolute inset-0 " />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
+        {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">
             Learn something new everyday.
           </h1>
           <p className="mt-3 text-lg">
             Become professionals and ready to join the world.
           </p>
-        </div>
+        </div> */}
 
         {/* Dropdown Box */}
         <div className="absolute left-1/2 -translate-x-1/2 bottom-[-60px] bg-white shadow-lg rounded-xl px-12 py-6 flex gap-8 text-lg w-[90%] max-w-6xl">

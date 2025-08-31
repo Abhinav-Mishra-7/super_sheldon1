@@ -7,6 +7,7 @@ import Image from "next/image";
 import countries from "world-countries";
 import { Changa_One } from "next/font/google";
 import {useEffect } from "react";
+import GlossyButton from "./GlossyButton";
 
 
 // Pre-process countries (flag + name + dialCode)
@@ -145,20 +146,37 @@ export default function Hero() {
 
 
 // highlight options for title
+// const highlightOptions = [
+//   { text: "SATs.", color: "#FFD700" },
+//   { text: "ICAS.", color: "#ff8800ff" },
+//   { text: "NAPLAN.", color: "#FF1493" },
+// ];
+
+// const [highlight, setHighlight] = useState(highlightOptions[0]);
+
+
+// useEffect(() => {
+//   const random = Math.floor(Math.random() * highlightOptions.length);
+//   setHighlight(highlightOptions[random]);
+// }, []);
+
 const highlightOptions = [
   { text: "SATs.", color: "#FFD700" },
   { text: "ICAS.", color: "#ff8800ff" },
   { text: "NAPLAN.", color: "#FF1493" },
 ];
 
-const [highlight, setHighlight] = useState(highlightOptions[0]);
-
+const [highlightIndex, setHighlightIndex] = useState(0);
 
 useEffect(() => {
-  const random = Math.floor(Math.random() * highlightOptions.length);
-  setHighlight(highlightOptions[random]);
+  const interval = setInterval(() => {
+    setHighlightIndex((prevIndex) => (prevIndex + 1) % highlightOptions.length);
+  }, 7000); // every 7 sec
+
+  return () => clearInterval(interval); // cleanup on unmount
 }, []);
 
+const highlight = highlightOptions[highlightIndex];
 
   return (
     <div  id="home" className="relative w-full overflow-hidden">
@@ -191,13 +209,13 @@ useEffect(() => {
                 />
               </div>
               
-              <button
+              <GlossyButton
               onClick={handleForm}
                 type="submit"
-                className="px-6 py-2 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105"
+                // className="px-6 py-2 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-colors duration-300 hover:scale-105"
               >
                 Try a Free Class
-              </button>
+              </GlossyButton>
             </div>
             {error && <p className="text-red-500 text-xs">{error}</p>}
           </form>

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { Download, Clock, BookOpen, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import GlossyButton from "./GlossyButton";
 
 const years = [
   "Year 2",
@@ -837,15 +838,23 @@ export default function ExamCourses() {
 
                 {/* Buttons */}
                 <div className="flex space-x-2 mt-auto">
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      router.push(course.path); // changed course id to course path
-                    }}
+                  <Link
+      href="https://forms.gle/csc94GLG3tEDit6N6"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+                  
+                  <GlossyButton
+                    // onClick={(e) => {
+                    //   e.preventDefault();
+                    //   router.push(course.path); // changed course id to course path
+                    // }}
                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
                   >
                     Try a free Class
-                  </button>
+                  </GlossyButton>
+                  </Link>
                   {/* <a
                     href={course.brochure}
                     download
@@ -854,7 +863,7 @@ export default function ExamCourses() {
                     <Download size={16} /> Download Brochure
                   </a> */}
 
-                  <a
+                  {/* <a
   href={`https://wa.me/919137053875?text=${encodeURIComponent(
     `Hi, I am interested in the ${course.title} course. Can you share more details?`
   )}`}
@@ -863,7 +872,20 @@ export default function ExamCourses() {
   className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
 >
   <Download size={16} /> Download Brochure
-</a>
+</a> */}
+
+<GlossyButton
+  as="a"
+  href={`https://wa.me/9179746 95618?text=${encodeURIComponent(
+    `Hi, I am interested in the ${course.title} course. Can you share more details?`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600"
+>
+  <Download size={16} /> Download Brochure
+</GlossyButton>
+
 
                 </div>
               </div>
