@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Popup from "./Popup";
+import GlossyButton from "./GlossyButton";
 
 const navLinks = [
   { href: "/", label: "Home", type: "link" },
@@ -89,15 +90,19 @@ export default function Header() {
         {/* Right side buttons */}
         <div className="hidden md:flex items-center space-x-4">
           <Link href="/login">
-            <Button variant="primary" className="px-4 py-1.5 text-sm">
+            {/* <Button variant="primary" className="px-4 py-1.5 text-sm">
               Login
-            </Button>
+            </Button> */}
+            <GlossyButton >Login</GlossyButton>
           </Link>
-          <a href="#try a free class">
-            <Button variant="primary" className="px-4 py-1.5 text-sm">
-              Try a free Class
-            </Button>
-          </a>
+          <Link
+      href="https://forms.gle/csc94GLG3tEDit6N6"
+      target="_blank"
+      rel="noopener noreferrer"
+          ><GlossyButton>
+            Try a free Class
+          </GlossyButton>
+        </Link>
         </div>
       </nav>
     </header>

@@ -180,7 +180,7 @@ export default function TeacherCarousel() {
   }, [activeVideo]);
 
   return (
-    <div className="relative w-full overflow-hidden bg-gradient-to-r from-gray-50 to-gray-100 py-6">
+    <div className="relative w-full overflow-hidden ">
       {/* Scrolling Cards */}
       <motion.div
         className="flex gap-6"

@@ -7,6 +7,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause } from "lucide-react";
+import GlossyButton from "./GlossyButton";
+import Link from "next/link";
 
 const videos = [
   { id: 2, name: "Ms. Aditi", src: "/videos/video2.mp4" },
@@ -79,7 +81,7 @@ export default function TeacherTestimonial() {
 
       {/* Title */}
       <h2 className="text-5xl sm:text-2xl md:text-5xl font-quicksand font-semibold mb-10 text-center">
-        Why Choose <br /> Masters in Me?
+        Behind Every Success, <br /><teach className="text-red-400">A Teacher's Story</teach>
       </h2>
 
       {/* Wrapper */}
@@ -92,11 +94,20 @@ export default function TeacherTestimonial() {
             <div className="mx-auto text-center">
               <h3 className="font-semibold text-lg sm:text-xl">2M+ Questions</h3>
               <p className="text-sm sm:text-base text-gray-600 pb-3">2M+ extra projects</p>
-              <a href="#try a free class">
-                <button className="px-5 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] text-white rounded-full font-bold text-xs sm:text-sm shadow-md transition-transform duration-300 hover:scale-105">
-                  Try a free Class
-                </button>
-              </a>
+              
+              <Link
+              href="https://forms.gle/csc94GLG3tEDit6N6"
+              target="_blank"
+              rel="noopener noreferrer"
+    >
+
+                  
+                  <GlossyButton
+                    className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
+                  >
+                    Try a free Class
+                  </GlossyButton>
+                  </Link>
             </div>
           </div>
           <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 sm:p-6 w-full sm:w-56 flex flex-col justify-center items-center font-manrope">
@@ -157,11 +168,19 @@ export default function TeacherTestimonial() {
             <div className="mx-auto text-center">
               <h3 className="font-semibold text-lg sm:text-xl">MIT Certified +</h3>
               <p className="text-sm sm:text-base text-gray-600 pb-3">All teachers MIT certified</p>
-              <a href="#try a free class">
-                <button className="px-5 py-2 bg-gradient-to-r from-[#ff7700] to-[#f7820e] text-white rounded-full font-bold text-xs sm:text-sm shadow-md transition-transform duration-300 hover:scale-105">
-                  Try a free Class
-                </button>
-              </a>
+              <Link
+             href="https://forms.gle/csc94GLG3tEDit6N6"
+             target="_blank"
+              rel="noopener noreferrer"
+              >
+
+                  
+                  <GlossyButton
+                    className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
+                  >
+                    Try a free Class
+                  </GlossyButton>
+                  </Link>
             </div>
           </div>
         </div>

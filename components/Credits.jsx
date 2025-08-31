@@ -2,6 +2,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import GlossyButton from "./GlossyButton";
 
 export default function Credits() {
   return (
@@ -84,11 +86,14 @@ export default function Credits() {
       <div className="absolute bottom-0 left-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none" />
 
       <div className="text-center mx-auto mt-8 relative z-20 mb-2">
-        <a href="#course">
-          <button className="px-6 py-2 shadow-gray-500 bg-gradient-to-r from-[#FFC93C] to-[#FF8C00] hover:from-[#E6AE2C] hover:to-[#CC7000] text-white rounded-full font-bold text-sm shadow-md transition-transform duration-300 hover:scale-105">
-            Try a Free Class
-          </button>
-        </a>
+        <Link
+      href="https://forms.gle/csc94GLG3tEDit6N6"
+      target="_blank"
+      rel="noopener noreferrer"
+          ><GlossyButton>
+            Try a free Class
+          </GlossyButton>
+        </Link>
       </div>
     </section>
   );

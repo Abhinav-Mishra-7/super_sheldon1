@@ -248,7 +248,7 @@ export default function Footer() {
         <div className="lg:w-3/5 grid grid-cols-1 sm:grid-cols-3 gap-6">
 
           <div>
-            <h3 className="font-extrabold text-gray-900 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Company</h3>
+            <h3 className="font-extrabold text-red-400 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Company</h3>
             <ul className="space-y-3 text-gray-800 text-xl sm:text-2xl">
               <li><Link href="/privacypolicy" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Privacy Policy</Link></li>
               <li><Link href="/refund" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Refund Policy</Link></li>
@@ -257,7 +257,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <Link href="/courses"><h3 className="font-extrabold text-gray-900 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Courses</h3></Link>
+            <Link href="/courses"><h3 className="font-extrabold text-orange-600 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Courses</h3></Link>
             <ul className="space-y-3 text-gray-800 text-xl sm:text-2xl">
               <li><Link href="#course" className="hover:text-gray-900">Naplan Exam</Link></li>
               <li><Link href="#course" className="hover:text-gray-900">11+ Exam</Link></li>
@@ -266,7 +266,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-extrabold text-gray-900 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Support</h3>
+            <h3 className="font-extrabold text-red-600 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Support</h3>
             <ul className="space-y-3 text-gray-800 text-xl sm:text-2xl">
               <li><Link href="#" className="hover:text-gray-900">FAQ</Link></li>
               <li><Link href="#" className="hover:text-gray-900">Support</Link></li>
