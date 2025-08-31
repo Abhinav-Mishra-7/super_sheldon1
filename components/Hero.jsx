@@ -254,7 +254,7 @@ const highlight = highlightOptions[highlightIndex];
           />
 
           {/* Members Card */}
-          <div className="absolute bottom-6 right-6 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white animate-float1">
+          <div className="absolute bottom-32 right-12 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white animate-float1">
             <span className="font-bold text-[#1D2026] text-lg">500k+</span>
             <span className="text-[#4E5566] text-xs">Members</span>
             <div className="flex -space-x-3">
@@ -297,7 +297,7 @@ const highlight = highlightOptions[highlightIndex];
               height={100}
             />
           </div>
-          <div className="absolute bottom-0 left-0 translate-x-1/4 translate-y-1/4 z-10 animate-float1">
+          <div className="absolute bottom-32 left-0 translate-x-1/4 translate-y-1/4 z-10 animate-float1">
             <Image
               src="/floating-icons/graph.png"
               alt="Graph icon"

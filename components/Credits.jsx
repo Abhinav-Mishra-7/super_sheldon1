@@ -7,14 +7,14 @@ import GlossyButton from "./GlossyButton";
 
 export default function Credits() {
   return (
-    <section className="relative w-[95%] sm:w-[90%] mx-auto mt-5 overflow-hidden">
+    <section className="relative w-[95%] sm:w-[90%] mx-auto -mt-32 px-4 overflow-hidden">
       {/* Pill background */}
       <div className="w-full bg-[#EDE8E1] rounded-[9999px] py-6 px-4 sm:px-10 shadow-md relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch text-center">
           
           {/* Trusted Feedback */}
           <div className="flex flex-col items-center justify-between space-y-3">
-            <p className="text-lg text-[#4E5566] font-medium">Trusted Feedback</p>
+            <p className="text-xl font-semibold font-medium">Trusted Feedback</p>
             <div className="flex items-start justify-center gap-6">
               {/* Trustpilot */}
               <div className="flex flex-col items-center">
@@ -44,7 +44,7 @@ export default function Credits() {
 
           {/* Accredited By */}
           <div className="flex flex-col items-center space-y-3">
-            <p className="text-lg text-[#4E5566] font-medium">Accredited by</p>
+            <p className="text-xl font-semibold font-medium">Accredited by</p>
             <Image
               src="/Stem.png"
               alt="STEM Accredited"
@@ -56,7 +56,7 @@ export default function Credits() {
 
           {/* Built By Alumni */}
           <div className="flex flex-col items-center space-y-3">
-            <p className="text-lg text-[#4E5566] font-medium">Built by alumni of</p>
+            <p className="text-xl font-semibold font-medium">Built by alumni of</p>
             <Image
               src="/Messa.png"
               alt="Mesa School of Business"
@@ -67,7 +67,7 @@ export default function Credits() {
           </div>
 
           <div className="flex flex-col items-center justify-center space-y-3">
-            <p className="text-[#1D2026] font-semibold text-sm sm:text-md leading-snug">
+            <p className="text-[#1D2026] font-semibold text-xl sm:text-md leading-snug">
               80% learners show Exam<br />increased confidence in 2 weeks
             </p>
           </div>

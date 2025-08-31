@@ -43,7 +43,7 @@ export default function FloatingArrowWhatsApp() {
       <button
         onClick={() =>
           window.open(
-            "https://api.whatsapp.com/send/?phone=919137053875&text&type=phone_number&app_absent=0", // replace with your number/message
+            "https://api.whatsapp.com/send/?phone=917974695618&text&type=phone_number&app_absent=0", // replace with your number/message
             "_blank"
           )
         }
