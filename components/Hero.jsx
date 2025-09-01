@@ -254,7 +254,7 @@ const highlight = highlightOptions[highlightIndex];
           />
 
           {/* Members Card */}
-          <div className="absolute bottom-32 right-12 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white animate-float1">
+          <div className="absolute bottom-32 -translate-y-2 right-24 bg-white p-3 rounded-full shadow-lg flex items-center space-x-2 border-2 border-white animate-float">
             <span className="font-bold text-[#1D2026] text-lg">500k+</span>
             <span className="text-[#4E5566] text-xs">Members</span>
             <div className="flex -space-x-3">
@@ -337,6 +337,15 @@ const highlight = highlightOptions[highlightIndex];
             transform: translate(-8px, 10px) scale(1.07);
           }
         }
+          @keyframes float4 {
+          0%,
+          100% {
+            transform: translate(0, 0);
+          }
+          50% {
+            transform: translate(-10px, 12px) scale(1.08);
+          }
+        }
         .animate-float1 {
           animation: float1 4s ease-in-out infinite;
         }
@@ -344,6 +353,9 @@ const highlight = highlightOptions[highlightIndex];
           animation: float2 5s ease-in-out infinite;
         }
         .animate-float3 {
+          animation: float3 6s ease-in-out infinite;
+        }
+          .animate-float4 {
           animation: float3 6s ease-in-out infinite;
         }
       `}</style>
