@@ -250,7 +250,7 @@ export default function Footer() {
           <div>
             <h3 className="font-extrabold text-red-400 mb-3 text-2xl sm:text-3xl uppercase tracking-wide">Company</h3>
             <ul className="space-y-3 text-gray-800 text-xl sm:text-2xl">
-              <li><Link href="/privacypolicy" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Privacy Policy</Link></li>
+              <li><Link href="/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Privacy Policy</Link></li>
               <li><Link href="/refund" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Refund Policy</Link></li>
               <li><Link href="/terms" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Terms & Conditions</Link></li>
             </ul>
