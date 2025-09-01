@@ -198,21 +198,27 @@ export default function StudentTestimonial() {
 
           {/* Floating Icons */}
 
-<div className="absolute bottom-6 left-8 -translate-x-1/3 animate-float1 z-10">
-  <img src="/floating-icons/globe.png" alt="globe" width={60} height={60} />
+<div className="absolute bottom-6 left-8 -translate-x-1/3 animate-float1 z-10 rotate-[45]">
+  <img src="/icons/book.png" alt="globe" width={120} height={120}  />
 </div>
-<div className="absolute bottom-8 right-6 animate-float1 z-10">
-  <img src="/floating-icons/orangesquiggle.png" alt="" width={80} height={80} />
+<div className="absolute bottom-8 right-6 animate-float2 z-10">
+  <img src="/icons/chalkboard.png" alt="" width={150} height={150} />
+</div>
+<div className="absolute top-4  left-12 animate-float2 z-10">
+  <img src="/icons/palette.png" alt="" width={120} height={120} />
+</div>
+<div className="absolute top-4  right-12 animate-float1 z-10">
+  <img src="/icons/Scholarcap.png" alt="" width={120} height={120} />
 </div>
 
 <style jsx>{`
   @keyframes float1 {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    0%, 100% { transform: translateY(0) rotate(-45deg); }
+    50% { transform: translateY(-12px) rotate(-45deg); }
   }
   @keyframes float2 {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(12px); }
+    0%, 100% { transform: translateX(0) rotate(45deg); }
+    50% { transform: translateX(12px) rotate(45deg); }
   }
   @keyframes float3 {
     0%, 100% { transform: translateY(0) translateX(0); }
