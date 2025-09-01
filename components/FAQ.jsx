@@ -279,7 +279,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-orange-50 py-12 md:py-24" id="faq">
+    <section className=" py-12 md:py-24" id="faq">
     <div className="relative max-w-3xl mx-auto px-4 py-12">
       {/* FAQ Content above watermark */}
       <div className="relative">
