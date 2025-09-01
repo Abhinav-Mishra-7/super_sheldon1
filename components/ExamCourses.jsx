@@ -876,7 +876,7 @@ export default function ExamCourses() {
 
 <GlossyButton
   as="a"
-  href={`https://wa.me/9179746 95618?text=${encodeURIComponent(
+  href={`https://wa.me/917974695618?text=${encodeURIComponent(
     `Hi, I am interested in the ${course.title} course. Can you share more details?`
   )}`}
   target="_blank"
