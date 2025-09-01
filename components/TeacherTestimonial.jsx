@@ -204,11 +204,47 @@ export default function TeacherTestimonial() {
       </div>
 
       {/* Floating Logos */}
-      <img src="/saturn.png" className="absolute left-5 sm:left-20 top-20 sm:top-36 w-10 sm:w-14 animate-spin-slow" alt="planet" />
+      {/* <img src="/saturn.png" className="absolute left-5 sm:left-20 top-20 sm:top-36 w-10 sm:w-14 animate-spin-slow" alt="planet" />
       <img src="/pencil.png" className="absolute left-5 sm:left-20 bottom-10 sm:bottom-20 w-8 sm:w-10 animate-bounce" alt="book" />
       <img src="/blacksquiggle.png" className="absolute right-5 sm:right-20 bottom-10 sm:bottom-20 w-12 sm:w-16 animate-bounce" alt="atom" />
       <img src="/blacksquiggle.png" className="absolute left-5 sm:left-20 top-5 sm:top-8 w-12 sm:w-16 animate-bounce" alt="star" />
-      <img src="/orangesquiggle.png" className="absolute right-5 sm:right-20 top-5 sm:top-8 w-12 sm:w-16 animate-bounce" alt="lightbulb" />
+      <img src="/orangesquiggle.png" className="absolute right-5 sm:right-20 top-5 sm:top-8 w-12 sm:w-16 animate-bounce" alt="lightbulb" /> */}
+
+          <div className="absolute bottom-32 left-16 -translate-x-1/3 animate-float1 z-10 rotate-[45]">
+  <img src="/icons/book.png" alt="globe" width={120} height={120}  />
+</div>
+<div className="absolute bottom-32 right-24 animate-float2 z-10">
+  <img src="/icons/science.png" alt="" width={100} height={100} />
+</div>
+<div className="absolute top-64  left-12 animate-float2 z-10">
+  <img src="/icons/palette.png" alt="" width={120} height={120} />
+</div>
+<div className="absolute top-1/2   right-12 animate-float1 z-10">
+  <img src="/icons/Scholarcap.png" alt="" width={120} height={120} />
+</div>
+<div className="absolute top-16  right-64 animate-float1 z-10">
+  <img src="/icons/homework.png" alt="" width={100} height={100} />
+</div>
+
+<style jsx>{`
+  @keyframes float1 {
+    0%, 100% { transform: translateY(0) rotate(-45deg); }
+    50% { transform: translateY(-12px) rotate(-45deg); }
+  }
+  @keyframes float2 {
+    0%, 100% { transform: translateX(0) rotate(45deg); }
+    50% { transform: translateX(12px) rotate(45deg); }
+  }
+  @keyframes float3 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-10px) translateX(10px); }
+  }
+  .animate-float1 { animation: float1 4s ease-in-out infinite; }
+  .animate-float2 { animation: float2 5s ease-in-out infinite; }
+  .animate-float3 { animation: float3 6s ease-in-out infinite; }
+`}</style>
+
+
     </section>
   );
 }

@@ -158,6 +158,41 @@ export default function SlideShow() {
           </div>
         </div>
       </div>
+      <div className="absolute left-1/2 bottom-2 -translate-x-1/3 animate-float1 z-10 rotate-[45]">
+  <img src="/icons/book.png" alt="globe" width={120} height={120}  />
+</div>
+<div className="absolute bottom-32 right-24 animate-float2 z-10">
+  <img src="/icons/apple.png" alt="" width={100} height={100} />
+</div>
+<div className="absolute top-32  left-12 animate-float2 z-10">
+  <img src="/icons/palette.png" alt="" width={120} height={120} />
+</div>
+<div className="absolute top-64  right-12 animate-float1 z-10">
+  <img src="/icons/calculator.png" alt="" width={120} height={120} />
+</div>
+<div className="absolute top-16  right-64 animate-float1 z-10">
+  <img src="/icons/lamp.png" alt="" width={100} height={100} />
+</div>
+
+<style jsx>{`
+  @keyframes float1 {
+    0%, 100% { transform: translateY(0) rotate(-45deg); }
+    50% { transform: translateY(-12px) rotate(-45deg); }
+  }
+  @keyframes float2 {
+    0%, 100% { transform: translateX(0) rotate(45deg); }
+    50% { transform: translateX(12px) rotate(45deg); }
+  }
+  @keyframes float3 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-10px) translateX(10px); }
+  }
+  .animate-float1 { animation: float1 4s ease-in-out infinite; }
+  .animate-float2 { animation: float2 5s ease-in-out infinite; }
+  .animate-float3 { animation: float3 6s ease-in-out infinite; }
+`}</style>
+
     </div>
+    
   );
 }
