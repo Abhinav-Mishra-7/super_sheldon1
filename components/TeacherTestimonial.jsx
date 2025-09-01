@@ -81,7 +81,7 @@ export default function TeacherTestimonial() {
 
       {/* Title */}
       <h2 className="text-5xl sm:text-2xl md:text-5xl font-quicksand font-semibold mb-10 text-center">
-        Behind Every Success, <br /><teach className="text-red-400">A Teacher's Story</teach>
+        Behind Every Success, <br /><div className="text-red-400">A Teacher's Story</div>
       </h2>
 
       {/* Wrapper */}
