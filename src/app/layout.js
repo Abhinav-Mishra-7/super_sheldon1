@@ -29,6 +29,7 @@
 // }
 
 
+import { icons } from "lucide-react";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
 import Script from "next/script";
@@ -42,6 +43,9 @@ const quicksand = Quicksand({
 export const metadata = {
   title: "Supersheldon",
   description: "Worldwide Exam Prep Made Easy",
+  icons:{
+    icon : "/favicon.png",
+  }
 };
 
 export default function RootLayout({ children }) {

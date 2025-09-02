@@ -1,3 +1,223 @@
+
+
+
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import Image from "next/image";
+
+// const slides = [
+//   {
+//     id: 0,
+//     texts: [
+//       {
+//         number: "01",
+//         title: " Sessions Anytime, Anywhere",
+//         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
+//       },
+//       {
+//         number: "02",
+//         title: " Customized Curriculum for Every Topic",
+//         desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
+//       },
+//       {
+//         number: "03",
+//         title: " Interactive LMS for Homework & Quizzes",
+//         desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
+//       },
+//     ],
+//     images: ["/course/Grp1.png"],
+//   },
+//   {
+//     id: 1,
+//     texts: [
+//       {
+//         number: "01",
+//         title: " Sessions Anytime, Anywhere",
+//         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
+//       },
+//       {
+//         number: "02",
+//         title: " Customized Curriculum for Every Topic",
+//         desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
+//       },
+//       {
+//         number: "03",
+//         title: " Interactive LMS for Homework & Quizzes",
+//         desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
+//       },
+//     ],
+//     images: ["/course/Grp2.png"],
+//   },
+//   {
+//     id: 2,
+//     texts: [
+//       {
+//         number: "01",
+//         title: " Sessions Anytime, Anywhere",
+//         desc: " Learn directly from expert tutors with flexible sessions accessible from any location.",
+//       },
+//       {
+//         number: "02",
+//         title: " Customized Curriculum for Every Topic",
+//         desc: " Personalized learning plans tailored to each student’s unique needs and goals.",
+//       },
+//       {
+//         number: "03",
+//         title: " Interactive LMS for Homework & Quizzes",
+//         desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
+//       },
+//     ],
+//     images: ["/course/Grp3.png"],
+//   },
+// ];
+
+// export default function FullPageSlider() {
+//   const [active, setActive] = useState(0);
+
+//   // ✅ Auto-switch every 5 seconds
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActive((prev) => (prev + 1) % slides.length);
+//     }, 5000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <div className="flex flex-col items-center justify-center w-full px-6 sm:px-10 py-16">
+//       {/* Top Heading */}
+//       <motion.h2
+//         initial={{ opacity: 0, y: -40 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.8, ease: "easeOut" }}
+//         className="text-3xl sm:text-5xl leading-tight font-quicksand font-semibold mb-10 sm:mb-14 text-center"
+//       >
+//         The <span className="text-purple-400">Smart</span> Choice for <br />
+//         <span className="text-red-400">Bright</span>
+//         <span className="text-orange-400"> Futures</span>
+//       </motion.h2>
+
+//       {/* Content Flexbox */}
+//       <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-8 lg:gap-5 items-center">
+//         {/* Left Section (Text Side) */}
+//         <div className="flex-1 flex flex-col justify-start">
+//           <motion.h3
+//             initial={{ opacity: 0, x: -40 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.7 }}
+//             className="text-2xl sm:text-4xl font-quicksand font-semibold mb-6 sm:mb-10"
+//           >
+//             The Global Exam Expertise
+//           </motion.h3>
+
+//           {/* AnimatePresence for whole text group */}
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={slides[active].id + "-texts"}
+//               initial={{ opacity: 0, x: -60 }}
+//               animate={{ opacity: 1, x: 0 }}
+//               exit={{ opacity: 0, x: 60 }}
+//               transition={{ duration: 0.7, ease: "easeInOut" }}
+//               className="flex flex-col gap-5 w-full sm:w-[600px] z-10"
+//             >
+//               {slides[active].texts.map((t, idx) => (
+//                 <motion.div
+//                   key={t.title}
+//                   initial={{ opacity: 0, y: 20 }}
+//                   animate={{ opacity: 1, y: 0 }}
+//                   exit={{ opacity: 0, y: -20 }}
+//                   transition={{
+//                     duration: 0.5,
+//                     delay: idx * 0.1, // staggered animation
+//                   }}
+//                   className={`flex items-center gap-6 ${
+//                     idx % 2 === 0 ? "flex-row" : "flex-row-reverse"
+//                   }`}
+//                 >
+//                   {/* Number */}
+//                   <span className="text-4xl sm:text-6xl font-bold font-poppins text-gray-200 leading-none flex-shrink-0">
+//                     {t.number}
+//                   </span>
+
+//                   {/* Text Box */}
+//                   <div className="flex items-center gap-4 w-full max-w-lg bg-white rounded-2xl shadow-2xl shadow-gray-400 p-6 sm:p-8 min-h-[120px] sm:min-h-[150px]">
+//                     {/* Logo placeholder */}
+//                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex-shrink-0 flex items-center justify-center" />
+
+//                     {/* Text Content */}
+//                     <div>
+//                       <h3 className="text-lg sm:text-xl font-roboto font-bold">
+//                         {t.title}
+//                       </h3>
+//                       <p className="text-sm sm:text-base font-roboto text-gray-600">
+//                         {t.desc}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 </motion.div>
+//               ))}
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+
+//         {/* Right Section (Images + Pills) */}
+//         <div className="flex-1 flex items-center justify-between gap-5">
+//           {/* Images */}
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={slides[active].id + "-images"}
+//               initial={{ opacity: 0, x: 60 }}
+//               animate={{ opacity: 1, x: 0 }}
+//               exit={{ opacity: 0, x: -60 }}
+//               transition={{ duration: 0.7, ease: "easeInOut" }}
+//               className="flex items-start gap-6"
+//             >
+//               {/* Image (made bigger) */}
+//               <div className="rounded-2xl overflow-hidden w-[280px] sm:w-[400px] lg:w-[460px] flex items-center justify-center">
+//                 <Image
+//                   src={slides[active].images[0]}
+//                   alt="large"
+//                   width={460}
+//                   height={380}
+//                   className="object-cover h-full w-full"
+//                 />
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+
+//           {/* Navigation Pills */}
+//           <div className="flex flex-col justify-center gap-2">
+//             {slides.map((_, index) => (
+//               <motion.button
+//                 key={index}
+//                 onClick={() => setActive(index)}
+//                 animate={{
+//                   height: active === index ? 100 : 40,
+//                   width: 8,
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={`rounded-full transition-colors ${
+//                   active === index
+//                     ? "bg-gray-700"
+//                     : "bg-gray-300 hover:bg-gray-400"
+//                 }`}
+//               />
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,9 +230,21 @@ const slides = [
     texts: [
       {
         number: "01",
-        title: "Sessions Anytime, Anywhere",
-        desc: "Learn directly from expert tutors with flexible sessions accessible from any location.",
-        logo: "/course/online-student.png",
+        icon: "🎯",
+        title: "Stress-Free Exam Prep Starts Here",
+        desc: "1:1 live sessions ensure your child gets the individual attention they need.",
+      },
+      {
+        number: "02",
+        icon: "📌",
+        title: "Give Your Child the Exam Edge",
+        desc: "Customized 1:1 tutoring for NAPLAN, UK Exams, SATs & international assessments.",
+      },
+      {
+        number: "03",
+        icon: "✅",
+        title: "Build Confidence, Not Just Grades",
+        desc: "Strengthening concepts, boosting problem-solving skills, and growing confidence.",
       },
     ],
     images: ["/course/Grp1.png"],
@@ -21,10 +253,22 @@ const slides = [
     id: 1,
     texts: [
       {
-        number: "02",
-        title: "Customized Curriculum for Every Topic",
-        desc: "Personalized learning plans tailored to each student’s unique needs and goals.",
-        logo: "/course/online-lesson.png",
+        number: "04",
+        icon: "📚",
+        title: "The Future of Learning is Here",
+        desc: "Covers school syllabus + extra skills, worldwide access, flexible sessions.",
+      },
+      {
+        number: "05",
+        icon: "⭐",
+        title: "Turn Screen Time Into Learning Time",
+        desc: "Learning feels like play with interactive, tutor-guided sessions.",
+      },
+      {
+        number: "06",
+        icon: "🌍",
+        title: "Learning Tailored Just for Your Child",
+        desc: "Personalized plans that adapt to your child’s pace and style across all subjects.",
       },
     ],
     images: ["/course/Grp2.png"],
@@ -33,118 +277,138 @@ const slides = [
     id: 2,
     texts: [
       {
-        number: "03",
+        number: "07",
+        icon: "⏰",
+        title: "Sessions Anytime, Anywhere",
+        desc: "Learn directly from expert tutors with flexible sessions accessible from any location.",
+      },
+      {
+        number: "08",
+        icon: "📖",
+        title: "Customized Curriculum for Every Topic",
+        desc: "Personalized learning plans tailored to each student’s unique needs and goals.",
+      },
+      {
+        number: "09",
+        icon: "📝",
         title: "Interactive LMS for Homework & Quizzes",
         desc: "A smart platform to practice, submit homework, and take quizzes anytime.",
-        logo: "/course/idea.png",
       },
     ],
     images: ["/course/Grp3.png"],
   },
 ];
 
-export default function SlideShow() {
+export default function FullPageSlider() {
   const [active, setActive] = useState(0);
 
-  // Auto-switch every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-10 py-12 lg:py-20">
-      {/* Background glows */}
-      {/* <div className="absolute -left-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" />
-      <div className="absolute -right-[300px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-orange-200 opacity-20 blur-3xl pointer-events-none" /> */}
+    <div className="flex flex-col items-center justify-center w-full px-6 sm:px-10 py-16">
+      {/* Top Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-3xl sm:text-5xl leading-tight font-quicksand font-semibold mb-10 sm:mb-14 text-center"
+      >
+        The <span className="text-purple-400">Smart</span> Choice for <br />
+        <span className="text-red-400">Bright</span>
+        <span className="text-orange-400"> Futures</span>
+      </motion.h2>
 
-      {/* Heading */}
-      <h2 className="text-3xl sm:text-5xl lg:text-5xl leading-tight font-semibold mb-10 sm:mb-14 text-center">
-        The Smart Choice for <br />
-        
-        <span className="text-orange-400"> Bright Futures</span>
-      </h2>
+      <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-8 lg:gap-5 items-center">
+        {/* Left Section */}
+        <div className="flex-1 flex flex-col justify-start">
+          <motion.h3
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-2xl sm:text-4xl font-quicksand font-semibold mb-6 sm:mb-10"
+          >
+            The Global Exam Expertise
+          </motion.h3>
 
-      {/* Content Flexbox */}
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl gap-10 lg:gap-16 relative">
-        {/* Left Section (Text Side) */}
-        <div className="flex flex-col justify-center items-center lg:items-start gap-8 w-full lg:w-1/2 relative">
-          {slides[active].texts.map((t, idx) => (
+          <AnimatePresence mode="wait">
             <motion.div
-              key={t.title}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+              key={slides[active].id + "-texts"}
+              initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="flex items-center gap-4 sm:gap-6 w-full"
+              exit={{ opacity: 0, x: 60 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              className="flex flex-col gap-5 w-full sm:w-[600px] z-10"
             >
-              {/* Number */}
-              <span className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-200 leading-none flex-shrink-0">
-                {t.number}
-              </span>
+              {slides[active].texts.map((t, idx) => (
+                <motion.div
+                  key={t.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className={`flex items-center gap-6 ${
+                    idx % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                  }`}
+                >
+                  <span className="text-4xl sm:text-6xl font-bold font-poppins text-gray-200 leading-none flex-shrink-0">
+                    {t.number}
+                  </span>
 
-              {/* Text Box */}
-              <div className="flex items-center gap-4 w-full bg-white rounded-2xl shadow-2xl shadow-gray-300 p-6 sm:p-8">
-                {/* Logo */}
-                <div className="w-12 h-12 rounded-full flex items-center justify-center">
-                  <img src={t.logo} alt="logo" className="w-10 h-10 object-contain" />
-                </div>
-
-                {/* Text */}
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold">{t.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600">{t.desc}</p>
-                </div>
-              </div>
+                  <div className="flex items-center gap-4 w-full max-w-lg bg-white rounded-2xl shadow-2xl shadow-gray-400 p-6 sm:p-8 min-h-[120px] sm:min-h-[150px]">
+                    {/* Icon */}
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl">
+                      {t.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-roboto font-bold">
+                        {t.title}
+                      </h3>
+                      <p className="text-sm sm:text-base font-roboto text-gray-600">
+                        {t.desc}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-
-          {/* Sticker (kept) */}
-         <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
-            <img
-              src="/course/numbers.png"
-              alt="sticker"
-              className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] object-contain"
-            />
-          </div>
-
+          </AnimatePresence>
         </div>
 
-        {/* Right Section (Images + Pills) */}
-        <div className="flex-1 flex items-center justify-center gap-6 w-full lg:w-1/2">
-          {/* Images */}
+        {/* Right Section */}
+        <div className="flex-1 flex items-center justify-between gap-5">
           <AnimatePresence mode="wait">
             <motion.div
               key={slides[active].id + "-images"}
-              initial={{ opacity: 0, x: 40 }}
+              initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
+              exit={{ opacity: 0, x: -60 }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="flex justify-center"
+              className="flex items-start gap-6"
             >
-              <div className="rounded-2xl overflow-hidden w-[260px] sm:w-[320px] lg:w-[380px] flex items-center justify-center">
+              <div className="rounded-2xl overflow-hidden w-[280px] sm:w-[400px] lg:w-[460px] flex items-center justify-center">
                 <Image
                   src={slides[active].images[0]}
-                  alt="slide image"
-                  width={380}
-                  height={340}
-                  className="object-contain"
+                  alt="large"
+                  width={460}
+                  height={380}
+                  className="object-cover h-full w-full"
                 />
               </div>
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Pills */}
           <div className="flex flex-col justify-center gap-2">
             {slides.map((_, index) => (
               <motion.button
                 key={index}
                 onClick={() => setActive(index)}
                 animate={{
-                  height: active === index ? 80 : 30,
+                  height: active === index ? 100 : 40,
                   width: 8,
                 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -158,41 +422,6 @@ export default function SlideShow() {
           </div>
         </div>
       </div>
-      <div className="absolute left-1/2 bottom-2 -translate-x-1/3 animate-float1 z-10 rotate-[45]">
-  <img src="/icons/book.png" alt="globe" width={120} height={120}  />
-</div>
-<div className="absolute bottom-32 right-24 animate-float2 z-10">
-  <img src="/icons/apple.png" alt="" width={100} height={100} />
-</div>
-<div className="absolute top-32  left-12 animate-float2 z-10">
-  <img src="/icons/palette.png" alt="" width={120} height={120} />
-</div>
-<div className="absolute top-64  right-12 animate-float1 z-10">
-  <img src="/icons/calculator.png" alt="" width={120} height={120} />
-</div>
-<div className="absolute top-16  right-64 animate-float1 z-10">
-  <img src="/icons/lamp.png" alt="" width={100} height={100} />
-</div>
-
-<style jsx>{`
-  @keyframes float1 {
-    0%, 100% { transform: translateY(0) rotate(-45deg); }
-    50% { transform: translateY(-12px) rotate(-45deg); }
-  }
-  @keyframes float2 {
-    0%, 100% { transform: translateX(0) rotate(45deg); }
-    50% { transform: translateX(12px) rotate(45deg); }
-  }
-  @keyframes float3 {
-    0%, 100% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(-10px) translateX(10px); }
-  }
-  .animate-float1 { animation: float1 4s ease-in-out infinite; }
-  .animate-float2 { animation: float2 5s ease-in-out infinite; }
-  .animate-float3 { animation: float3 6s ease-in-out infinite; }
-`}</style>
-
     </div>
-    
   );
 }

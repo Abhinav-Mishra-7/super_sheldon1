@@ -119,16 +119,16 @@ const Review = () => {
       </div>
 
       <div className="absolute bottom-6 left-8 -translate-x-1/3 animate-float1 z-10 rotate-[45]">
-  <img src="/icons/book.png" alt="globe" width={120} height={120}  />
+  <img src="/icons/book.png" alt="globe" width={60} height={60}  />
 </div>
 <div className="absolute bottom-8 right-6 animate-float2 z-10">
-  <img src="/icons/backpack.png" alt="" width={120} height={120} />
+  <img src="/icons/backpack.png" alt="" width={60} height={60} />
 </div>
 <div className="absolute top-4  left-32 animate-float2 z-10">
-  <img src="/icons/lamp.png" alt="" width={120} height={120} />
+  <img src="/icons/lamp.png" alt="" width={60} height={60} />
 </div>
 <div className="absolute top-4  right-32 animate-float1 z-10">
-  <img src="/icons/Scholarcap.png" alt="" width={120} height={120} />
+  <img src="/icons/Scholarcap.png" alt="" width={60} height={60} />
 </div>
 
 <style jsx>{`
