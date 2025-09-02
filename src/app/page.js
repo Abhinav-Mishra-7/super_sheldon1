@@ -25,7 +25,13 @@ import FloatingArrowWhatsApp from '@/components/ArrowAndWhatsapp';
 
 
 import ClassVideoSection from '@/components/Studentvideo';
+import Hero from '@/components/Hero';
 
+
+export const metadata = {
+  title: "SuperSheldon | Interactive Online Learning for Kids & Students",
+
+  }
 
 export default function Home() {
   return (
@@ -36,7 +42,9 @@ export default function Home() {
       {/* <HeroContent /> */}
       {/* <CreditsSection /> */}
 
-      <HeroWithCredits/>
+      {/* <HeroWithCredits/> */}
+      <HeroContent/>
+      <CreditsSection/>
 
       <StudentTestimonial />
       <ExamCourses />
