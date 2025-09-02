@@ -218,16 +218,16 @@ export default function ClassVideoBanner() {
         </div>
       </div>
       <div className="absolute top-16 left-16 -translate-x-1/3 animate-float1 z-10">
-  <img src="/icons/book.png" alt="globe" width={120} height={120}  />
+  <img src="/icons/book.png" alt="globe" width={60} height={60}  />
 </div>
 <div className="absolute top-32 right-24 animate-float1 z-10">
-  <img src="/icons/science.png" alt="" width={100} height={100} />
+  <img src="/icons/science.png" alt="" width={50} height={50} />
 </div>
 <div className="absolute bottom-24  left-24 animate-float1 z-10">
-  <img src="/icons/palette.png" alt="" width={120} height={120} />
+  <img src="/icons/palette.png" alt="" width={60} height={60} />
 </div>
 <div className="absolute bottom-16  right-24 animate-float1 z-10">
-  <img src="/icons/abacus.png" alt="" width={120} height={120} />
+  <img src="/icons/abacus.png" alt="" width={60} height={60} />
 </div>
 {/* <div className="absolute top-64  right-12 animate-float1 z-10">
   <img src="/icons/Scholarcap.png" alt="" width={120} height={120} />
