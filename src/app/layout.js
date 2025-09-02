@@ -40,9 +40,11 @@ const quicksand = Quicksand({
   variable: "--font-quicksand",
 });
 
+
+
+
 export const metadata = {
-  title: "Supersheldon",
-  description: "Worldwide Exam Prep Made Easy",
+  title: "SuperSheldon | Interactive Online Learning for Kids & Students",
   icons:{
     icon : "/favicon.png",
   }

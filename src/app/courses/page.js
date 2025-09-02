@@ -22,6 +22,11 @@ import FloatingArrowWhatsApp from "@/components/ArrowAndWhatsapp";
 import ClassVideoSection from '@/components/Studentvideo';
 
 
+export const metadata = {
+  title: "Courses | SuperSheldon Online Learning",
+};
+
+
 export default function Courses() {
     return (
         <div>
