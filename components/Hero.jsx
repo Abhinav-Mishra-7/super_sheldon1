@@ -808,7 +808,7 @@ export default function Hero() {
             onSubmit={handleSubmit}
           >
             <label
-              className="text-xl text-[#494e5e] font-medium mb-1"
+              className="text-xl text-[#494e5e] font-bold mb-1"
               htmlFor="phone"
             >
               Experience Smarter Learning – <span className="text-md text-[#FF8C00]">First Class is Free!</span>
