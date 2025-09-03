@@ -2,7 +2,7 @@
 
 export default function RefundPolicy() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 mt-12 text-gray-800">
+    <div className="max-w-4xl mx-auto px-6 py-12 mt-24 text-gray-800">
       <h1 className="text-3xl font-bold mb-4">
         SuperSheldon Refund and Cancellation Policy
       </h1>

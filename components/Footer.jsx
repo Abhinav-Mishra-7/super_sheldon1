@@ -103,6 +103,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { useState } from "react";
 
 export default function Footer() {
   return (
@@ -178,7 +179,7 @@ export default function Footer() {
             <h3 className="font-extrabold text-red-600 mb-2 text-lg sm:text-xl uppercase tracking-wide">Support</h3>
             <ul className="space-y-2 text-gray-800 text-sm sm:text-base">
               <li><Link href="#" className="hover:text-gray-900">FAQ</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Support</Link></li>
+              <li><Link href="https://api.whatsapp.com/send/?phone=917974695618&text&type=phone_number&app_absent=0" target="_blank" className="hover:text-gray-900">Support</Link></li>
             </ul>
           </div>
 

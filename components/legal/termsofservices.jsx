@@ -2,7 +2,7 @@
 
 export default function TermsOfService() {
   return (
-    <section className="max-w-4xl mx-auto p-6 mt-24 text-gray-800 leading-relaxed">
+    <section className="max-w-4xl mx-auto p-6 mt-32 text-gray-800 leading-relaxed">
       <h1 className="text-2xl font-bold mb-4">SuperSheldon Terms of Services</h1>
       <p><strong>Effective Date:</strong> 16/08/2025</p>
       <p><strong>Last Updated:</strong> 16/08/2025</p>

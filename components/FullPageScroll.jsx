@@ -332,7 +332,7 @@ export default function FullPageSlider() {
             transition={{ duration: 0.7 }}
             className="text-2xl sm:text-4xl font-quicksand font-semibold mb-6 sm:mb-10"
           >
-            The Global Exam Expertise
+          
           </motion.h3>
 
           <AnimatePresence mode="wait">
