@@ -848,7 +848,7 @@ export default function Hero() {
             <StatCard
               iconSrc="/GlobeHemisphereWest.png"
               value="10+"
-              label="Country Language"
+              label="Countries"
             />
             <StatCard
               iconSrc="/Users.png"
