@@ -741,6 +741,175 @@ chapters: [
 // export { coursesData };
 
 
+// export default function ExamCourses() {
+//   const [activeYear, setActiveYear] = useState("Year 2");
+//   const router = useRouter();
+
+//   const items = coursesData[activeYear] || [];
+//   const isScrollable = items.length > 3;
+
+//   return (
+//     <div
+//       id="course"
+//       className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[700px] border border-gray-300"
+//     >
+//       {/* Title */}
+//       <h2 className="text-4xl font-bold text-center mb-6 text-quicksand">
+//         Our Exam Preparation Courses
+//       </h2>
+
+//       {/* Year Navbar */}
+//       <div className="flex justify-center gap-4 mb-10 p-4 bg-orange-100 rounded-xl overflow-x-auto">
+//         {years.map((year) => (
+//           <button
+//             key={year}
+//             onClick={() => setActiveYear(year)}
+//             className="relative px-4 py-2 text-gray-700 font-medium"
+//           >
+//             {year}
+//             {activeYear === year && (
+//               <motion.div
+//                 layoutId="underline"
+//                 className="absolute left-0 right-0 -bottom h-[3px] bg-orange-500 rounded-full"
+//                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
+//               />
+//             )}
+//           </button>
+//         ))}
+//       </div>
+
+//       {/* Course Cards */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={activeYear}
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           exit={{ opacity: 0, y: -20 }}
+//           transition={{ duration: 0.4, ease: "easeInOut" }}
+//           className={`flex gap-6 ${
+//             isScrollable
+//               ? "overflow-x-auto justify-start scroll-snap-x scroll-snap-mandatory px-2"
+//               : "justify-center"
+//           }`}
+//         >
+//           {items.map((course) => (
+//             <motion.div
+//               key={course.id}
+//               whileHover={{ scale: 1.02 }}
+//               transition={{ type: "spring", stiffness: 200, damping: 15 }}
+//               className={`snap-start bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden flex flex-col 
+//                 w-[80vw] sm:w-[360px] md:w-[400px] lg:w-[450px] xl:w-[480px] h-full ${
+//                   isScrollable ? "flex-shrink-0" : ""
+//                 }`}
+//             >
+//               {/* Image wrapped in Link */}
+//               <div className="m-4 rounded-xl border border-gray-200 overflow-hidden">
+//                 <div className="relative w-full aspect-[6000/3375] bg-gray-200">
+//                   <Link href={course.path || "#"}>
+//                     <Image
+//                       src={course.img}
+//                       alt={course.title}
+//                       fill
+//                       className="object-contain cursor-pointer"
+//                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//                     />
+//                   </Link>
+//                 </div>
+//               </div>
+
+//               {/* Course Info */}
+//               <div className="px-4 pb-4 flex flex-col flex-1">
+//                 <p className="text-sm text-gray-500">{course.type}</p>
+//                 <h3 className="text-lg font-semibold">{course.title}</h3>
+//                 <div className="flex items-center text-yellow-500 mb-3">
+//                   {"★".repeat(course.rating)}
+//                   {"☆".repeat(5 - course.rating)}
+//                 </div>
+
+//                 {/* Meta Info */}
+//                 <div className="flex justify-between text-sm text-gray-600 mb-4">
+//                   <span className="flex items-center gap-1">
+//                     <BookOpen size={16} /> {course.topics} Topics
+//                   </span>
+//                   <span className="flex items-center gap-1">
+//                     <Users size={16} /> {course.sales} Enrolled
+//                   </span>
+//                 </div>
+
+//                 {/* Buttons */}
+//                 <div className="flex space-x-2 mt-auto">
+//                   <Link
+//       href="https://forms.gle/csc94GLG3tEDit6N6"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//     >
+
+                  
+//                   <GlossyButton
+//                     // onClick={(e) => {
+//                     //   e.preventDefault();
+//                     //   router.push(course.path); // changed course id to course path
+//                     // }}
+//                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
+//                   >
+//                     Try a free Class
+//                   </GlossyButton>
+//                   </Link>
+//                   {/* <a
+//                     href={course.brochure}
+//                     download
+//                     className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
+//                   >
+//                     <Download size={16} /> Download Brochure
+//                   </a> */}
+
+//                   {/* <a
+//   href={`https://wa.me/919137053875?text=${encodeURIComponent(
+//     `Hi, I am interested in the ${course.title} course. Can you share more details?`
+//   )}`}
+//   target="_blank"
+//   rel="noopener noreferrer"
+//   className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
+// >
+//   <Download size={16} /> Download Brochure
+// </a> */}
+
+// <GlossyButton
+//   as="a"
+//   href={`https://wa.me/917974695618?text=${encodeURIComponent(
+//     `Hi, I am interested in the ${course.title} course. Can you share more details?`
+//   )}`}
+//   target="_blank"
+//   rel="noopener noreferrer"
+//   className="flex-1 flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600"
+// >
+//   <Download size={16} /> Download Brochure
+// </GlossyButton>
+
+
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//       </AnimatePresence>
+//     </div>
+//   );
+// }
+
+// export { coursesData };
+
+
+
+
+
+
+
+
+
+
+
+
 export default function ExamCourses() {
   const [activeYear, setActiveYear] = useState("Year 2");
   const router = useRouter();
@@ -751,26 +920,26 @@ export default function ExamCourses() {
   return (
     <div
       id="course"
-      className="px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[92%] h-[700px] border border-gray-300"
+      className="px-4 sm:px-6 py-10 bg-[#FFEFE0] rounded-2xl mx-auto w-[95%] max-w-[1600px] min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] border border-gray-300"
     >
       {/* Title */}
-      <h2 className="text-4xl font-bold text-center mb-6 text-quicksand">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 text-quicksand">
         Our Exam Preparation Courses
       </h2>
 
       {/* Year Navbar */}
-      <div className="flex justify-center gap-4 mb-10 p-4 bg-orange-100 rounded-xl overflow-x-auto">
+      <div className="flex justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 p-3 sm:p-4 bg-orange-100 rounded-xl overflow-x-auto">
         {years.map((year) => (
           <button
             key={year}
             onClick={() => setActiveYear(year)}
-            className="relative px-4 py-2 text-gray-700 font-medium"
+            className="relative px-3 sm:px-4 py-2 text-gray-700 font-medium whitespace-nowrap"
           >
             {year}
             {activeYear === year && (
               <motion.div
                 layoutId="underline"
-                className="absolute left-0 right-0 -bottom h-[3px] bg-orange-500 rounded-full"
+                className="absolute left-0 right-0 -bottom-1 h-[3px] bg-orange-500 rounded-full"
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
               />
             )}
@@ -786,10 +955,10 @@ export default function ExamCourses() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className={`flex gap-6 ${
+          className={`flex gap-4 sm:gap-6 ${
             isScrollable
               ? "overflow-x-auto justify-start scroll-snap-x scroll-snap-mandatory px-2"
-              : "justify-center"
+              : "justify-center flex-wrap"
           }`}
         >
           {items.map((course) => (
@@ -798,12 +967,12 @@ export default function ExamCourses() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
               className={`snap-start bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden flex flex-col 
-                w-[80vw] sm:w-[360px] md:w-[400px] lg:w-[450px] xl:w-[480px] h-full ${
+                w-[85vw] sm:w-[360px] md:w-[400px] lg:w-[420px] xl:w-[460px] ${
                   isScrollable ? "flex-shrink-0" : ""
                 }`}
             >
               {/* Image wrapped in Link */}
-              <div className="m-4 rounded-xl border border-gray-200 overflow-hidden">
+              <div className="m-3 sm:m-4 rounded-xl border border-gray-200 overflow-hidden">
                 <div className="relative w-full aspect-[6000/3375] bg-gray-200">
                   <Link href={course.path || "#"}>
                     <Image
@@ -811,82 +980,57 @@ export default function ExamCourses() {
                       alt={course.title}
                       fill
                       className="object-contain cursor-pointer"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 100vw,
+                             (max-width: 1024px) 50vw,
+                             33vw"
                     />
                   </Link>
                 </div>
               </div>
 
               {/* Course Info */}
-              <div className="px-4 pb-4 flex flex-col flex-1">
-                <p className="text-sm text-gray-500">{course.type}</p>
-                <h3 className="text-lg font-semibold">{course.title}</h3>
-                <div className="flex items-center text-yellow-500 mb-3">
+              <div className="px-3 sm:px-4 pb-4 flex flex-col flex-1">
+                <p className="text-xs sm:text-sm text-gray-500">{course.type}</p>
+                <h3 className="text-base sm:text-lg font-semibold">{course.title}</h3>
+                <div className="flex items-center text-yellow-500 mb-2 sm:mb-3">
                   {"★".repeat(course.rating)}
                   {"☆".repeat(5 - course.rating)}
                 </div>
 
                 {/* Meta Info */}
-                <div className="flex justify-between text-sm text-gray-600 mb-4">
+                <div className="flex justify-between text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                   <span className="flex items-center gap-1">
-                    <BookOpen size={16} /> {course.topics} Topics
+                    <BookOpen size={14} /> {course.topics} Topics
                   </span>
                   <span className="flex items-center gap-1">
-                    <Users size={16} /> {course.sales} Enrolled
+                    <Users size={14} /> {course.sales} Enrolled
                   </span>
                 </div>
 
                 {/* Buttons */}
                 <div className="flex space-x-2 mt-auto">
                   <Link
-      href="https://forms.gle/csc94GLG3tEDit6N6"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-
-                  
-                  <GlossyButton
-                    // onClick={(e) => {
-                    //   e.preventDefault();
-                    //   router.push(course.path); // changed course id to course path
-                    // }}
-                    className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition"
+                    href="https://forms.gle/csc94GLG3tEDit6N6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
                   >
-                    Try a free Class
-                  </GlossyButton>
+                    <GlossyButton className="w-full bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
+                      Try a free Class
+                    </GlossyButton>
                   </Link>
-                  {/* <a
-                    href={course.brochure}
-                    download
-                    className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
+
+                  <GlossyButton
+                    as="a"
+                    href={`https://wa.me/917974695618?text=${encodeURIComponent(
+                      `Hi, I am interested in the ${course.title} course. Can you share more details?`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600 text-white py-2 px-3 rounded-full transition"
                   >
                     <Download size={16} /> Download Brochure
-                  </a> */}
-
-                  {/* <a
-  href={`https://wa.me/919137053875?text=${encodeURIComponent(
-    `Hi, I am interested in the ${course.title} course. Can you share more details?`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-1"
->
-  <Download size={16} /> Download Brochure
-</a> */}
-
-<GlossyButton
-  as="a"
-  href={`https://wa.me/917974695618?text=${encodeURIComponent(
-    `Hi, I am interested in the ${course.title} course. Can you share more details?`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex-1 flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600"
->
-  <Download size={16} /> Download Brochure
-</GlossyButton>
-
-
+                  </GlossyButton>
                 </div>
               </div>
             </motion.div>

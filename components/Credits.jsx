@@ -366,9 +366,9 @@ export default function Credits() {
           {/* 3. 80% Confidence */}
           <div className="flex flex-col items-center justify-center space-y-3">
             <p className="text-[#1D2026] font-semibold text-lg sm:text-xl leading-snug text-center">
-              80% learners show Exam
+              80% learners show increased 
               <br className="hidden sm:block" />
-              increased confidence in 2 weeks
+               confidence in 2 weeks
             </p>
           </div>
         </div>
