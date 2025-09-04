@@ -176,94 +176,6 @@ export default function ReviewsSection() {
         />
       </motion.div>
 
-      {/* Filter + Search + Sort */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="mt-6 w-full bg-white shadow-md rounded-full px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3"
-      >
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-2">
-          {["all", "parents", "learners", "teachers"].map((tab) => (
-            <motion.button
-              key={tab}
-              onClick={() => setFilter(tab)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`px-4 py-2 rounded-full text-sm capitalize transition ${
-                filter === tab
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              {tab}
-            </motion.button>
-          ))}
-        </div>
-
-        {/* Search + Sort Dropdown */}
-        <div className="flex items-center gap-2 w-full md:w-auto relative">
-          <div className="relative w-full md:w-64">
-            <input
-              type="text"
-              placeholder="Search reviews..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full px-4 py-2 pl-10 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-            />
-            <Search
-              size={18}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
-            />
-          </div>
-
-          {/* Sort Dropdown */}
-          <div className="relative">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setSortOpen(!sortOpen)}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
-            >
-              {sort === "recent"
-                ? "Recent Reviews"
-                : sort === "highest"
-                ? "Highest Rated"
-                : "Lowest Rated"}
-              <ChevronDown size={16} />
-            </motion.button>
-            {sortOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border z-10"
-              >
-                {[
-                  { key: "recent", label: "Recent Reviews" },
-                  { key: "highest", label: "Highest Rated" },
-                  { key: "lowest", label: "Lowest Rated" },
-                ].map((opt) => (
-                  <button
-                    key={opt.key}
-                    onClick={() => {
-                      setSort(opt.key);
-                      setSortOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                      sort === opt.key ? "bg-gray-200 font-medium" : ""
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </motion.div>
-
       {/* Rating Overview + Highlights */}
       <div className="mt-10 space-y-10">
         <div className="flex flex-col md:flex-row items-start gap-8 w-full">
@@ -405,6 +317,93 @@ export default function ReviewsSection() {
   </motion.div>
 </motion.div>
 
+{/* Filter + Search + Sort */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="mt-6 w-full bg-white shadow-md rounded-full px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3"
+      >
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap gap-2">
+          {["all", "parents", "learners", "teachers"].map((tab) => (
+            <motion.button
+              key={tab}
+              onClick={() => setFilter(tab)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-4 py-2 rounded-full text-sm capitalize transition ${
+                filter === tab
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              {tab}
+            </motion.button>
+          ))}
+        </div>
+
+        {/* Search + Sort Dropdown */}
+        <div className="flex items-center gap-2 w-full md:w-auto relative">
+          <div className="relative w-full md:w-64">
+            <input
+              type="text"
+              placeholder="Search reviews..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full px-4 py-2 pl-10 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+            />
+            <Search
+              size={18}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+            />
+          </div>
+
+          {/* Sort Dropdown */}
+          <div className="relative">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setSortOpen(!sortOpen)}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+            >
+              {sort === "recent"
+                ? "Recent Reviews"
+                : sort === "highest"
+                ? "Highest Rated"
+                : "Lowest Rated"}
+              <ChevronDown size={16} />
+            </motion.button>
+            {sortOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border z-10"
+              >
+                {[
+                  { key: "recent", label: "Recent Reviews" },
+                  { key: "highest", label: "Highest Rated" },
+                  { key: "lowest", label: "Lowest Rated" },
+                ].map((opt) => (
+                  <button
+                    key={opt.key}
+                    onClick={() => {
+                      setSort(opt.key);
+                      setSortOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
+                      sort === opt.key ? "bg-gray-200 font-medium" : ""
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </motion.div>
       {/* Reviews */}
       <div className="mt-12 w-full mb-16">
         <h2 className="text-2xl font-semibold mb-6">Recent Reviews</h2>
