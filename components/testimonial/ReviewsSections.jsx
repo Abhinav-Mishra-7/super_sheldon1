@@ -163,52 +163,62 @@ export default function ReviewsSection() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-12 mt-24 font-quicksand">
       {/* Banner */}
-      <motion.div
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="w-full h-96 md:h-[700px] overflow-hidden rounded-3xl"
-      >
-        <img
-          src="/reviewsbannerv1.png"
-          alt="Banner"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: -40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="w-full h-64 sm:h-80 md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden rounded-3xl"
+>
+  <img
+    src="/reviewsbannerv1.png"
+    alt="Reviews Banner"
+    className="w-full h-full object-cover object-center"
+  />
+</motion.div>
+
+
 
       {/* Rating Overview + Highlights */}
-      <div className="mt-10 space-y-10">
-        <div className="flex flex-col md:flex-row items-start gap-8 w-full">
-          <div className="text-center bg-white p-10 rounded-2xl shadow-lg w-full md:w-[400px]">
-            <p className="text-sm uppercase tracking-wide text-gray-500">
-              Overall Rating
-            </p>
-            <p className="text-7xl text-teal-500 font-bold">
-              4.8<span className="text-2xl">/5</span>
-            </p>
-            <p className="text-gray-600 mt-2">2,431 reviews</p>
-          </div>
-          <div className="flex-1">
-            <div className="space-y-2">
-              {[5, 4, 3, 2, 1].map((star) => (
-                <div key={star} className="flex items-center gap-2">
-                  <span className="w-8">{star}★</span>
-                  <div className="w-full bg-gray-200 h-2 rounded-full">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${ratings[star]}%` }}
-                      transition={{ duration: 0.6 }}
-                      className="bg-blue-500 h-2 rounded-full"
-                    />
-                  </div>
-                  <span className="ml-2 text-sm text-gray-600">
-                    {ratings[star]}%
-                  </span>
-                </div>
-              ))}
+<div className="mt-10 space-y-10">
+  <div className="flex flex-col md:flex-row items-start gap-8 w-full">
+    {/* Overall Rating Card */}
+    <div className="text-center bg-white p-8 md:p-10 rounded-2xl shadow-lg w-full md:w-[400px]">
+      <p className="text-sm uppercase tracking-wide text-gray-500">
+        Overall Rating
+      </p>
+      <p className="text-6xl md:text-7xl text-teal-500 font-bold">
+        4.8<span className="text-2xl">/5</span>
+      </p>
+      <p className="text-gray-600 mt-2">2,431 reviews</p>
+    </div>
+
+    {/* Bars */}
+    <div className="flex-1 w-full max-w-lg md:max-w-none">
+      <div className="space-y-3">
+        {[5, 4, 3, 2, 1].map((star, idx) => (
+          <div key={star} className="flex items-center gap-2 w-full">
+            <span className="w-10 text-sm md:text-base">{star}★</span>
+            <div className="flex-1 bg-gray-200 h-2 rounded-full overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${ratings[star]}%` }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                className="bg-blue-500 h-2 rounded-full"
+              />
             </div>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: idx * 0.15 + 0.4 }}
+              className="ml-2 text-xs md:text-sm text-gray-600"
+            >
+              {ratings[star]}%
+            </motion.span>
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
+  </div>
 
         {/* Highlights Section */}
         <div>
@@ -317,93 +327,99 @@ export default function ReviewsSection() {
   </motion.div>
 </motion.div>
 
+
 {/* Filter + Search + Sort */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="mt-6 w-full bg-white shadow-md rounded-full px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3"
+<motion.div
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2, duration: 0.5 }}
+  className="mt-6 w-full bg-white shadow-md rounded-2xl px-4 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+>
+  {/* Filter Buttons */}
+  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+    {["all", "parents", "learners", "teachers"].map((tab) => (
+      <motion.button
+        key={tab}
+        onClick={() => setFilter(tab)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={`px-4 py-2 rounded-full text-sm capitalize transition ${
+          filter === tab
+            ? "bg-blue-500 text-white"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
       >
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-2">
-          {["all", "parents", "learners", "teachers"].map((tab) => (
-            <motion.button
-              key={tab}
-              onClick={() => setFilter(tab)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`px-4 py-2 rounded-full text-sm capitalize transition ${
-                filter === tab
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        {tab}
+      </motion.button>
+    ))}
+  </div>
+
+  {/* Search + Sort */}
+  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
+    {/* Search */}
+    <div className="relative w-full sm:w-64">
+      <input
+        type="text"
+        placeholder="Search reviews..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full px-4 py-2 pl-10 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none text-sm"
+      />
+      <Search
+        size={18}
+        className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+      />
+    </div>
+
+    {/* Sort Dropdown */}
+    <div className="relative w-full sm:w-auto">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setSortOpen(!sortOpen)}
+        className="flex items-center justify-between sm:justify-center gap-2 px-4 py-2 w-full sm:w-auto rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition text-sm"
+      >
+        {sort === "recent"
+          ? "Recent Reviews"
+          : sort === "highest"
+          ? "Highest Rated"
+          : "Lowest Rated"}
+        <ChevronDown size={16} />
+      </motion.button>
+      {sortOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="absolute right-0 mt-2 w-full sm:w-40 bg-white rounded-lg shadow-lg border z-10"
+        >
+          {[
+            { key: "recent", label: "Recent Reviews" },
+            { key: "highest", label: "Highest Rated" },
+            { key: "lowest", label: "Lowest Rated" },
+          ].map((opt) => (
+            <button
+              key={opt.key}
+              onClick={() => {
+                setSort(opt.key);
+                setSortOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
+                sort === opt.key ? "bg-gray-200 font-medium" : ""
               }`}
             >
-              {tab}
-            </motion.button>
+              {opt.label}
+            </button>
           ))}
-        </div>
+        </motion.div>
+      )}
+    </div>
+  </div>
+</motion.div>
 
-        {/* Search + Sort Dropdown */}
-        <div className="flex items-center gap-2 w-full md:w-auto relative">
-          <div className="relative w-full md:w-64">
-            <input
-              type="text"
-              placeholder="Search reviews..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full px-4 py-2 pl-10 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-            />
-            <Search
-              size={18}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
-            />
-          </div>
 
-          {/* Sort Dropdown */}
-          <div className="relative">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setSortOpen(!sortOpen)}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
-            >
-              {sort === "recent"
-                ? "Recent Reviews"
-                : sort === "highest"
-                ? "Highest Rated"
-                : "Lowest Rated"}
-              <ChevronDown size={16} />
-            </motion.button>
-            {sortOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border z-10"
-              >
-                {[
-                  { key: "recent", label: "Recent Reviews" },
-                  { key: "highest", label: "Highest Rated" },
-                  { key: "lowest", label: "Lowest Rated" },
-                ].map((opt) => (
-                  <button
-                    key={opt.key}
-                    onClick={() => {
-                      setSort(opt.key);
-                      setSortOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                      sort === opt.key ? "bg-gray-200 font-medium" : ""
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </motion.div>
+
+
       {/* Reviews */}
       <div className="mt-12 w-full mb-16">
         <h2 className="text-2xl font-semibold mb-6">Recent Reviews</h2>
