@@ -7,6 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Star, Search, ChevronDown, CheckCircle, Play, Globe, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
+import { ShieldCheck, PlayCircle, Medal } from "lucide-react";
 
 const reviews = [
   {
@@ -19,6 +20,7 @@ const reviews = [
     source: "Website",
     text: "Supersheldon classes are so much fun! My coding teacher explains everything clearly and I even built my first small game.",
     link: "/reviews/olivia-thompson",
+    profilePic: "/images/reviews/olivia.jpg", // 👈 placeholder
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ const reviews = [
     source: "Google",
     text: "Math used to be hard for me, but now I enjoy solving problems. The interactive lessons really helped me.",
     link: "/reviews/ethan-williams",
+    profilePic: "/images/reviews/ethan.jpg",
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ const reviews = [
     source: "Trustpilot",
     text: "I love the Science experiments! The teacher shows us step by step and I can even try some at home.",
     link: "/reviews/charlotte-brown",
+    profilePic: "/images/reviews/charlotte.jpg",
   },
   {
     id: 4,
@@ -52,6 +56,7 @@ const reviews = [
     source: "Website",
     text: "As a parent, I am very happy with the progress Olivia is making. The teachers are patient and supportive.",
     link: "/reviews/sarah-thompson",
+    profilePic: "/images/reviews/sarah.jpg",
   },
   {
     id: 5,
@@ -63,6 +68,7 @@ const reviews = [
     source: "Google",
     text: "Ethan has improved a lot in Math. The structured lessons and feedback from teachers are excellent.",
     link: "/reviews/daniel-williams",
+    profilePic: "/images/reviews/daniel.jpg",
   },
   {
     id: 6,
@@ -74,6 +80,7 @@ const reviews = [
     source: "Trustpilot",
     text: "Supersheldon gives my daughter confidence in her learning. The platform is easy to use and very engaging.",
     link: "/reviews/emily-brown",
+    profilePic: "/images/reviews/emily.jpg",
   },
   {
     id: 7,
@@ -85,6 +92,7 @@ const reviews = [
     source: "Website",
     text: "It’s rewarding to see students grow each week. The interactive tools on Supersheldon make teaching smooth and effective.",
     link: "/reviews/jessica-miller",
+    profilePic: "/images/reviews/jessica.jpg",
   },
   {
     id: 8,
@@ -96,6 +104,7 @@ const reviews = [
     source: "Google",
     text: "Students are more engaged during online lessons. The platform helps me track their progress and assign homework easily.",
     link: "/reviews/liam-johnson",
+    profilePic: "/images/reviews/liam.jpg",
   },
   {
     id: 9,
@@ -107,6 +116,7 @@ const reviews = [
     source: "Trustpilot",
     text: "I love the one-to-one interaction. It allows me to focus on each student’s strengths and areas of improvement.",
     link: "/reviews/hannah-davis",
+    profilePic: "/images/reviews/hannah.jpg",
   },
   {
     id: 10,
@@ -118,6 +128,7 @@ const reviews = [
     source: "Website",
     text: "SuperSheldon has provided me with an outstanding platform to apply my expertise and grow as a mentor. The structured approach, innovative resources, and supportive environment have greatly enriched my professional journey.",
     link: "/reviews/mtech-graduate",
+    profilePic: "/images/reviews/mtech.jpg",
   },
 ];
 
@@ -150,16 +161,16 @@ export default function ReviewsSection() {
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-12 mt-10 font-quicksand">
+    <div className="w-full px-4 sm:px-6 lg:px-12 mt-24 font-quicksand">
       {/* Banner */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-full h-96 md:h-[520px] overflow-hidden rounded-3xl"
+        className="w-full h-96 md:h-[700px] overflow-hidden rounded-3xl"
       >
         <img
-          src="https://via.placeholder.com/1600x700"
+          src="/reviewsbannerv1.png"
           alt="Banner"
           className="w-full h-full object-cover"
         />
@@ -260,7 +271,7 @@ export default function ReviewsSection() {
             <p className="text-sm uppercase tracking-wide text-gray-500">
               Overall Rating
             </p>
-            <p className="text-7xl font-bold">
+            <p className="text-7xl text-teal-500 font-bold">
               4.8<span className="text-2xl">/5</span>
             </p>
             <p className="text-gray-600 mt-2">2,431 reviews</p>
@@ -296,7 +307,7 @@ export default function ReviewsSection() {
               <p className="text-sm uppercase tracking-wide text-gray-500 mb-1">
                 Overall Rating
               </p>
-              <p className="text-5xl font-bold text-blue-500">
+              <p className="text-5xl font-bold text-teal-500">
                 4.8<span className="text-xl">/5</span>
               </p>
               <p className="text-gray-600 mt-2">Based on 2,431 reviews</p>
@@ -339,6 +350,61 @@ export default function ReviewsSection() {
         </div>
       </div>
 
+
+      {/* Extra Highlight Boxes */}
+<motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={{
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.15, duration: 0.5 },
+    },
+  }}
+  className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4"
+>
+  {/* Verified Parents & Learners */}
+  <motion.div
+    variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+    className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md"
+  >
+    <ShieldCheck className="w-6 h-6 text-teal-600" />
+    <p className="text-sm font-medium text-gray-700">
+      Verified Parents & Learners
+    </p>
+  </motion.div>
+
+  {/* Video Testimonials */}
+  <motion.div
+    variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+    className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md"
+  >
+    <PlayCircle className="w-6 h-6 text-teal-600" />
+    <p className="text-sm font-medium text-gray-700">Video Testimonials</p>
+  </motion.div>
+
+  {/* Global Community */}
+  <motion.div
+    variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+    className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md"
+  >
+    <Globe className="w-6 h-6 text-teal-600" />
+    <p className="text-sm font-medium text-gray-700">Global Community</p>
+  </motion.div>
+
+  {/* Top Rated Curriculum */}
+  <motion.div
+    variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+    className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md"
+  >
+    <Medal className="w-6 h-6 text-teal-600" />
+    <p className="text-sm font-medium text-gray-700">Top Rated Curriculum</p>
+  </motion.div>
+</motion.div>
+
       {/* Reviews */}
       <div className="mt-12 w-full mb-16">
         <h2 className="text-2xl font-semibold mb-6">Recent Reviews</h2>
@@ -360,7 +426,7 @@ export default function ReviewsSection() {
                 className="bg-white p-6 rounded-2xl shadow-md flex flex-col"
               >
                 {/* Name + Source Row */}
-                <div className="flex justify-between items-center mb-1">
+                {/* <div className="flex justify-between items-center mb-1">
                   <Link href={review.link || "#"}>
                     <span className="font-semibold text-black hover:underline">
                       {review.name}
@@ -372,7 +438,29 @@ export default function ReviewsSection() {
                   >
                     {review.source}
                   </a>
-                </div>
+                </div> */}
+
+
+                {/* Name + Source Row */}
+<div className="flex justify-between items-center mb-1">
+  <div className="flex items-center gap-3">
+    <img
+      src={review.profilePic}
+      alt={review.name}
+      className="w-10 h-10 rounded-full object-cover"
+    />
+    <a
+      href={review.link}
+      className="font-semibold text-black hover:underline"
+    >
+      {review.name}
+    </a>
+  </div>
+  <span className="px-3 py-1 text-xs font-medium rounded-full bg-teal-200 text-teal-900">
+    {review.source}
+  </span>
+</div>
+
 
                 <p className="text-xs text-gray-500 mb-2">{review.date}</p>
 
