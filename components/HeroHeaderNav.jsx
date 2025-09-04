@@ -289,7 +289,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { href: "/", label: "Home", type: "link" },
   { href: "/courses", label: "Courses", type: "link" },
-  { href: "#testimonial", label: "Testimonial", type: "anchor" },
+  { href: "/testimonial", label: "Testimonial", type: "anchor" },
 ];
 
 export const Button = ({
