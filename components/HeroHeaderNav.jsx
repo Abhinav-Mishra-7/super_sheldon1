@@ -290,6 +290,7 @@ const navLinks = [
   { href: "/", label: "Home", type: "link" },
   { href: "/courses", label: "Courses", type: "link" },
   { href: "/testimonial", label: "Testimonial", type: "anchor" },
+  { href: "/blogs", label: "Blogs", type: "anchor" },
 ];
 
 export const Button = ({
