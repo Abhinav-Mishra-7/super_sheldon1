@@ -1015,7 +1015,7 @@ export default function ExamCourses() {
                     rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <GlossyButton className="w-full bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
+                    <GlossyButton className="w-full bg-orange-500 text-white py-2 px-1 rounded-full hover:bg-orange-600 transition">
                       Try a free Class
                     </GlossyButton>
                   </Link>
@@ -1023,11 +1023,11 @@ export default function ExamCourses() {
                   <GlossyButton
                     as="a"
                     href={`https://wa.me/917974695618?text=${encodeURIComponent(
-                      `Hi, I am interested in the ${course.title} course. Can you share more details?`
+                      `Hi, I am interested in the ${course.title}. Can you share more details?`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600 text-white py-2 px-3 rounded-full transition"
+                    className="flex-1 flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600 text-white py-2 px-1 rounded-full transition"
                   >
                     <Download size={16} /> Download Brochure
                   </GlossyButton>
