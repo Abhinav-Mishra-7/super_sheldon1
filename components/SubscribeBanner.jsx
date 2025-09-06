@@ -1,101 +1,193 @@
 
 
 
-// "use client";
-// import React , {useState} from "react";
-// import Image from "next/image";
-// import { useRouter } from "next/navigation";
+// // "use client";
+// // import React , {useState} from "react";
+// // import Image from "next/image";
+// // import { useRouter } from "next/navigation";
 
-// const SubscribeSection = () => {
+// // const SubscribeSection = () => {
 
-//     const [email , setEmail] = useState("") ;
+// //     const [email , setEmail] = useState("") ;
 
-//     const handleSubmit = (e) => {
-//       e.preventDefault();
-//       if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
-//         setError("Please enter a valid email account.");
-//         return;
-//       }
-//       setError("");
-//       // TODO: connect API / handle form
-//     };
+// //     const handleSubmit = (e) => {
+// //       e.preventDefault();
+// //       if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+// //         setError("Please enter a valid email account.");
+// //         return;
+// //       }
+// //       setError("");
+// //       // TODO: connect API / handle form
+// //     };
 
-//     const navigate = useRouter();
+// //     const navigate = useRouter();
   
-//     const handleForm= (()=>{
-//       if(email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))
-//       navigate.push("https://forms.gle/csc94GLG3tEDit6N6") ;
-//     })
+// //     const handleForm= (()=>{
+// //       if(email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))
+// //       navigate.push("https://forms.gle/csc94GLG3tEDit6N6") ;
+// //     })
 
-//   return (
-//     <section
-//       id="try a free class"
-//       className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[370px] bg-[#4D2C5E]"
-//     >
-//       {/* Decorative circles */}
-//       <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>
-//       <div className="absolute top-0 left-0 w-48 h-48 border-2 border-white rounded-full translate-x-1/4 -translate-y-1/4 rotate-6"></div>
-//       <div className="absolute top-0 right-0 w-32 h-32 border-2 border-white rounded-full translate-x-1/3 -translate-y-1/3 -rotate-12"></div>
-//       <div className="absolute top-0 right-0 w-48 h-48 border-2 border-white rounded-full -translate-x-1/4 -translate-y-1/4 -rotate-6"></div>
+// //   return (
+// //     <section
+// //       id="try a free class"
+// //       className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[370px] bg-[#4D2C5E]"
+// //     >
+// //       {/* Decorative circles */}
+// //       <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>
+// //       <div className="absolute top-0 left-0 w-48 h-48 border-2 border-white rounded-full translate-x-1/4 -translate-y-1/4 rotate-6"></div>
+// //       <div className="absolute top-0 right-0 w-32 h-32 border-2 border-white rounded-full translate-x-1/3 -translate-y-1/3 -rotate-12"></div>
+// //       <div className="absolute top-0 right-0 w-48 h-48 border-2 border-white rounded-full -translate-x-1/4 -translate-y-1/4 -rotate-6"></div>
 
-//       {/* Content */}
-//       <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
-//         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Subscribe to Supersheldon</h2>
-//         <p className="mb-6 text-base md:text-lg">
-//           Stay ahead with the latest courses, exam tips, and free learning resources.
-//         </p>
+// //       {/* Content */}
+// //       <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
+// //         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Subscribe to Supersheldon</h2>
+// //         <p className="mb-6 text-base md:text-lg">
+// //           Stay ahead with the latest courses, exam tips, and free learning resources.
+// //         </p>
 
-//         {/* Stylish Email + Button */}
-//         <div className="relative w-full">
-//           <form onSubmit={handleSubmit}>
-//             <input
-//             type="email"
-//             placeholder="Enter your email"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//             className="w-full rounded-full py-4 px-6 text-gray-800 outline-none pr-36 shadow-lg"
-//           />
-//           <button onClick={handleForm}  className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-orange-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg">
-//             Try a free Class
-//           </button>
-//           </form>
-//         </div>
+// //         {/* Stylish Email + Button */}
+// //         <div className="relative w-full">
+// //           <form onSubmit={handleSubmit}>
+// //             <input
+// //             type="email"
+// //             placeholder="Enter your email"
+// //             value={email}
+// //             onChange={(e) => setEmail(e.target.value)}
+// //             className="w-full rounded-full py-4 px-6 text-gray-800 outline-none pr-36 shadow-lg"
+// //           />
+// //           <button onClick={handleForm}  className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-orange-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg">
+// //             Try a free Class
+// //           </button>
+// //           </form>
+// //         </div>
 
-//         {/* Lightbulbs using responsive percentages */}
-//         <div
-//           className="absolute"
-//           style={{
-//             left: "-30%",
-//             top: "35%",
-//             transform: "translateX(-50%) rotate(-25deg)",
-//           }}
-//         >
-//           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
-//         </div>
-//         <div
-//           className="absolute"
-//           style={{
-//             right: "-10%",
-//             bottom: "10%",
-//             transform: "translateX(70%) rotate(50deg)",
-//           }}
-//         >
-//           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+// //         {/* Lightbulbs using responsive percentages */}
+// //         <div
+// //           className="absolute"
+// //           style={{
+// //             left: "-30%",
+// //             top: "35%",
+// //             transform: "translateX(-50%) rotate(-25deg)",
+// //           }}
+// //         >
+// //           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
+// //         </div>
+// //         <div
+// //           className="absolute"
+// //           style={{
+// //             right: "-10%",
+// //             bottom: "10%",
+// //             transform: "translateX(70%) rotate(50deg)",
+// //           }}
+// //         >
+// //           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
+// //         </div>
+// //       </div>
+// //     </section>
+// //   );
+// // };
 
-// export default SubscribeSection;
+// // export default SubscribeSection;
 
+
+
+// // "use client";
+// // import React, { useState } from "react";
+// // import Image from "next/image";
+// // import { useRouter } from "next/navigation";
+// // import GlossyButton from "./GlossyButton"; // Make sure to import your component
+
+// // const SubscribeSection = () => {
+// //   const [email, setEmail] = useState("");
+// //   const [error, setError] = useState("");
+// //   const navigate = useRouter();
+
+// //   const handleSubmit = (e) => {
+// //     e.preventDefault();
+// //     if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+// //       setError("Please enter a valid email account.");
+// //       return;
+// //     }
+// //     setError("");
+// //     // TODO: connect API / handle form
+// //   };
+
+// //   const handleForm = () => {
+// //     if (email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))
+// //       navigate.push("https://forms.gle/csc94GLG3tEDit6N6");
+// //   };
+
+// //   return (
+// //     <section
+// //       id="try a free class"
+// //       className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[370px] bg-[#4D2C5E]"
+// //     >
+// //       {/* Decorative circles */}
+// //       <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>
+// //       <div className="absolute top-0 left-0 w-48 h-48 border-2 border-white rounded-full translate-x-1/4 -translate-y-1/4 rotate-6"></div>
+// //       <div className="absolute top-0 right-0 w-32 h-32 border-2 border-white rounded-full translate-x-1/3 -translate-y-1/3 -rotate-12"></div>
+// //       <div className="absolute top-0 right-0 w-48 h-48 border-2 border-white rounded-full -translate-x-1/4 -translate-y-1/4 -rotate-6"></div>
+
+// //       {/* Content */}
+// //       <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
+// //         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Subscribe to Supersheldon</h2>
+// //         <p className="mb-6 text-base md:text-lg">
+// //           Stay ahead with the latest courses, exam tips, and free learning resources.
+// //         </p>
+
+// //         {/* Stylish Email + Button */}
+// //         <div className="relative w-full">
+// //           <form onSubmit={handleSubmit}>
+// //             <input
+// //               type="email"
+// //               placeholder="Enter your email"
+// //               value={email}
+// //               onChange={(e) => setEmail(e.target.value)}
+// //               className="w-full rounded-full py-4 px-6 text-gray-800 outline-none pr-44 shadow-lg"
+// //             />
+// //             <GlossyButton
+// //               onClick={handleForm}
+// //               className="absolute top-1/2 right-2 transform -translate-y-1/2 px-5 py-2 rounded-full inline-flex max-w-fit"
+// //             >
+// //               Try a free Class
+// //             </GlossyButton>
+// //           </form>
+// //         </div>
+
+// //         {/* Lightbulbs using responsive percentages */}
+// //         <div
+// //           className="absolute"
+// //           style={{
+// //             left: "-30%",
+// //             top: "35%",
+// //             transform: "translateX(-50%) rotate(-25deg)",
+// //           }}
+// //         >
+// //           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
+// //         </div>
+// //         <div
+// //           className="absolute"
+// //           style={{
+// //             right: "-10%",
+// //             bottom: "10%",
+// //             transform: "translateX(70%) rotate(50deg)",
+// //           }}
+// //         >
+// //           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
+// //         </div>
+// //       </div>
+// //     </section>
+// //   );
+// // };
+
+// // export default SubscribeSection;
 
 
 // "use client";
 // import React, { useState } from "react";
 // import Image from "next/image";
 // import { useRouter } from "next/navigation";
-// import GlossyButton from "./GlossyButton"; // Make sure to import your component
+// import GlossyButton from "./GlossyButton"; // import glossy button
 
 // const SubscribeSection = () => {
 //   const [email, setEmail] = useState("");
@@ -109,12 +201,12 @@
 //       return;
 //     }
 //     setError("");
-//     // TODO: connect API / handle form
 //   };
 
 //   const handleForm = () => {
-//     if (email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))
+//     if (email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
 //       navigate.push("https://forms.gle/csc94GLG3tEDit6N6");
+//     }
 //   };
 
 //   return (
@@ -135,26 +227,28 @@
 //           Stay ahead with the latest courses, exam tips, and free learning resources.
 //         </p>
 
-//         {/* Stylish Email + Button */}
-//         <div className="relative w-full">
+//         {/* Email + Button inside box */}
+//         <div className="relative w-full max-w-md">
 //           <form onSubmit={handleSubmit}>
 //             <input
 //               type="email"
 //               placeholder="Enter your email"
 //               value={email}
 //               onChange={(e) => setEmail(e.target.value)}
-//               className="w-full rounded-full py-4 px-6 text-gray-800 outline-none pr-44 shadow-lg"
+//               className="w-full rounded-full py-4 px-6 text-gray-800 outline-none shadow-lg pr-40"
 //             />
-//             <GlossyButton
-//               onClick={handleForm}
-//               className="absolute top-1/2 right-2 transform -translate-y-1/2 px-5 py-2 rounded-full inline-flex max-w-fit"
-//             >
-//               Try a free Class
-//             </GlossyButton>
+//             <div className="absolute top-1/2 right-2 -translate-y-1/2">
+//               <GlossyButton
+//                 onClick={handleForm}
+//                 className="px-4 py-2 rounded-full text-sm"
+//               >
+//                 Try a free Class
+//               </GlossyButton>
+//             </div>
 //           </form>
 //         </div>
 
-//         {/* Lightbulbs using responsive percentages */}
+//         {/* Lightbulbs */}
 //         <div
 //           className="absolute"
 //           style={{
@@ -181,6 +275,11 @@
 // };
 
 // export default SubscribeSection;
+
+
+
+
+
 
 
 "use client";
@@ -212,45 +311,48 @@ const SubscribeSection = () => {
   return (
     <section
       id="try a free class"
-      className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[370px] bg-[#4D2C5E]"
+      className="relative mx-auto w-[92%] mt-4 mb-4 rounded-2xl overflow-hidden text-white font-poppins flex items-center justify-center h-[300px] sm:h-[340px] md:h-[370px] bg-[#4D2C5E] px-4"
     >
       {/* Decorative circles */}
-      <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>
-      <div className="absolute top-0 left-0 w-48 h-48 border-2 border-white rounded-full translate-x-1/4 -translate-y-1/4 rotate-6"></div>
-      <div className="absolute top-0 right-0 w-32 h-32 border-2 border-white rounded-full translate-x-1/3 -translate-y-1/3 -rotate-12"></div>
-      <div className="absolute top-0 right-0 w-48 h-48 border-2 border-white rounded-full -translate-x-1/4 -translate-y-1/4 -rotate-6"></div>
+      <div className="absolute top-0 left-0 w-20 h-20 sm:w-32 sm:h-32 border-2 border-white rounded-full -translate-x-1/3 -translate-y-1/3 rotate-12"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 sm:w-48 sm:h-48 border-2 border-white rounded-full translate-x-1/4 -translate-y-1/4 rotate-6"></div>
+      <div className="absolute top-0 right-0 w-20 h-20 sm:w-32 sm:h-32 border-2 border-white rounded-full translate-x-1/3 -translate-y-1/3 -rotate-12"></div>
+      <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 border-2 border-white rounded-full -translate-x-1/4 -translate-y-1/4 -rotate-6"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Subscribe to Supersheldon</h2>
-        <p className="mb-6 text-base md:text-lg">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-lg px-2 sm:px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4">
+          Subscribe to Supersheldon
+        </h2>
+        <p className="mb-4 sm:mb-6 text-sm sm:text-base md:text-lg">
           Stay ahead with the latest courses, exam tips, and free learning resources.
         </p>
 
         {/* Email + Button inside box */}
         <div className="relative w-full max-w-md">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-2 sm:gap-0">
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-full py-4 px-6 text-gray-800 outline-none shadow-lg pr-40"
+              className="flex-1 rounded-full py-3 sm:py-4 px-4 sm:px-6 text-gray-800 outline-none shadow-lg w-full sm:w-auto"
             />
-            <div className="absolute top-1/2 right-2 -translate-y-1/2">
+            <div className="sm:absolute sm:top-1/2 sm:right-2 sm:-translate-y-1/2 mt-2 sm:mt-0">
               <GlossyButton
                 onClick={handleForm}
-                className="px-4 py-2 rounded-full text-sm"
+                className="px-4 sm:px-5 py-2 rounded-full text-sm sm:text-base"
               >
                 Try a free Class
               </GlossyButton>
             </div>
           </form>
+          {error && <p className="text-red-300 text-sm mt-2">{error}</p>}
         </div>
 
         {/* Lightbulbs */}
         <div
-          className="absolute"
+          className="absolute hidden md:block"
           style={{
             left: "-30%",
             top: "35%",
@@ -260,7 +362,7 @@ const SubscribeSection = () => {
           <Image src="/lightbulb.png" alt="Lightbulb" width={64} height={64} />
         </div>
         <div
-          className="absolute"
+          className="absolute hidden md:block"
           style={{
             right: "-10%",
             bottom: "10%",
