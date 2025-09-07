@@ -1,10 +1,6 @@
 import Footer from '@/components/Footer';
 import HeroHeader from '@/components/HeroHeader';
-<<<<<<< HEAD
 // import Hero from '@/components/Hero';
-=======
-import HeroContent from '@/components/Hero';
->>>>>>> origin/main
 import CreditsSection from '@/components/Credits';
 import StudentTestimonial from '@/components/StudentTestimonial';
 import HeaderNav from '@/components/HeroHeaderNav';
@@ -47,11 +43,7 @@ export default function Home() {
       {/* <CreditsSection /> */}
 
       {/* <HeroWithCredits/> */}
-<<<<<<< HEAD
       <Hero/>
-=======
-      <HeroContent/>
->>>>>>> origin/main
       <CreditsSection/>
 
       <StudentTestimonial />
