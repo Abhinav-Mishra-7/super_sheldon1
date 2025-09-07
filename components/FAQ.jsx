@@ -249,34 +249,35 @@ export default function FAQ() {
           </h1>
 
           {/* Section Tabs */}
-          <div className="relative flex flex-wrap justify-center mb-8 md:mb-10 bg-orange-100 rounded-full p-1 gap-2 sm:gap-0">
-            {faqSections.map((section, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  setActiveSection(idx);
-                  setActiveIndex(null);
-                }}
-                className="relative flex-1 sm:flex-none text-center px-3 sm:px-6 py-2 font-semibold z-10 transition-colors duration-300"
-              >
-                <span
-                  className={`relative z-10 ${
-                    activeSection === idx ? "text-white" : "text-orange-600"
-                  }`}
-                >
-                  {section.title}
-                </span>
+          <div className="relative flex justify-center mb-8 md:mb-10 bg-orange-100 rounded-full p-1 gap-1 sm:gap-0">
+  {faqSections.map((section, idx) => (
+    <button
+      key={idx}
+      onClick={() => {
+        setActiveSection(idx);
+        setActiveIndex(null);
+      }}
+      className="relative flex-1 sm:flex-none text-center px-2 sm:px-6 py-2 font-semibold z-10 transition-colors duration-300"
+    >
+      <span
+        className={`relative z-10 whitespace-nowrap truncate text-[clamp(10px,2.5vw,14px)] sm:text-sm md:text-base ${
+          activeSection === idx ? "text-white" : "text-orange-600"
+        }`}
+      >
+        {section.title}
+      </span>
 
-                {activeSection === idx && (
-                  <motion.div
-                    layoutId="tabIndicator"
-                    className="absolute inset-0 bg-orange-500 rounded-full shadow-md z-0"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
+      {activeSection === idx && (
+        <motion.div
+          layoutId="tabIndicator"
+          className="absolute inset-0 bg-orange-500 rounded-full shadow-md z-0"
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        />
+      )}
+    </button>
+  ))}
+</div>
+
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -336,17 +337,17 @@ export default function FAQ() {
       </div>
 
       {/* Floating Icons (responsive sizing & positions) */}
-      <div className="absolute bottom-12 sm:bottom-32 left-4 sm:left-16 animate-float1 z-10 rotate-[45]">
-        <img src="/icons/science.png" alt="globe" className="w-10 sm:w-[60px]" />
+      <div className="absolute bottom-20 sm:bottom-32 left-4 sm:left-16 animate-float1 z-10 rotate-[45]">
+        <img src="/icons/book.png" alt="globe" className="w-10 sm:w-[60px]" />
       </div>
-      <div className="absolute bottom-16 sm:bottom-32 right-6 sm:right-24 animate-float2 z-10">
-        <img src="/icons/science.png" alt="scienc" className="w-8 sm:w-[50px]" />
+      <div className="absolute bottom-20 sm:bottom-32 right-6 sm:right-24 animate-float2 z-10">
+        <img src="/icons/science.png" alt="" className="w-8 sm:w-[50px]" />
       </div>
       <div className="absolute top-40 sm:top-64 left-4 sm:left-12 animate-float1 z-10">
-        <img src="/icons/chalkboard.png" alt="chalk" className="w-10 sm:w-[60px]" />
+        <img src="/icons/chalkboard.png" alt="" className="w-10 sm:w-[60px]" />
       </div>
       <div className="absolute top-40 sm:top-64 right-4 sm:right-12 animate-float1 z-10">
-        <img src="/icons/backpack.png" alt="back" className="w-10 sm:w-[60px]" />
+        <img src="/icons/backpack.png" alt="" className="w-10 sm:w-[60px]" />
       </div>
 
       <style jsx>{`

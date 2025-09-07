@@ -285,6 +285,7 @@ import Image from "next/image";
 import Popup from "./Popup";
 import GlossyButton from "./GlossyButton";
 import { Menu, X } from "lucide-react";
+import { useOpenDemoBooking } from "./utils/navigation";
 
 const navLinks = [
   { href: "/", label: "Home", type: "link" },
@@ -318,6 +319,7 @@ export const Button = ({
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const openDemoBooking = useOpenDemoBooking();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -384,13 +386,14 @@ export default function Header() {
           <Link href="/login">
             <GlossyButton>Login</GlossyButton>
           </Link>
-          <Link
+          {/* <Link
             href="https://forms.gle/csc94GLG3tEDit6N6"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GlossyButton>Try a free Class</GlossyButton>
-          </Link>
+            
+          </Link> */}
+          <GlossyButton onClick={openDemoBooking}>Try a free Class</GlossyButton>
         </div>
 
         {/* Mobile Menu Button */}

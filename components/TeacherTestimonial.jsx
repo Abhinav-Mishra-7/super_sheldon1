@@ -257,6 +257,7 @@ import { useState, useRef, useEffect } from "react";
 import { Play, Pause } from "lucide-react";
 import GlossyButton from "./GlossyButton";
 import Link from "next/link";
+import { useOpenDemoBooking } from "./utils/navigation";
 
 const videos = [
   { id: 2, name: "Ms. Aditi", src: "/videos/video2.mp4" },
@@ -267,6 +268,7 @@ export default function TeacherTestimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
+  const openDemoBooking =useOpenDemoBooking();
 
   const currentVideo = videos[currentIndex];
 
@@ -343,15 +345,9 @@ export default function TeacherTestimonial() {
             <div className="mx-auto text-center">
               <h3 className="font-semibold text-lg sm:text-xl">2M+ Questions</h3>
               <p className="text-sm sm:text-base text-gray-600 pb-3">2M+ extra projects</p>
-              <Link
-                href="https://forms.gle/csc94GLG3tEDit6N6"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GlossyButton className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
-                  Try a free Class
-                </GlossyButton>
-              </Link>
+              <GlossyButton onClick={openDemoBooking} className=" bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
+                 Try a free Class
+              </GlossyButton>
             </div>
           </div>
           <div className="bg-white shadow-lg shadow-gray-500 rounded-2xl p-4 sm:p-6 w-full max-w-[220px] flex flex-col justify-center items-center font-manrope">
@@ -412,15 +408,9 @@ export default function TeacherTestimonial() {
             <div className="mx-auto text-center">
               <h3 className="font-semibold text-lg sm:text-xl">MIT Certified +</h3>
               <p className="text-sm sm:text-base text-gray-600 pb-3">All teachers MIT certified</p>
-              <Link
-                href="https://forms.gle/csc94GLG3tEDit6N6"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GlossyButton className="flex-1 bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
-                  Try a free Class
-                </GlossyButton>
-              </Link>
+              <GlossyButton onClick={openDemoBooking} className=" bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
+                 Try a free Class
+              </GlossyButton>
             </div>
           </div>
         </div>
