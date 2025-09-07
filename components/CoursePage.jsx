@@ -40,7 +40,6 @@ export default function CoursePage() {
   ];
 
   // Shuffle reviews once after mount
-
   useEffect(() => {
     const shuffled = [...allReviews].sort(() => 0.5 - Math.random()).slice(0, 5);
     setReviews(shuffled);
