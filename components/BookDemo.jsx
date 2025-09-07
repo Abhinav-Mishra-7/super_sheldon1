@@ -1,6 +1,7 @@
 // components/BookDemo.jsx
 import { useState } from 'react';
 import axios from 'axios';
+import GlossyButton from './GlossyButton';
 
 // Create axios instance with proper configuration
 const api = axios.create({
@@ -141,7 +142,7 @@ export default function BookDemo() {
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Congratulations!</h2>
           <p className="text-gray-600 mb-2">Your demo session has been successfully booked.</p>
           <p className="text-gray-600 mb-6">We'll contact you shortly to confirm the details.</p>
-          <button 
+          <GlossyButton 
             onClick={() => {
               setIsRegistered(false);
               setFormData({
@@ -152,29 +153,29 @@ export default function BookDemo() {
                 subject: ''
               });
             }}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300"
+            className="w-full bg-[#e66e37] hover:bg-[#e68355] text-white font-medium py-3 px-4 rounded-lg transition duration-300"
           >
             Book Another Demo
-          </button>
+          </GlossyButton>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
-      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-        <div className="p-6 md:p-8">
+    <div className="min-h-screen py-8 px-4">
+      <div className="max-w-2xl mx-auto bg-white/95 rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-white/20 p-6 md:p-8 ">
           <header className="text-center mb-6">
-            <h1 className="text-2xl md-text-3xl font-bold text-blue-800">SuperSheldon Seasonal Sale – Unlock 30% Off</h1>
+            <h1 className="text-2xl md-text-3xl font-bold text-[#e66e37]">SuperSheldon Seasonal Sale – Unlock 30% Off</h1>
             <p className="text-gray-600 mt-2">Promotion valid from Sep 1, 2025 - Sep 10, 2025</p>
           </header>
 
           <div className="h-px bg-gray-200 my-6"></div>
 
-          <main className="mt-6">
-            <h2 className="text-xl font-semibold text-blue-800 mb-4">Book a Demo Session</h2>
-            <div className="bg-blue-50 p-4 rounded-lg mb-6">
+          <main className="mt-6 ">
+            <h2 className="text-xl font-semibold text-[#e66e37] mb-4">Book a Demo Session</h2>
+            <div className="bg-orange-100 p-4 rounded-lg mb-6">
               <h3 className="font-medium text-gray-800">Student Demo Booking</h3>
               <p className="font-semibold text-gray-700 mt-1">Ace your next class with a free demo</p>
               <p className="text-gray-600 mt-2">Pick your subject and grade. We'll match you with the right tutor.</p>
@@ -278,10 +279,10 @@ export default function BookDemo() {
                 {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
               </div>
 
-              <button 
-                type="submit" 
+              <GlossyButton
+                  type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300 disabled:bg-blue-400 disabled:cursor-not-allowed"
+                className="w-full bg-[#e66e37] hover:bg-[#e68355] text-white font-medium py-3 px-4 rounded-lg transition duration-300 disabled:bg-blue-400 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">
@@ -292,7 +293,9 @@ export default function BookDemo() {
                     Submitting...
                   </span>
                 ) : 'Submit Booking'}
-              </button>
+                </GlossyButton> 
+              
+              
               
               <p className="text-center text-sm text-gray-500 mt-4">
                 By submitting, you agree to be contacted about your demo.

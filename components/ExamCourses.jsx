@@ -8,6 +8,7 @@ import { Download, Clock, BookOpen, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import GlossyButton from "./GlossyButton";
+import { useOpenDemoBooking } from "./utils/navigation";
 
 const years = [
   "Year 2",
@@ -900,19 +901,10 @@ chapters: [
 // export { coursesData };
 
 
-
-
-
-
-
-
-
-
-
-
 export default function ExamCourses() {
   const [activeYear, setActiveYear] = useState("Year 2");
   const router = useRouter();
+  const openDemoBooking = useOpenDemoBooking();
 
   const items = coursesData[activeYear] || [];
   const isScrollable = items.length > 3;
@@ -928,7 +920,24 @@ export default function ExamCourses() {
       </h2>
 
       {/* Year Navbar */}
-      <div className="flex justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 p-3 sm:p-4 bg-orange-100 rounded-xl overflow-x-auto">
+  <div className="w-full">
+      {/* Mobile dropdown */}
+      <div className="sm:hidden mb-6">
+        <select
+          value={activeYear}
+          onChange={(e) => setActiveYear(e.target.value)}
+          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
+        >
+          {years.map((year) => (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Desktop button tabs */}
+      <div className="hidden sm:flex justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 p-3 sm:p-4 bg-orange-100 rounded-xl overflow-x-auto">
         {years.map((year) => (
           <button
             key={year}
@@ -946,6 +955,7 @@ export default function ExamCourses() {
           </button>
         ))}
       </div>
+    </div>
 
       {/* Course Cards */}
       <AnimatePresence mode="wait">
@@ -1009,16 +1019,11 @@ export default function ExamCourses() {
 
                 {/* Buttons */}
                 <div className="flex space-x-2 mt-auto">
-                  <Link
-                    href="https://forms.gle/csc94GLG3tEDit6N6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1"
-                  >
-                    <GlossyButton className="w-full bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
+                  
+                    <GlossyButton onClick={openDemoBooking} className="w-[60%] bg-orange-500 text-white py-2 px-3 rounded-full hover:bg-orange-600 transition">
                       Try a free Class
                     </GlossyButton>
-                  </Link>
+                  
 
                   <GlossyButton
                     as="a"

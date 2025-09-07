@@ -1,3 +1,5 @@
+"use client"
+
 import Header from "@/components/HeroHeaderNav";
 import TeacherTestimonial from "@/components/TeacherTestimonial";
 import FullPageSlider from "@/components/FullPageScroll";
@@ -20,34 +22,35 @@ import CardsScholarship from "@/components/PricingcardScholar";
 import FloatingArrowWhatsApp from "@/components/ArrowAndWhatsapp";
 
 import ClassVideoSection from '@/components/Studentvideo';
+import { useEffect , useState } from "react";
 
-
-export const metadata = {
+ const metadata = {
   title: "Courses | SuperSheldon Online Learning",
 };
 
 
-export default function Courses() {
+export default  function  Courses({currentCourse}) {
+
     return (
         <div>
             <Header />
             <CoursePage/>
 
-
-            <CardsNaplan/>
-            <CardsICAS/>
-            <CardsHSC/>
+            {/* {currentCourse.title === "Naplan Champion Course"  ? <CardsNaplan/> : false} */}
+            {/* <CardsICAS/> */}
+            {/* <CardsHSC/>
             <CardsExam/>
-            <CardsScholarship/>
+            <CardsScholarship/> */}
+            {/* {renderCards()}            */}
 
-            <ClassVideoSection/>
+            {/* <ClassVideoSection/>
             <TeacherTestimonial/>
             <FullPageSlider/>
             <FAQ/>
             <SubscribeSection/>
             <Footer/>
 
-            <FloatingArrowWhatsApp/>
+            <FloatingArrowWhatsApp/> */}
 
         </div>
     );

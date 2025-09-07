@@ -309,6 +309,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import GlossyButton from "./GlossyButton";
+import { useOpenDemoBooking } from "./utils/navigation";
 
 export default function Credits() {
   return (
@@ -376,13 +377,9 @@ export default function Credits() {
 
       {/* CTA Button */}
       <div className="text-center mx-auto mt-10 relative z-20 mb-2">
-        <Link
-          href="https://forms.gle/csc94GLG3tEDit6N6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GlossyButton>Try a free Class</GlossyButton>
-        </Link>
+        
+          <GlossyButton onClick={useOpenDemoBooking()}>Try a free Class</GlossyButton>
+        
       </div>
     </section>
   );

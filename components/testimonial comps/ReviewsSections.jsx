@@ -163,6 +163,7 @@ export default function ReviewsSection() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-12 mt-24 font-quicksand">
       {/* Banner */}
+      
 <motion.div
   initial={{ opacity: 0, y: -40 }}
   animate={{ opacity: 1, y: 0 }}

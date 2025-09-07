@@ -2,9 +2,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { coursesData } from "@/components/ExamCourses";
+import CardsRenderer from "./CardsRenderer";
 
 export default function CoursePage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -12,7 +12,9 @@ export default function CoursePage() {
   const [selectedCourse, setSelectedCourse] = useState(
     coursesData[Object.keys(coursesData)[0]][0].id
   );
+
   const [reviews, setReviews] = useState([]);
+  const [currentCourseData, setCurrentCourseData] = useState(null);
 
   const allReviews = [
     { name: "Maria ", text: "Loved the course. I’ve learned some very subtle techniques, especially on leaves.", img: "/reviews/r1g.jpg" },
@@ -38,6 +40,7 @@ export default function CoursePage() {
   ];
 
   // Shuffle reviews once after mount
+
   useEffect(() => {
     const shuffled = [...allReviews].sort(() => 0.5 - Math.random()).slice(0, 5);
     setReviews(shuffled);
@@ -46,6 +49,8 @@ export default function CoursePage() {
   const currentCourse = coursesData[selectedYear].find(
     (c) => c.id === selectedCourse
   );
+
+  
 
 //   return (
 //     <div className="w-full">
@@ -232,12 +237,12 @@ export default function CoursePage() {
       </section> */}
       {/* Hero Section */}
 {/* Hero Section */}
-<section className="relative w-full mt-32 h-[680px] px-2 sm:px-4 md:px-6"> 
+<section className="relative w-[92%] mx-auto mt-32 h-[680px] px-2 sm:px-4 md:px-6"> 
   <Image
     src="/coursebannerv2.png"
     alt="Hero"
     fill
-    className="object-cover rounded-2xl"
+    className=" w-full h-full object-cover object-center rounded-2xl"
   />
   <div className="absolute inset-0" />
 </section>
@@ -256,7 +261,7 @@ export default function CoursePage() {
           >
             {Object.keys(coursesData).map((year) => (
               <option key={year} value={year}>
-                {year}
+                {year}                
               </option>
             ))}
           </select>
@@ -276,7 +281,7 @@ export default function CoursePage() {
       </section>
 
       {/* Course Section */}
-      <section className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 pt-36 pb-16 gap-12">
+      <section className="flex flex-col md:flex-row max-w-[96%] mx-auto px-6 pt-36 pb-16 gap-12">
         {/* Left Side */}
         <div className="flex-[1.5]">
           {/* Fixed Course Image */}
@@ -389,6 +394,7 @@ export default function CoursePage() {
           </form>
         </div>
       </section>
+      <CardsRenderer currentCourse={currentCourse} />
     </div>
   );
 }

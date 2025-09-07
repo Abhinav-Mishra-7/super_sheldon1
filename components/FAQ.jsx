@@ -249,34 +249,35 @@ export default function FAQ() {
           </h1>
 
           {/* Section Tabs */}
-          <div className="relative flex flex-wrap justify-center mb-8 md:mb-10 bg-orange-100 rounded-full p-1 gap-2 sm:gap-0">
-            {faqSections.map((section, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  setActiveSection(idx);
-                  setActiveIndex(null);
-                }}
-                className="relative flex-1 sm:flex-none text-center px-3 sm:px-6 py-2 font-semibold z-10 transition-colors duration-300"
-              >
-                <span
-                  className={`relative z-10 ${
-                    activeSection === idx ? "text-white" : "text-orange-600"
-                  }`}
-                >
-                  {section.title}
-                </span>
+          <div className="relative flex justify-center mb-8 md:mb-10 bg-orange-100 rounded-full p-1 gap-1 sm:gap-0">
+  {faqSections.map((section, idx) => (
+    <button
+      key={idx}
+      onClick={() => {
+        setActiveSection(idx);
+        setActiveIndex(null);
+      }}
+      className="relative flex-1 sm:flex-none text-center px-2 sm:px-6 py-2 font-semibold z-10 transition-colors duration-300"
+    >
+      <span
+        className={`relative z-10 whitespace-nowrap truncate text-[clamp(10px,2.5vw,14px)] sm:text-sm md:text-base ${
+          activeSection === idx ? "text-white" : "text-orange-600"
+        }`}
+      >
+        {section.title}
+      </span>
 
-                {activeSection === idx && (
-                  <motion.div
-                    layoutId="tabIndicator"
-                    className="absolute inset-0 bg-orange-500 rounded-full shadow-md z-0"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
+      {activeSection === idx && (
+        <motion.div
+          layoutId="tabIndicator"
+          className="absolute inset-0 bg-orange-500 rounded-full shadow-md z-0"
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        />
+      )}
+    </button>
+  ))}
+</div>
+
 
           <AnimatePresence mode="wait">
             <motion.div
