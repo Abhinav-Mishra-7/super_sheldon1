@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer';
 
-import HeroHeader from '@/components/HeroHeader';
+import HeroHeader from '@/components/waste/HeroHeader';
 // import Hero from '@/components/Hero';
 
 import CreditsSection from '@/components/Credits';
