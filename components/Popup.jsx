@@ -163,6 +163,7 @@
 import { useState } from "react";
 import GlossyButton from "./GlossyButton";
 import Link from "next/link";
+import { useOpenDemoBooking } from "./utils/navigation";
 
 export default function Popup() {
   const [visible, setVisible] = useState(true);
@@ -179,16 +180,11 @@ export default function Popup() {
         </p>
 
         {/* Button */}
-        <Link
-          href="https://forms.gle/csc94GLG3tEDit6N6"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-shrink-0"
-        >
-          <GlossyButton className="px-3 py-1 text-xs sm:text-sm">
+       
+          <GlossyButton onClick={useOpenDemoBooking} className="px-3 py-1 text-xs sm:text-sm">
             Book Now
           </GlossyButton>
-        </Link>
+        
 
         {/* Close Button */}
         <button

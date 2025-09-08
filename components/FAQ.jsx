@@ -340,6 +340,7 @@ export default function FAQ() {
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full text-left px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center focus:outline-none"
+
                   >
                     <span
                       className={`font-anybody text-base sm:text-lg ${
@@ -361,6 +362,7 @@ export default function FAQ() {
                         transition={{ duration: 0.3 }}
                         className="px-4 sm:px-6 pb-3 sm:pb-4 text-orange-800 font-manrope text-sm sm:text-base"
                       >
+
                         {item.answer}
                       </motion.div>
                     )}
@@ -370,6 +372,7 @@ export default function FAQ() {
             })}
           </motion.div>
         </AnimatePresence>
+
       </div>
 
       {/* Floating Icons (animated on scroll) */}

@@ -1,6 +1,61 @@
 
 
 
+// // // "use client";
+
+// // // import Link from "next/link";
+
+// // // export default function GlossyButton({
+// // //   children = "Book A Free Math Class",
+// // //   href,
+// // //   onClick,
+// // //   className = "",
+// // // }) {
+// // //   const Tag = href ? Link : "button";
+
+// // //   return (
+// // //     <Tag
+// // //       {...(href ? { href } : { onClick })}
+// // //       className={`relative overflow-hidden bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold px-5 py-1 rounded-full border-2 border-[#3A1F10] shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-[#D16F3B] transition-all duration-200 inline-block ${className}`}
+// // //     >
+// // //       {children}
+
+// // //       {/* Single streak overlay */}
+// // //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-50">
+// // //         <div className="absolute top-0 left-[-150%] w-[250%] h-full animate-shine-slow">
+// // //           <svg
+// // //             viewBox="0 0 53 54"
+// // //             fill="none"
+// // //             xmlns="http://www.w3.org/2000/svg"
+// // //             className="w-full h-full"
+// // //           >
+// // //             <g opacity="0.2">
+// // //               <rect
+// // //                 x="31.3149"
+// // //                 y="-9"
+// // //                 width="11"
+// // //                 height="70"
+// // //                 transform="rotate(26.574 31.3149 -9)"
+// // //                 fill="#D9D9D9"
+// // //               />
+// // //               <rect
+// // //                 x="47.3149"
+// // //                 y="-7.4563"
+// // //                 width="6.30956"
+// // //                 height="70"
+// // //                 transform="rotate(26.574 47.3149 -7.4563)"
+// // //                 fill="#D9D9D9"
+// // //               />
+// // //             </g>
+// // //           </svg>
+// // //         </div>
+// // //       </div>
+// // //     </Tag>
+// // //   );
+// // // }
+
+
+
 // // "use client";
 
 // // import Link from "next/link";
@@ -16,11 +71,20 @@
 // //   return (
 // //     <Tag
 // //       {...(href ? { href } : { onClick })}
-// //       className={`relative overflow-hidden bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold px-5 py-1 rounded-full border-2 border-[#3A1F10] shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-[#D16F3B] transition-all duration-200 inline-block ${className}`}
+// //       className={`relative overflow-hidden 
+// //         bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold
+// //         rounded-full border-2 border-[#3A1F10] 
+// //         shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] 
+// //         focus:outline-none focus:ring-2 focus:ring-[#D16F3B] 
+// //         transition-all duration-200 inline-block
+// //         px-4 py-1.5 text-sm 
+// //         sm:px-5 sm:py-2 sm:text-base 
+// //         lg:px-6 lg:py-2.5 lg:text-lg
+// //         ${className}`}
 // //     >
 // //       {children}
 
-// //       {/* Single streak overlay */}
+// //       {/* Shine overlay */}
 // //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-50">
 // //         <div className="absolute top-0 left-[-150%] w-[250%] h-full animate-shine-slow">
 // //           <svg
@@ -56,6 +120,13 @@
 
 
 
+
+
+
+
+
+
+
 // "use client";
 
 // import Link from "next/link";
@@ -66,25 +137,16 @@
 //   onClick,
 //   className = "",
 // }) {
-//   const Tag = href ? Link : "button";
+//   const Tag = href ? "button" : "button";
 
 //   return (
 //     <Tag
 //       {...(href ? { href } : { onClick })}
-//       className={`relative overflow-hidden 
-//         bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold
-//         rounded-full border-2 border-[#3A1F10] 
-//         shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] 
-//         focus:outline-none focus:ring-2 focus:ring-[#D16F3B] 
-//         transition-all duration-200 inline-block
-//         px-4 py-1.5 text-sm 
-//         sm:px-5 sm:py-2 sm:text-base 
-//         lg:px-6 lg:py-2.5 lg:text-lg
-//         ${className}`}
+//       className={`relative overflow-hidden bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold px-5 py-1 rounded-full border-2 border-[#3A1F10] shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-[#D16F3B] transition-all duration-200 inline-block text-sm sm:text-base ${className}`}
 //     >
 //       {children}
 
-//       {/* Shine overlay */}
+//       {/* Single streak overlay */}
 //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-50">
 //         <div className="absolute top-0 left-[-150%] w-[250%] h-full animate-shine-slow">
 //           <svg
@@ -118,108 +180,23 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-// "use client";
-
-// import Link from "next/link";
-
-// export default function GlossyButton({
-//   children = "Book A Free Math Class",
-//   href,
-//   onClick,
-//   className = "",
-// }) {
-//   const baseClasses = `relative overflow-hidden bg-[#e66e37] hover:bg-[#e68355] 
-//     text-white font-semibold 
-//     px-3 py-0.5 sm:px-4 sm:py-1 md:px-5 md:py-1 lg:px-5 lg:py-1.5
-//     rounded-full border-2 border-[#3A1F10] 
-//     shadow-[2px_2px_0_0_rgba(0,0,0,0.7)] 
-//     focus:outline-none focus:ring-2 focus:ring-[#D16F3B] 
-//     transition-all duration-200 inline-block
-//     text-xs sm:text-sm md:text-base lg:text-lg
-//     ${className}`;
-
-//   const ShineOverlay = () => (
-//     <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-50">
-//       <div className="absolute top-0 left-[-150%] w-[250%] h-full animate-shine-slow">
-//         <svg
-//           viewBox="0 0 53 54"
-//           fill="none"
-//           xmlns="http://www.w3.org/2000/svg"
-//           className="w-full h-full"
-//         >
-//           <g opacity="0.2">
-//             <rect
-//               x="31.3149"
-//               y="-9"
-//               width="11"
-//               height="70"
-//               transform="rotate(26.574 31.3149 -9)"
-//               fill="#D9D9D9"
-//             />
-//             <rect
-//               x="47.3149"
-//               y="-7.4563"
-//               width="6.30956"
-//               height="70"
-//               transform="rotate(26.574 47.3149 -7.4563)"
-//               fill="#D9D9D9"
-//             />
-//           </g>
-//         </svg>
-//       </div>
-//     </div>
-//   );
-
-//   if (href) {
-//     return (
-//       <Link href={href} className={baseClasses}>
-//         {children}
-//         <ShineOverlay />
-//       </Link>
-//     );
-//   }
-
-//   return (
-//     <button onClick={onClick} className={baseClasses}>
-//       {children}
-//       <ShineOverlay />
-//     </button>
-//   );
-// }
-
-
-
-
-
-
-
-
-
 "use client";
-
-import Link from "next/link";
 
 export default function GlossyButton({
   children = "Book A Free Math Class",
-  href,
   onClick,
   className = "",
 }) {
-  const Tag = href ? Link : "button";
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e); // Call the passed onClick function
+    }
+  };
 
   return (
-    <Tag
-      {...(href ? { href } : { onClick })}
-      className={`relative overflow-hidden bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold px-1 py-1 rounded-full border-2 border-[#3A1F10] shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-[#D16F3B] transition-all duration-200 inline-block text-sm sm:text-base ${className}`}
+    <button
+      onClick={handleClick}
+      className={`relative overflow-hidden bg-[#e66e37] hover:bg-[#e68355] text-white font-semibold px-5 py-1 rounded-full border-2 border-[#3A1F10] shadow-[1px_2px_0_0_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-[#D16F3B] transition-all duration-200 inline-block text-sm sm:text-base ${className}`}
     >
       {children}
 
@@ -253,13 +230,6 @@ export default function GlossyButton({
           </svg>
         </div>
       </div>
-    </Tag>
+    </button>
   );
 }
-
-
-
-
-
-
-

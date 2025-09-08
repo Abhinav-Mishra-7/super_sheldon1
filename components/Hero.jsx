@@ -1,4 +1,3 @@
-
 // // "use client";
 
 // // import { useState } from "react";
@@ -688,6 +687,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import countries from "world-countries";
 import GlossyButton from "./GlossyButton";
+import { useOpenDemoBooking } from "./utils/navigation";
 
 // Pre-process countries (flag + name + dialCode)
 const countryOptions = countries.map((c) => ({
@@ -747,6 +747,7 @@ export default function Hero() {
   const [error, setError] = useState("");
   const [userCountryCode, setUserCountryCode] = useState("+1");
   const router = useRouter();
+  const openBokingDemo = useOpenDemoBooking() ;
 
   useEffect(() => {
     const getUserCountryPhoneCode = async () => {
@@ -770,7 +771,7 @@ export default function Hero() {
       return;
     }
     setError("");
-    router.push("https://forms.gle/csc94GLG3tEDit6N6");
+    return () => router.push("/demo") ;
   };
 
   const highlightOptions = [
@@ -829,6 +830,7 @@ export default function Hero() {
               </div>
               
               <GlossyButton
+                onClick={openBokingDemo}
                 type="submit"
                 className="h-10"
               >
