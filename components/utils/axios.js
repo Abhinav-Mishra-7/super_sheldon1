@@ -2,7 +2,6 @@ import axios from "axios"
 
 const axiosClient = axios.create({
   baseURL: 'https://super-sheldon1.onrender.com',
-  timeout: 15000, 
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json'
