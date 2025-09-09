@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import GlossyButton from './GlossyButton';
-import axioClient from './utils/axios';
+import axiosClient from './utils/axios';
 
 export default function BookDemo() {
   const [formData, setFormData] = useState({
@@ -96,8 +96,10 @@ export default function BookDemo() {
       
       console.log('Sending data to backend:', requestData);
       
-      const response = await axioClient.post('/user/bookDemo', requestData);
+      const response = await axiosClient.post('/user/bookDemo', requestData);
       
+      console.log(response.data) ;
+
       if (response.status === 200 || response.status === 201) {
         setIsRegistered(true);
       }
