@@ -2,15 +2,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import GlossyButton from './GlossyButton';
-
-// Create axios instance with proper configuration
-const api = axios.create({
-  baseURL: 'https://super-sheldon1.onrender.com',
-  timeout: 10000,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+import axioClient from './utils/axios';
 
 export default function BookDemo() {
   const [formData, setFormData] = useState({
@@ -104,7 +96,7 @@ export default function BookDemo() {
       
       console.log('Sending data to backend:', requestData);
       
-      const response = await api.post('/user/bookDemo', requestData);
+      const response = await axioClient.post('/user/bookDemo', requestData);
       
       if (response.status === 200 || response.status === 201) {
         setIsRegistered(true);
