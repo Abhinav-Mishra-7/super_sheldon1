@@ -7,7 +7,7 @@ const cors = require("cors") ;
 const userRouter = require("./src/routes/userRouter") ;
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://supersheldon.com",
     credentials: true
 }))
 
